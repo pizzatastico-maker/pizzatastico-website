@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Canonical Sitemap for Search Engines and AI Crawlers
+Sitemap: https://pizzatastico.com/sitemap.xml
