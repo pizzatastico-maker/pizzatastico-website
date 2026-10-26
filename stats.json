@@ -1,0 +1,19 @@
+{
+  "avg_hydration": 65.3,
+  "avg_flour_protein": 12.9,
+  "avg_weighted_flour_protein": 12.89,
+  "avg_effective_flour_protein": 12.89,
+  "flour_blend_rate_pct": 0.6,
+  "avg_tipo_00_pct": 99.9,
+  "avg_tipo_0_pct": 0.1,
+  "avg_tipo_1_pct": 0,
+  "avg_bake_heat": 400,
+  "avg_oven_max_temp": 400,
+  "avg_dough_profile_score": 92,
+  "quick_configurator_rate_pct": 0,
+  "avpn_locked_rate_pct": 0,
+  "avg_timing_score": 92,
+  "total_bakes_count": 179,
+  "popular_style_id": "napoletana",
+  "updated_at": "2026-10-18T05:22:46.978Z"
+}

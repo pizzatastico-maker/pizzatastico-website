@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="bg" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Stats – Community Pizza Index – Pizzatastico</title>
+    <meta name="description" content="Insights into the Pizzatastico community baking data: anonymous averages for hydration, flour protein, baking heat, and schedule timing.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/bg/stats.html">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/stats.html">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/stats.html">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/stats.html">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/stats.html">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/stats.html">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/stats.html">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/stats.html">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/stats.html">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/stats.html">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/stats.html">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/stats.html">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/stats.html">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/stats.html">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/stats.html">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/stats.html">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/stats.html">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/stats.html">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/stats.html">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/stats.html">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/stats.html">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/stats.html">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/stats.html">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/stats.html">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/stats.html">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/stats.html">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/stats.html">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="Pizza Stats – Community Pizza Index">
+    <meta property="og:description" content="Insights into the Pizzatastico community baking data: anonymous averages for hydration, flour protein, baking heat, and schedule timing.">
+    <meta property="og:url" content="https://pizzatastico.com/bg/stats.html">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pizza Stats – Community Pizza Index">
+    <meta name="twitter:description" content="Insights into the Pizzatastico community baking data: anonymous averages for hydration, flour protein, baking heat, and schedule timing.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        pizza: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        },
+                        app: {
+                            bg: '#f8fafc',
+                            cardOrange: '#eb6a0b',
+                            cardDark: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #eb6a0b 0%, #ea580c 50%, #c2410c 100%);
+        }
+        .stat-card-gradient {
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
+
+    <!-- Header Section mit Zurück-Link und Sprachumschalter -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black/5"></div>
+        
+        <!-- Navigation -->
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <!-- Backlink zur Startseite (Logo + Brand) -->
+            <a href="/bg/" class="flex items-center space-x-3 transition hover:opacity-90 cursor-pointer group" title="Back to Home">
+                <div class="bg-white rounded-full p-1 shadow-sm transition group-hover:scale-105">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Лого на Pizzatastico" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-extrabold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </a>
+
+            <!-- Mittlerer Backlink Button -->
+            <div class="flex items-center space-x-3">
+                <a href="/bg/" class="hidden sm:inline-flex items-center space-x-1.5 text-white/95 hover:text-white font-semibold text-xs md:text-sm bg-black/20 hover:bg-black/30 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full transition shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Back to Home</span>
+                </a>
+                
+                <!-- 25 Sprachen Switcher Dropdown -->
+                <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                    <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/stats.html" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/stats.html" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/stats.html" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/stats.html" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/stats.html" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/stats.html" class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/stats.html" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/stats.html" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/stats.html" class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/stats.html" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/stats.html" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/stats.html" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/stats.html" class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/stats.html" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/stats.html" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/stats.html" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/stats.html" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/stats.html" class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/stats.html" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/stats.html" class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/stats.html" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/stats.html" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/stats.html" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/stats.html" selected class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/stats.html" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-20">
+            <div class="max-w-3xl">
+                <!-- Pill Badge -->
+                <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm border border-white/25 px-3 py-1 rounded-full text-white text-xs font-bold tracking-wider uppercase mb-5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+                    <span>COMMUNITY PIZZA INDEX</span>
+                </div>
+
+                <!-- Main Title & Subtitle -->
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white leading-tight mb-4 drop-shadow-xs">
+                    Pizza Stats: Community Insights
+                </h1>
+                <p class="text-base sm:text-lg text-white/90 leading-relaxed font-normal mb-8 max-w-2xl">
+                    A transparent look at how the Pizzatastico community is baking right now. No rigid rules, no forced recipes — start relaxed with comfortable hydration and find your own path to great dough.
+                </p>
+
+                <!-- Controls: Temperature Switcher & Live Meta -->
+                <div class="flex flex-wrap items-center gap-4 text-xs font-medium text-white/80 border-t border-white/15 pt-5">
+                    <div class="flex items-center space-x-2 bg-black/20 backdrop-blur-sm px-3 py-1 rounded-lg border border-white/15">
+                        <span class="text-white/70">Einheit:</span>
+                        <div class="inline-flex bg-black/30 p-0.5 rounded-md text-[11px] font-bold">
+                            <button id="btn-celsius" type="button" onclick="setTempUnit('C')" class="px-2 py-1 rounded-md bg-white text-orange-600 shadow-xs transition-all">°C</button>
+                            <button id="btn-fahrenheit" type="button" onclick="setTempUnit('F')" class="px-2 py-1 rounded-md text-white/70 hover:text-white transition-all">°F</button>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-1.5">
+                        <svg class="w-4 h-4 text-orange-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        <span>Last Synced:</span>
+                        <span id="hero-updated-at" class="font-mono text-white font-semibold">Live</span>
+                    </div>
+
+                    <span class="hidden sm:inline opacity-40">•</span>
+
+                    <div class="flex items-center space-x-1.5">
+                        <svg class="w-4 h-4 text-emerald-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        <span>100% GDPR & Anonymous</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Divider -->
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none pointer-events-none">
+            <svg class="relative block w-full h-10 sm:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <!-- KPI Benchmark Grid (5 Reine Daten-Karten) -->
+        <section class="max-w-5xl mx-auto px-6 py-10 mb-8">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-display font-extrabold text-gray-900">Current Averages</h2>
+                    <p class="text-xs sm:text-sm text-gray-500">Computed automatically from completed pizza baking sessions.</p>
+                </div>
+                <div class="flex items-center space-x-1.5 text-xs text-orange-600 font-semibold bg-orange-50 px-3 py-1.5 rounded-full border border-orange-200">
+                    <span class="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
+                    <span id="kpi-live-count">158 Bakes</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                
+                <!-- Card 1: Total Bakes -->
+                <div class="stat-card-gradient p-5 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl p-2 bg-orange-50 border border-orange-100 rounded-xl">🍕</span>
+                    </div>
+                    <div class="text-3xl font-display font-black text-gray-900 mb-1 tracking-tight">
+                        <span id="stat-total-bakes">158</span><span class="text-orange-500">+</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-bold text-gray-700">Total Baking Sessions</h3>
+                </div>
+
+                <!-- Card 2: Hydration -->
+                <div class="stat-card-gradient p-5 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl p-2 bg-sky-50 border border-sky-100 rounded-xl">💧</span>
+                    </div>
+                    <div class="text-3xl font-display font-black text-gray-900 mb-1 tracking-tight">
+                        <span id="stat-avg-hydration">65.9</span><span class="text-sky-500 text-xl">%</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-bold text-gray-700">Avg. Hydration (Water)</h3>
+                </div>
+
+                <!-- Card 3: Flour Protein & Blend -->
+                <div class="stat-card-gradient p-5 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl p-2 bg-amber-50 border border-amber-100 rounded-xl">🌾</span>
+                        <span id="stat-flour-blend-badge" class="text-[10px] font-mono font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-0.5 rounded-full">Tipo 00 / 0 / 1</span>
+                    </div>
+                    <div class="text-3xl font-display font-black text-gray-900 mb-1 tracking-tight">
+                        <span id="stat-avg-protein">13.0</span><span class="text-amber-500 text-lg font-bold ml-0.5">g</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-bold text-gray-700">Avg. Flour Protein</h3>
+                    <p id="stat-flour-blend-sub" class="text-[10px] font-mono text-gray-400 mt-1">Ø Tipo 00: 100%</p>
+                </div>
+
+                <!-- Card 4: Baking Heat -->
+                <div class="stat-card-gradient p-5 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-shadow">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl p-2 bg-red-50 border border-red-100 rounded-xl">🔥</span>
+                    </div>
+                    <div class="text-3xl font-display font-black text-gray-900 mb-1 tracking-tight">
+                        <span id="stat-avg-heat">409</span><span id="stat-heat-unit" class="text-red-500 text-xl">°C</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-bold text-gray-700">Avg. Baking Heat</h3>
+                </div>
+
+                <!-- Card 5: Timing Score -->
+                <div class="stat-card-gradient p-5 rounded-2xl border border-gray-200 shadow-xs hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl p-2 bg-emerald-50 border border-emerald-100 rounded-xl">⏱️</span>
+                    </div>
+                    <div class="text-3xl font-display font-black text-gray-900 mb-1 tracking-tight">
+                        <span id="stat-avg-timing">92</span><span class="text-emerald-500 text-xl">%</span>
+                    </div>
+                    <h3 class="text-xs sm:text-sm font-bold text-gray-700">Avg. Timing Score</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Hydration Overview (Sympathisch, motivierend, kein Zwang) -->
+        <section class="max-w-5xl mx-auto px-6 mb-16">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs">
+                <div class="max-w-2xl mb-8">
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md mb-2 inline-block">HYDRATION</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-3">Hydration Overview</h2>
+                    <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                        An average number is never a requirement. If you are starting out, begin relaxed at 55% to 58% water. Dough with moderate hydration barely sticks, is easy to handle, and forgives small mistakes. Increase water gradually only when you feel confident.
+                    </p>
+                </div>
+
+                <!-- Visual Bar Scale -->
+                <div class="relative pt-8 pb-4">
+                    <!-- Marker (dynamisch positioniert) -->
+                    <div id="marker-container" class="absolute top-0 transition-all duration-700 ease-out" style="left: 43.6%; transform: translateX(-50%);">
+                        <div class="flex flex-col items-center">
+                            <span class="bg-orange-600 text-white text-[11px] font-black px-2 py-0.5 rounded-full shadow-sm whitespace-nowrap mb-1">
+                                Ø <span id="marker-hydration">65.9%</span>
+                            </span>
+                            <div class="w-0.5 h-3 bg-orange-600"></div>
+                        </div>
+                    </div>
+
+                    <!-- Gradient Track -->
+                    <div class="h-4 rounded-full bg-gradient-to-r from-emerald-400 via-sky-400 to-indigo-500 shadow-inner"></div>
+
+                    <!-- Scale Labels -->
+                    <div class="flex justify-between items-center text-xs font-mono text-gray-400 mt-2 px-1">
+                        <div class="text-left">
+                            <span class="font-bold text-gray-700">55%</span>
+                            <span class="block text-[10px] text-emerald-600 font-sans font-semibold">Start & Beherrschbar</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="font-bold text-gray-700">65% – 68%</span>
+                            <span class="block text-[10px] text-sky-600 font-sans font-semibold">Community-Mitte</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="font-bold text-gray-700">80%+</span>
+                            <span class="block text-[10px] text-indigo-600 font-sans font-semibold">Erfahren & Höhere Hydration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warm, sympathetischer Rat -->
+                <div class="mt-8 p-4 sm:p-5 rounded-2xl bg-orange-50/60 border border-orange-100 flex items-start space-x-3.5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                    <span class="text-xl shrink-0 mt-0.5">💡</span>
+                    <div>
+                        <strong class="text-orange-900 block font-bold mb-0.5">Your Dough. Your Pace.</strong>
+                        <p class="text-gray-600">Don't let high numbers stress you. Superb pizza can be made at any hydration — what matters is matching the schedule to your flour and your oven.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy & Telemetry Commitment (100% DSGVO & Anonym) -->
+        <section class="max-w-5xl mx-auto px-6 mb-16">
+            <div class="bg-slate-900 rounded-3xl p-6 sm:p-8 md:p-10 text-white relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl">
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-md mb-3 inline-block border border-emerald-800">DATA PRIVACY</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white mb-3">100% Anonymous. Zero Tracking.</h2>
+                    <p class="text-sm sm:text-base text-gray-300 leading-relaxed mb-6">
+                        This community index only captures pure dough and baking parameters. We never store personal identifiers such as names, email addresses, IP addresses, or device IDs. Telemetry can be switched off anytime in the app settings.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-slate-800 text-xs">
+                        <div class="flex items-center space-x-2 text-gray-200">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>No user account needed</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-200">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>Opt-out anytime in app</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-200">
+                            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                            <span>GDPR & EU Cloud hosting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="max-w-5xl mx-auto px-6 mb-16 text-center">
+            <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-xl mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold mb-3">Изпечете перфектната пица.</h2>
+                    <p class="text-sm sm:text-base text-white/90 mb-6 leading-relaxed">Практичен калкулатор за тесто за автентична неаполитанска пица у дома. Без излишни трикове – само прецизна хидратация, надеждно изчисляване на маята и график, който просто работи.</p>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Apple App Store" class="h-11">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play Магазин">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play Магазин" class="h-11">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer mit allen Links inkl. Backlink, Promo, Privacy und Imprint -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <a href="/bg/" class="hover:opacity-80 transition" title="Back to Home">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Лого на Pizzatastico" class="w-8 h-8 object-contain grayscale opacity-60">
+                </a>
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v1.16.2</span>
+                </div>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/bg/" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">&larr; Back to Home</a>
+                <a href="/bg/stats.html" class="hover:text-pizza-600 transition-colors text-pizza-600 font-bold">Pizza Stats</a>
+                <a href="/promo" class="hover:text-pizza-600 transition-colors">Promo</a>
+                <a href="/bg/privacy.html" class="hover:text-pizza-600 transition-colors">Политика за поверителност</a>
+                <a href="/bg/imprint.html" class="hover:text-pizza-600 transition-colors">Правна информация</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Live Fetch & Temperature Switcher -->
+    <script>
+        let statsData = {
+            avg_hydration: 65.9,
+            avg_flour_protein: 13.0,
+            avg_effective_flour_protein: 13.0,
+            flour_blend_rate_pct: 0.0,
+            avg_tipo_00_pct: 100.0,
+            avg_tipo_0_pct: 0.0,
+            avg_tipo_1_pct: 0.0,
+            avg_bake_heat: 409,
+            avg_timing_score: 92,
+            total_bakes_count: 158,
+            updated_at: new Date().toISOString()
+        };
+
+        let currentTempUnit = 'C';
+
+        function setTempUnit(unit) {
+            currentTempUnit = unit;
+            localStorage.setItem('pizzatastico_stats_temp_unit', unit);
+
+            const btnC = document.getElementById('btn-celsius');
+            const btnF = document.getElementById('btn-fahrenheit');
+            if (unit === 'C') {
+                if (btnC) btnC.className = "px-2 py-1 rounded-md bg-white text-orange-600 shadow-xs transition-all";
+                if (btnF) btnF.className = "px-2 py-1 rounded-md text-white/70 hover:text-white transition-all";
+            } else {
+                if (btnF) btnF.className = "px-2 py-1 rounded-md bg-white text-orange-600 shadow-xs transition-all";
+                if (btnC) btnC.className = "px-2 py-1 rounded-md text-white/70 hover:text-white transition-all";
+            }
+
+            renderHeat();
+        }
+
+        function renderHeat() {
+            const rawHeatC = Number(statsData.avg_bake_heat) || 409;
+            const heatElem = document.getElementById('stat-avg-heat');
+            const unitElem = document.getElementById('stat-heat-unit');
+
+            if (currentTempUnit === 'F') {
+                const heatF = Math.round(rawHeatC * 1.8 + 32);
+                if (heatElem) heatElem.textContent = heatF;
+                if (unitElem) unitElem.textContent = '°F';
+            } else {
+                if (heatElem) heatElem.textContent = Math.round(rawHeatC);
+                if (unitElem) unitElem.textContent = '°C';
+            }
+        }
+
+        function renderStats() {
+            const bakes = statsData.total_bakes_count || 158;
+            const hydration = Number(statsData.avg_hydration || 65.9).toFixed(1);
+            const protein = Number(statsData.avg_effective_flour_protein || statsData.avg_flour_protein || 13.0).toFixed(1);
+            const timing = Math.round(statsData.avg_timing_score || 92);
+
+            const totalEl = document.getElementById('stat-total-bakes');
+            if (totalEl) totalEl.textContent = bakes;
+
+            const hydEl = document.getElementById('stat-avg-hydration');
+            if (hydEl) hydEl.textContent = hydration;
+
+            const markerHydEl = document.getElementById('marker-hydration');
+            if (markerHydEl) markerHydEl.textContent = `${hydration}%`;
+
+            // Position hydration marker dynamically based on 55%..80% scale
+            const markerContainer = document.getElementById('marker-container');
+            if (markerContainer) {
+                const hVal = parseFloat(hydration);
+                const pct = Math.min(Math.max(((hVal - 55) / (80 - 55)) * 100, 5), 95);
+                markerContainer.style.left = `${pct}%`;
+            }
+
+            const protEl = document.getElementById('stat-avg-protein');
+            if (protEl) protEl.textContent = protein;
+
+            const blendBadgeEl = document.getElementById('stat-flour-blend-badge');
+            const blendSubEl = document.getElementById('stat-flour-blend-sub');
+            const t00 = Number(statsData.avg_tipo_00_pct ?? 100);
+            const t0 = Number(statsData.avg_tipo_0_pct ?? 0);
+            const t1 = Number(statsData.avg_tipo_1_pct ?? 0);
+            const blendRate = Number(statsData.flour_blend_rate_pct ?? 0);
+
+            if (blendBadgeEl) {
+                blendBadgeEl.textContent = blendRate > 0 ? `Blend ${blendRate.toFixed(0)}%` : 'Tipo 00 / 0 / 1';
+            }
+            if (blendSubEl) {
+                if (t0 > 0 || t1 > 0) {
+                    const parts = [`00: ${t00.toFixed(0)}%`];
+                    if (t0 > 0) parts.push(`0: ${t0.toFixed(1)}%`);
+                    if (t1 > 0) parts.push(`1: ${t1.toFixed(1)}%`);
+                    blendSubEl.textContent = `Ø ${parts.join(' · ')}`;
+                } else {
+                    blendSubEl.textContent = 'Ø Tipo 00: 100%';
+                }
+            }
+
+            const timingEl = document.getElementById('stat-avg-timing');
+            if (timingEl) timingEl.textContent = timing;
+
+            const liveCountEl = document.getElementById('kpi-live-count');
+            if (liveCountEl) liveCountEl.textContent = `${bakes} Bakes`;
+
+            renderHeat();
+
+            // Date formatting
+            if (statsData.updated_at) {
+                try {
+                    const date = new Date(statsData.updated_at);
+                    const formatted = date.toLocaleDateString('bg' === 'de' ? 'de-DE' : 'en-US', {
+                        day: '2-digit',
+                        month: 'short',
+                        year: 'numeric'
+                    });
+                    const dateEl = document.getElementById('hero-updated-at');
+                    if (dateEl) dateEl.textContent = formatted;
+                } catch (_) {}
+            }
+        }
+
+        async function fetchLiveStats() {
+            // 1. Primär: Direkte Firestore REST-API für sofortige Live-Zahlen (DSGVO-konform, öffentlich lesbar)
+            try {
+                const firestoreUrl = 'https://firestore.googleapis.com/v1/projects/pizzatastico-40234/databases/(default)/documents/public_stats/dough_index';
+                const fsRes = await fetch(firestoreUrl);
+                if (fsRes.ok) {
+                    const doc = await fsRes.json();
+                    const f = doc.fields;
+                    if (f && f.avg_hydration) {
+                        const baseProt = f.avg_flour_protein?.doubleValue ?? Number(f.avg_flour_protein?.integerValue ?? 13.0);
+                        statsData = {
+                            avg_hydration: f.avg_hydration?.doubleValue ?? Number(f.avg_hydration?.integerValue ?? 65.9),
+                            avg_flour_protein: baseProt,
+                            avg_effective_flour_protein: f.avg_effective_flour_protein?.doubleValue ?? Number(f.avg_effective_flour_protein?.integerValue ?? baseProt),
+                            flour_blend_rate_pct: f.flour_blend_rate_pct?.doubleValue ?? Number(f.flour_blend_rate_pct?.integerValue ?? 0.0),
+                            avg_tipo_00_pct: f.avg_tipo_00_pct?.doubleValue ?? Number(f.avg_tipo_00_pct?.integerValue ?? 100.0),
+                            avg_tipo_0_pct: f.avg_tipo_0_pct?.doubleValue ?? Number(f.avg_tipo_0_pct?.integerValue ?? 0.0),
+                            avg_tipo_1_pct: f.avg_tipo_1_pct?.doubleValue ?? Number(f.avg_tipo_1_pct?.integerValue ?? 0.0),
+                            avg_bake_heat: Number(f.avg_bake_heat?.integerValue ?? f.avg_bake_heat?.doubleValue ?? 409),
+                            avg_timing_score: Number(f.avg_timing_score?.integerValue ?? 92),
+                            total_bakes_count: Number(f.total_bakes_count?.integerValue ?? 158),
+                            updated_at: f.updated_at?.timestampValue || new Date().toISOString()
+                        };
+                        renderStats();
+                        return;
+                    }
+                }
+            } catch (e) {
+                // Bei Netzwerk-Blocker oder Offline-Modus greift der statische Fallback
+            }
+
+            // 2. Sekundär: Statisches JSON als Fallback
+            const endpoints = ['/stats.json', '/stats/index.json'];
+            for (const url of endpoints) {
+                try {
+                    const res = await fetch(url);
+                    if (res.ok) {
+                        const json = await res.json();
+                        if (json && json.avg_hydration) {
+                            statsData = Object.assign(statsData, json);
+                            renderStats();
+                            return;
+                        }
+                    }
+                } catch (e) {
+                    // ignore network errors and keep default benchmark
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTemp = localStorage.getItem('pizzatastico_stats_temp_unit');
+            if (savedTemp) {
+                setTempUnit(savedTemp);
+            } else {
+                setTempUnit('C');
+            }
+
+            renderStats();
+            fetchLiveStats();
+        });
+    </script>
+</body>
+</html>
