@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzatastico – Private Web Analytics Cockpit</title>
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased font-sans min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico" class="w-8 h-8 object-contain bg-white rounded-full p-0.5">
+                <div>
+                    <div class="font-display font-bold text-sm sm:text-base tracking-wide text-white flex items-center gap-2">
+                        <span>PIZZATASTICO</span>
+                        <span class="text-[10px] font-mono uppercase px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-300 border border-orange-500/30">Owner Analytics</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400 hidden sm:block">Hybrid First-Party Cookieless Telemetry + GA4 Opt-In Monitor</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+                <a href="https://console.firebase.google.com/project/pizzatastico-40234/analytics" target="_blank" rel="noopener noreferrer"
+                   class="hidden md:inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-200 transition">
+                    <span>GA4 / Firebase Konsole</span>
+                    <span>↗</span>
+                </a>
+                <span id="admin-user-pill" class="hidden text-xs font-mono text-emerald-300 bg-emerald-950/60 border border-emerald-800/60 px-2.5 py-1 rounded-lg"></span>
+                <button id="btn-logout" type="button" class="hidden text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 bg-slate-800 hover:bg-rose-950 hover:border-rose-700 text-slate-200 transition cursor-pointer">
+                    Abmelden
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Auth Gate -->
+    <section id="auth-gate" class="flex-grow flex items-center justify-center px-4 py-16">
+        <div class="max-w-md w-full bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl text-center">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-orange-500/15 border border-orange-500/30 flex items-center justify-center text-2xl">
+                🔒
+            </div>
+            <h1 class="font-display font-bold text-xl text-white mb-2">Privates Web-Analytics Cockpit</h1>
+            <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                Zugriff serverseitig über Firestore Security Rules ausschließlich für verifizierte Inhaber-Konten freigeschaltet.
+            </p>
+            <button id="btn-google-login" type="button"
+                    class="w-full py-3 px-4 rounded-xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm shadow-lg transition cursor-pointer flex items-center justify-center gap-2">
+                <span>Mit Inhaber-Google-Konto anmelden</span>
+            </button>
+            <p id="auth-error" class="hidden mt-4 text-xs text-rose-400 bg-rose-950/50 border border-rose-800/60 rounded-xl p-3 text-left"></p>
+        </div>
+    </section>
+
+    <!-- Dashboard Content -->
+    <main id="dashboard-main" class="hidden flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-8 space-y-6">
+
+        <!-- Controls Row -->
+        <div class="flex flex-wrap items-center justify-between gap-3 bg-slate-900 border border-slate-800 rounded-2xl p-4">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 mr-1">Zeitraum:</span>
+                <button data-days="1" class="range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer">Heute</button>
+                <button data-days="7" class="range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer">7 Tage</button>
+                <button data-days="30" class="range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-orange-500 bg-orange-600 text-white cursor-pointer">30 Tage</button>
+                <button data-days="90" class="range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer">90 Tage</button>
+                <button data-days="365" class="range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer">365 Tage</button>
+            </div>
+            <div class="flex items-center gap-2">
+                <span id="status-indicator" class="text-xs font-mono text-slate-400">Lade Daten...</span>
+                <button id="btn-refresh" type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 hover:bg-slate-700 text-white cursor-pointer">
+                    ↻ Aktualisieren
+                </button>
+                <button id="btn-export-csv" type="button" class="px-3 py-1.5 rounded-lg text-xs font-semibold border border-emerald-700/70 bg-emerald-950/60 hover:bg-emerald-900/70 text-emerald-200 cursor-pointer">
+                    ⬇ CSV Export
+                </button>
+            </div>
+        </div>
+
+        <!-- KPI Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Pageviews (100%)</div>
+                <div id="kpi-pageviews" class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">0</div>
+                <div class="text-[11px] text-slate-500 mt-1">Cookieless Gesamt</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-orange-400">Store-Klicks Gesamt</div>
+                <div id="kpi-store-total" class="text-2xl sm:text-3xl font-display font-extrabold text-orange-400 mt-1">0</div>
+                <div id="kpi-store-ctr" class="text-[11px] text-slate-400 mt-1">0.0% Klickrate</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-sky-400">App Store (iOS)</div>
+                <div id="kpi-appstore" class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">0</div>
+                <div class="text-[11px] text-slate-500 mt-1">Outbound Klicks</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-emerald-400">Google Play</div>
+                <div id="kpi-playstore" class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">0</div>
+                <div class="text-[11px] text-slate-500 mt-1">Outbound Klicks</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-purple-400">Deep Reads (75%+)</div>
+                <div id="kpi-scroll75" class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">0</div>
+                <div id="kpi-doi-clicks" class="text-[11px] text-slate-400 mt-1">0 DOI-Zitat-Klicks</div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4">
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-amber-300">GA4 Opt-In Quote</div>
+                <div id="kpi-optin-rate" class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">–</div>
+                <div id="kpi-optin-detail" class="text-[11px] text-slate-400 mt-1">0 Ja / 0 Nein</div>
+            </div>
+        </div>
+
+        <!-- Daily Trend Chart -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="font-display font-bold text-sm sm:text-base text-white">Tagesverlauf (Seitenaufrufe & Store-Conversions)</h2>
+                <div class="flex items-center gap-4 text-xs">
+                    <span class="inline-flex items-center gap-1.5 text-slate-300"><span class="w-2.5 h-2.5 rounded-sm bg-sky-500 inline-block"></span> Pageviews</span>
+                    <span class="inline-flex items-center gap-1.5 text-orange-300"><span class="w-2.5 h-2.5 rounded-sm bg-orange-500 inline-block"></span> Store-Klicks</span>
+                </div>
+            </div>
+            <div id="daily-chart" class="h-44 flex items-end gap-1.5 pt-4 overflow-x-auto border-b border-slate-800 pb-2"></div>
+        </div>
+
+        <!-- Breakdown Grid 1: Channels/AI & Pages -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+                <h2 class="font-display font-bold text-sm sm:text-base text-white mb-1">Traffic-Quellen & KI-Suchmaschinen</h2>
+                <p class="text-xs text-slate-400 mb-4">Google, ChatGPT, Perplexity, Gemini, Claude, Social & Direktzugriffe</p>
+                <div id="table-channels" class="space-y-2.5 text-xs"></div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+                <h2 class="font-display font-bold text-sm sm:text-base text-white mb-1">Seiten-Performance & Store-Klicks pro Seite</h2>
+                <p class="text-xs text-slate-400 mb-4">Welche Unterseite konvertiert Besucher in App-Downloads?</p>
+                <div id="table-pages" class="space-y-2.5 text-xs"></div>
+            </div>
+        </div>
+
+        <!-- Breakdown Grid 2: Languages, Devices & Referrers/UTM -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+                <h2 class="font-display font-bold text-sm sm:text-base text-white mb-3">Sprachen (25 Locales)</h2>
+                <div id="table-langs" class="space-y-2 text-xs max-h-72 overflow-y-auto pr-1"></div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-5">
+                <div>
+                    <h2 class="font-display font-bold text-sm sm:text-base text-white mb-3">Endgeräte</h2>
+                    <div id="table-devices" class="space-y-2 text-xs"></div>
+                </div>
+                <div class="pt-3 border-t border-slate-800">
+                    <h2 class="font-display font-bold text-sm sm:text-base text-white mb-3">Top Zeitzonen-Regionen</h2>
+                    <div id="table-regions" class="space-y-2 text-xs max-h-40 overflow-y-auto pr-1"></div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 space-y-5">
+                <div>
+                    <h2 class="font-display font-bold text-sm sm:text-base text-white mb-3">Externe Referrer-Domains</h2>
+                    <div id="table-refhosts" class="space-y-2 text-xs max-h-36 overflow-y-auto pr-1"></div>
+                </div>
+                <div class="pt-3 border-t border-slate-800">
+                    <h2 class="font-display font-bold text-sm sm:text-base text-white mb-3">UTM-Kampagnen & DOI-Klicks</h2>
+                    <div id="table-utms" class="space-y-2 text-xs max-h-36 overflow-y-auto pr-1"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+        import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
+        import { getFirestore, collection, query, where, limit, getDocs } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCQH5_7MfaqsEtbaeS6DSnvJMZ2aIrGryU",
+            authDomain: "pizzatastico-40234.firebaseapp.com",
+            projectId: "pizzatastico-40234",
+            storageBucket: "pizzatastico-40234.firebasestorage.app",
+            messagingSenderId: "157290366261",
+            appId: "1:157290366261:web:cb20f126174122ccf6f87c"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let selectedDays = 30;
+        let cachedEvents = [];
+
+        const CHANNEL_LABELS = {
+            search_google: '🔍 Google Suche',
+            ai_chatgpt: '🤖 ChatGPT / OpenAI',
+            ai_perplexity: '🧠 Perplexity AI',
+            ai_gemini: '✨ Google Gemini',
+            ai_claude: '🟣 Anthropic Claude',
+            ai_copilot: '🟦 Microsoft Copilot',
+            search_other: '🔎 Bing / DuckDuckGo / Andere Suche',
+            social_youtube: '▶️ YouTube',
+            social_tiktok: '🎵 TikTok',
+            social_instagram: '📸 Instagram',
+            social_reddit: '👽 Reddit',
+            social_other: '💬 Social Media (X/FB/Threads)',
+            referral: '🌐 Externe Webseite (Referral)',
+            direct: '⚡ Direktaufruf / Bookmark',
+            internal: '↩️ Interner Seitenwechsel'
+        };
+
+        const PAGE_LABELS = {
+            home: 'Startseite (/)',
+            formula: 'Teigformel-Guide (/formula.html)',
+            pde: 'PDE 5.3.0 Science Paper (/pde.html)',
+            guide: 'Pizza-Guide (/guide.html)',
+            stats: 'Community Pizza-Index (/stats.html)',
+            privacy: 'Datenschutz (/privacy.html)',
+            imprint: 'Impressum (/imprint.html)'
+        };
+
+        const authGate = document.getElementById('auth-gate');
+        const dashMain = document.getElementById('dashboard-main');
+        const authError = document.getElementById('auth-error');
+        const userPill = document.getElementById('admin-user-pill');
+        const btnLogout = document.getElementById('btn-logout');
+        const statusInd = document.getElementById('status-indicator');
+
+        document.getElementById('btn-google-login').addEventListener('click', async () => {
+            authError.classList.add('hidden');
+            try {
+                const provider = new GoogleAuthProvider();
+                provider.setCustomParameters({ prompt: 'select_account' });
+                await signInWithPopup(auth, provider);
+            } catch (err) {
+                const code = (err && err.code) ? String(err.code) : '';
+                if (code === 'auth/popup-blocked' || code === 'auth/operation-not-supported-in-this-environment') {
+                    authError.textContent = 'Popup wurde vom mobilen In-App-Browser blockiert. Bitte öffne https://pizzatastico.com/analytics direkt in Safari oder Chrome (oben rechts: „Im Browser öffnen“).';
+                } else {
+                    authError.textContent = 'Anmeldung fehlgeschlagen (' + (code || 'Fehler') + '): ' + (err.message || err);
+                }
+                authError.classList.remove('hidden');
+            }
+        });
+
+        btnLogout.addEventListener('click', () => signOut(auth));
+
+        onAuthStateChanged(auth, async (user) => {
+            if (!user) {
+                authGate.classList.remove('hidden');
+                dashMain.classList.add('hidden');
+                userPill.classList.add('hidden');
+                btnLogout.classList.add('hidden');
+                return;
+            }
+            userPill.textContent = user.email || user.uid;
+            userPill.classList.remove('hidden');
+            btnLogout.classList.remove('hidden');
+            await loadTelemetry();
+        });
+
+        function isoDayOffset(daysBack) {
+            const d = new Date();
+            d.setUTCDate(d.getUTCDate() - (daysBack - 1));
+            return d.toISOString().slice(0, 10);
+        }
+
+        async function loadTelemetry() {
+            statusInd.textContent = 'Lade Firestore-Events...';
+            try {
+                const startDay = isoDayOffset(selectedDays);
+                const q = query(collection(db, 'web_telemetry_events'), where('day', '>=', startDay), limit(5000));
+                const snap = await getDocs(q);
+                cachedEvents = [];
+                snap.forEach((docSnap) => {
+                    cachedEvents.push(docSnap.data());
+                });
+                authGate.classList.add('hidden');
+                dashMain.classList.remove('hidden');
+                statusInd.textContent = `${cachedEvents.length} Events ab ${startDay}`;
+                renderDashboard();
+            } catch (err) {
+                authGate.classList.remove('hidden');
+                dashMain.classList.add('hidden');
+                authError.textContent = 'Zugriff verweigert (Nur verifizierte Inhaber-E-Mail erlaubt): ' + (err.message || err);
+                authError.classList.remove('hidden');
+            }
+        }
+
+        function renderBarRows(containerId, entries, totalDenom, barColorClass) {
+            const el = document.getElementById(containerId);
+            el.innerHTML = '';
+            if (!entries.length) {
+                el.innerHTML = '<div class="text-slate-500 italic">Noch keine Daten im gewählten Zeitraum.</div>';
+                return;
+            }
+            const denom = Math.max(1, totalDenom);
+            for (const [label, count, badgeText] of entries) {
+                const pct = Math.min(100, (count / denom) * 100);
+                const row = document.createElement('div');
+                row.className = 'space-y-1';
+                const top = document.createElement('div');
+                top.className = 'flex items-center justify-between gap-2';
+                const left = document.createElement('span');
+                left.className = 'text-slate-200 font-medium truncate';
+                left.textContent = label;
+                const right = document.createElement('span');
+                right.className = 'font-mono text-slate-300 shrink-0';
+                right.textContent = badgeText ? `${count} (${badgeText})` : `${count} (${pct.toFixed(1)}%)`;
+                top.appendChild(left);
+                top.appendChild(right);
+
+                const track = document.createElement('div');
+                track.className = 'w-full h-1.5 bg-slate-800 rounded-full overflow-hidden';
+                const fill = document.createElement('div');
+                fill.className = `h-full rounded-full ${barColorClass}`;
+                fill.style.width = `${Math.max(2, pct)}%`;
+                track.appendChild(fill);
+
+                row.appendChild(top);
+                row.appendChild(track);
+                el.appendChild(row);
+            }
+        }
+
+        function renderDashboard() {
+            let pageviews = 0;
+            let appStore = 0;
+            let playStore = 0;
+            let scroll75 = 0;
+            let doiClicks = 0;
+            let consentYes = 0;
+            let consentNo = 0;
+
+            const byDay = {};
+            const byChannel = {};
+            const byPage = {};
+            const storeByPage = {};
+            const byLang = {};
+            const byDevice = {};
+            const byRegion = {};
+            const byRefHost = {};
+            const byUtmOrDoi = {};
+
+            for (let i = selectedDays - 1; i >= 0; i--) {
+                const d = isoDayOffset(i + 1);
+                byDay[d] = { views: 0, stores: 0 };
+            }
+
+            for (const ev of cachedEvents) {
+                const t = ev.type || '';
+                const d = ev.day || '';
+                if (!byDay[d]) byDay[d] = { views: 0, stores: 0 };
+
+                if (t === 'pageview') {
+                    pageviews++;
+                    byDay[d].views++;
+                    const ch = ev.ref_cat || 'direct';
+                    byChannel[ch] = (byChannel[ch] || 0) + 1;
+                    const pg = ev.page || 'home';
+                    byPage[pg] = (byPage[pg] || 0) + 1;
+                    const lg = (ev.lang || 'en').toUpperCase();
+                    byLang[lg] = (byLang[lg] || 0) + 1;
+                    const dv = ev.device || 'desktop';
+                    byDevice[dv] = (byDevice[dv] || 0) + 1;
+                    if (ev.tz_region) {
+                        byRegion[ev.tz_region] = (byRegion[ev.tz_region] || 0) + 1;
+                    }
+                    if (ev.ref_host) {
+                        byRefHost[ev.ref_host] = (byRefHost[ev.ref_host] || 0) + 1;
+                    }
+                    if (ev.utm_src || ev.utm_cmp) {
+                        const key = `UTM: ${ev.utm_src || '-'} / ${ev.utm_cmp || '-'}`;
+                        byUtmOrDoi[key] = (byUtmOrDoi[key] || 0) + 1;
+                    }
+                } else if (t === 'click_appstore') {
+                    appStore++;
+                    byDay[d].stores++;
+                    const pg = ev.page || 'home';
+                    storeByPage[pg] = (storeByPage[pg] || 0) + 1;
+                } else if (t === 'click_playstore') {
+                    playStore++;
+                    byDay[d].stores++;
+                    const pg = ev.page || 'home';
+                    storeByPage[pg] = (storeByPage[pg] || 0) + 1;
+                } else if (t === 'scroll_75') {
+                    scroll75++;
+                } else if (t === 'click_doi') {
+                    doiClicks++;
+                    if (ev.target) {
+                        const key = `DOI: ${ev.target}`;
+                        byUtmOrDoi[key] = (byUtmOrDoi[key] || 0) + 1;
+                    }
+                } else if (t === 'consent_accept') {
+                    consentYes++;
+                } else if (t === 'consent_reject') {
+                    consentNo++;
+                }
+            }
+
+            const totalStores = appStore + playStore;
+            const ctr = pageviews > 0 ? ((totalStores / pageviews) * 100).toFixed(1) : '0.0';
+            const consentTotal = consentYes + consentNo;
+            const optInPct = consentTotal > 0 ? ((consentYes / consentTotal) * 100).toFixed(1) + '%' : '–';
+
+            document.getElementById('kpi-pageviews').textContent = pageviews.toLocaleString('de-DE');
+            document.getElementById('kpi-store-total').textContent = totalStores.toLocaleString('de-DE');
+            document.getElementById('kpi-store-ctr').textContent = `${ctr}% Klickrate`;
+            document.getElementById('kpi-appstore').textContent = appStore.toLocaleString('de-DE');
+            document.getElementById('kpi-playstore').textContent = playStore.toLocaleString('de-DE');
+            document.getElementById('kpi-scroll75').textContent = scroll75.toLocaleString('de-DE');
+            document.getElementById('kpi-doi-clicks').textContent = `${doiClicks} DOI-Zitat-Klicks`;
+            document.getElementById('kpi-optin-rate').textContent = optInPct;
+            document.getElementById('kpi-optin-detail').textContent = `${consentYes} Ja / ${consentNo} Nein`;
+
+            // Daily Chart
+            const chartEl = document.getElementById('daily-chart');
+            chartEl.innerHTML = '';
+            const dayKeys = Object.keys(byDay).sort();
+            let maxDayVal = 1;
+            for (const k of dayKeys) {
+                if (byDay[k].views > maxDayVal) maxDayVal = byDay[k].views;
+            }
+            for (const k of dayKeys) {
+                const { views, stores } = byDay[k];
+                const hViews = Math.round((views / maxDayVal) * 120);
+                const hStores = Math.round((stores / maxDayVal) * 120);
+                const col = document.createElement('div');
+                col.className = 'flex-1 min-w-[18px] flex flex-col items-center justify-end gap-1 group relative';
+                col.title = `${k}: ${views} Aufrufe, ${stores} Store-Klicks`;
+
+                const bars = document.createElement('div');
+                bars.className = 'w-full flex items-end justify-center gap-0.5 h-32';
+
+                const b1 = document.createElement('div');
+                b1.className = 'w-2 sm:w-2.5 bg-sky-500/90 hover:bg-sky-400 rounded-t transition-all';
+                b1.style.height = `${views > 0 ? Math.max(4, hViews) : 1}px`;
+
+                const b2 = document.createElement('div');
+                b2.className = 'w-2 sm:w-2.5 bg-orange-500 hover:bg-orange-400 rounded-t transition-all';
+                b2.style.height = `${stores > 0 ? Math.max(4, hStores) : 0}px`;
+
+                bars.appendChild(b1);
+                if (stores > 0) bars.appendChild(b2);
+
+                const lbl = document.createElement('span');
+                lbl.className = 'text-[9px] font-mono text-slate-500';
+                lbl.textContent = k.slice(5);
+
+                col.appendChild(bars);
+                col.appendChild(lbl);
+                chartEl.appendChild(col);
+            }
+
+            // Tables
+            const chEntries = Object.entries(byChannel)
+                .sort((a, b) => b[1] - a[1])
+                .map(([k, v]) => [CHANNEL_LABELS[k] || k, v, null]);
+            renderBarRows('table-channels', chEntries, pageviews, 'bg-sky-500');
+
+            const pgEntries = Object.entries(byPage)
+                .sort((a, b) => b[1] - a[1])
+                .map(([k, v]) => {
+                    const st = storeByPage[k] || 0;
+                    return [PAGE_LABELS[k] || k, v, `${st} Store-Klicks`];
+                });
+            renderBarRows('table-pages', pgEntries, pageviews, 'bg-orange-500');
+
+            const lgEntries = Object.entries(byLang).sort((a, b) => b[1] - a[1]).map(([k, v]) => [k, v, null]);
+            renderBarRows('table-langs', lgEntries, pageviews, 'bg-emerald-500');
+
+            const dvEntries = Object.entries(byDevice).sort((a, b) => b[1] - a[1]).map(([k, v]) => [k.toUpperCase(), v, null]);
+            renderBarRows('table-devices', dvEntries, pageviews, 'bg-indigo-500');
+
+            const rgEntries = Object.entries(byRegion).sort((a, b) => b[1] - a[1]).slice(0, 12).map(([k, v]) => [k, v, null]);
+            renderBarRows('table-regions', rgEntries, pageviews, 'bg-teal-500');
+
+            const rhEntries = Object.entries(byRefHost).sort((a, b) => b[1] - a[1]).slice(0, 12).map(([k, v]) => [k, v, null]);
+            renderBarRows('table-refhosts', rhEntries, Math.max(1, rhEntries.reduce((s, x) => s + x[1], 0)), 'bg-amber-500');
+
+            const utmEntries = Object.entries(byUtmOrDoi).sort((a, b) => b[1] - a[1]).slice(0, 12).map(([k, v]) => [k, v, `${v}x`]);
+            renderBarRows('table-utms', utmEntries, Math.max(1, utmEntries.reduce((s, x) => s + x[1], 0)), 'bg-purple-500');
+        }
+
+        document.querySelectorAll('.range-btn').forEach((btn) => {
+            btn.addEventListener('click', () => {
+                selectedDays = Number(btn.dataset.days || 30);
+                document.querySelectorAll('.range-btn').forEach((b) => {
+                    b.className = 'range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-slate-700 bg-slate-800 text-slate-200 cursor-pointer';
+                });
+                btn.className = 'range-btn px-3 py-1.5 rounded-lg text-xs font-semibold border border-orange-500 bg-orange-600 text-white cursor-pointer';
+                loadTelemetry();
+            });
+        });
+
+        document.getElementById('btn-refresh').addEventListener('click', loadTelemetry);
+
+        document.getElementById('btn-export-csv').addEventListener('click', () => {
+            const cols = ['day', 'ts', 'type', 'page', 'lang', 'ref_cat', 'ref_host', 'utm_src', 'utm_cmp', 'device', 'tz_region', 'target'];
+            const lines = [cols.join(',')];
+            for (const ev of cachedEvents) {
+                const row = cols.map((c) => {
+                    let v = ev[c] ?? '';
+                    if (c === 'ts' && v && typeof v.toDate === 'function') v = v.toDate().toISOString();
+                    return `"${String(v).replace(/"/g, '""')}"`;
+                });
+                lines.push(row.join(','));
+            }
+            const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `pizzatastico-web-analytics-${new Date().toISOString().slice(0, 10)}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
+</body>
+</html>

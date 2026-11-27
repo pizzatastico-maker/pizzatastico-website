@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피자 반죽 공식 & 이스트 계산 (베이커스%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico</title>
+    <meta name="description" content="피자 반죽 공식 완벽 정리: 베이커스 퍼센트 예제, 이스트 환산 (CY/IDY/ADY), 조견표 및 고정 0D Q10 곡선의 냉장 한계, PDE 5.3.0의 0.01 g 계산.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/ko/formula.html">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/formula.html">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/formula.html">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/formula.html">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/formula.html">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/formula.html">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/formula.html">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/formula.html">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/formula.html">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/formula.html">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/formula.html">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/formula.html">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/formula.html">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/formula.html">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/formula.html">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/formula.html">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/formula.html">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/formula.html">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/formula.html">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/formula.html">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/formula.html">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/formula.html">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/formula.html">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/formula.html">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/formula.html">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/formula.html">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/formula.html">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="피자 반죽 공식 & 이스트 계산 (베이커스%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta property="og:description" content="피자 반죽 공식 완벽 정리: 베이커스 퍼센트 예제, 이스트 환산 (CY/IDY/ADY), 조견표 및 고정 0D Q10 곡선의 냉장 한계, PDE 5.3.0의 0.01 g 계산.">
+    <meta property="og:url" content="https://pizzatastico.com/ko/formula.html">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="피자 반죽 공식 & 이스트 계산 (베이커스%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta name="twitter:description" content="피자 반죽 공식 완벽 정리: 베이커스 퍼센트 예제, 이스트 환산 (CY/IDY/ADY), 조견표 및 고정 0D Q10 곡선의 냉장 한계, PDE 5.3.0의 0.01 g 계산.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Structured Data (Article + FAQPage) for Search Engines & AI Answer Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://pizzatastico.com/ko/formula.html#article",
+          "headline": "피자 반죽 공식 & 이스트 계산 (베이커스%, 0D Q10 vs. PDE 5.3.0)",
+          "description": "피자 반죽 공식 완벽 정리: 베이커스 퍼센트 예제, 이스트 환산 (CY/IDY/ADY), 조견표 및 고정 0D Q10 곡선의 냉장 한계, PDE 5.3.0의 0.01 g 계산.",
+          "inLanguage": "ko",
+          "datePublished": "2026-11-24",
+          "dateModified": "2026-11-26",
+          "author": {
+            "@type": "Person",
+            "name": "Paul Kern"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pizzatastico",
+            "url": "https://pizzatastico.com/",
+            "sameAs": [
+              "https://apps.apple.com/app/id6811171643",
+              "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+              "https://www.youtube.com/@Pizzatastico",
+              "https://www.instagram.com/pizzatastico.app/"
+            ],
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png"
+            }
+          },
+          "mainEntityOfPage": "https://pizzatastico.com/ko/formula.html",
+          "about": [
+            "Baker's percentages pizza dough formula (flour, hydration, salt, oil, yeast)",
+            "Continuous yeast fermentation math building on classic room-temperature models toward spatially resolved 1D-radial continuum physics",
+            "Cold fridge thermal inertia across dough ball vs. bulk dough block mass",
+            "Direct Dough, Poolish, Biga, and Type-I Sourdough (Licoli & Lievito Madre)",
+            "Pizzatastico Dough Engine (PDE 5.3.0): spatially resolved 1D-radial 5-shell continuum PDE running 100% offline in native C++20"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pizzatastico.com/ko/formula.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "표 대신 공식으로 모든 것을 계산하는 피자 반죽 앱은 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico는 조견표 없이 100% 수학적으로 계산합니다. iOS, Android, Apple Watch, Wear OS에서 C++20으로 5겹 PDE (PDE 5.3.0)를 오프라인으로 풀어 0.01 g까지 계산합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pizzatastico (PDE 5.3.0)는 TxCraig나 Hamelman 같은 선구적 모델을 어떻게 발전시켰나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "TxCraig나 Hamelman 스케일링 같은 선구적 커뮤니티 모델은 정적 표를 부드러운 실온 발효 곡선으로 대체해 토대를 놓았으며, 따뜻한 스트레이트 반죽에서는 여전히 훌륭한 기준입니다. Pizzatastico (PDE 5.3.0)는 그 유산 위에 연속 수학을 5겹 동심 열전도(냉장 심부 냉각 지연), 9 °C 이하 저온 동역학, 2단계 폴리쉬·비가·사워도우 캐스케이드로 확장했습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pizzatastico는 폴리쉬, 비가, 사워도우도 공식으로 지원하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네. 스트레이트, 폴리쉬, 비가, 리콜리, 리에비토 마드레를 연속 2단계 PDE 캐스케이드로 계산합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "오프라인에서 작동하고 저녁 시간부터 역산하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "네. 전체 C++20 PDE 5.3.0 엔진이 100% 오프라인으로 작동하며 수면 보호, 알림, .ics 캘린더 내보내기 및 워치 앱을 지원합니다."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+        }
+        .formula-box {
+            background: #0f172a;
+            color: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.15rem 1.35rem;
+            border: 1px solid #1e293b;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+        .formula-table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            background: #ffffff;
+        }
+        .formula-table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.8125rem;
+            line-height: 1.55;
+        }
+        .formula-table thead th {
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #1e293b;
+            vertical-align: bottom;
+        }
+        .formula-table tbody td {
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+            color: #334155;
+        }
+        .formula-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .formula-table tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .formula-table th.formula-col-highlight {
+            background: #065f46;
+            color: #ecfdf5;
+        }
+        .formula-table td.formula-col-highlight {
+            background: rgba(236, 253, 245, 0.65);
+            color: #064e3b;
+            border-left: 2px solid rgba(5, 150, 105, 0.35);
+            font-weight: 600;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .faq-item[open] {
+            border-color: rgba(234, 88, 12, 0.45);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-chevron {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: #ea580c;
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
+
+    <!-- Header & Hero -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="/ko/" class="flex items-center space-x-3 transition hover:opacity-90 cursor-pointer group" title="Back to Home">
+                <div class="bg-white rounded-full p-1 shadow-sm transition group-hover:scale-105">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico 로고" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-extrabold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </a>
+
+            <div class="flex items-center space-x-3">
+                <a href="/ko/" class="hidden sm:inline-flex items-center space-x-1.5 text-white/95 hover:text-white font-semibold text-xs md:text-sm bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full transition shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Back to Home</span>
+                </a>
+
+                <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                    <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/formula.html" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/formula.html" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/formula.html" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/formula.html" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/formula.html" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/formula.html" class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/formula.html" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/formula.html" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/formula.html" selected class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/formula.html" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/formula.html" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/formula.html" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/formula.html" class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/formula.html" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/formula.html" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/formula.html" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/formula.html" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/formula.html" class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/formula.html" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/formula.html" class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/formula.html" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/formula.html" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/formula.html" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/formula.html" class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/formula.html" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 px-3 py-1 rounded-full text-orange-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+                    <span>반죽 수학 · 조견표 제로</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white leading-tight mb-4 drop-shadow-xs">
+                    피자 반죽 공식 & 이스트 계산 원리
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mb-7">
+                    베이커스 퍼센트와 기존 0D 발효 곡선에서 5겹 공간 연속 물리 모델 (PDE 5.3.0)까지.
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                        <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play 스토어">
+                        <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play 스토어" class="h-11">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none pointer-events-none">
+            <svg class="relative block w-full h-10 sm:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Section 1: Baker's Percentages & Worked Example -->
+        <section class="max-w-5xl mx-auto px-6 py-10">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md mb-3 inline-block">1. 기본 공식</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-3">베이커스 퍼센트 & 목표 중량 역산</h2>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl">모든 정밀 공식은 베이커스 퍼센트에서 출발합니다. 전체 밀가루 M을 100%로 두고 물(H), 소금(S), 오일(F), 이스트(Y)를 밀가루 대비 비율로 계산합니다.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                    <div class="space-y-3">
+                        <h3 class="text-sm font-display font-bold uppercase tracking-wider text-slate-700">닫힌 배합 방정식</h3>
+                        <div class="formula-box space-y-1.5">
+                            <div class="text-orange-300">T = N_도구볼 × m_볼 × (1 + 손실%)</div>
+                            <div class="text-emerald-300">M_밀가루 = T / (1 + H% + S% + F% + Y%)</div>
+                            <div class="text-sky-300">물 = M × H% · 소금 = M × S% · 오일 = M × F%</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
+                        <div>
+                            <h3 class="text-base font-display font-extrabold text-gray-900 mb-1.5">계산 예시 (4 × 250 g = 1,000 g 반죽, 수분율 65%, 소금 2.8%)</h3>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">미량 이스트 (< 0.5%) 제외 시: M_밀가루 = 1,000 g / (1 + 0.65 + 0.028) = 1,000 / 1.678 ≈ 596 g. 물 = 595.9 g × 0.65 ≈ 387 g. 소금 = 595.9 g × 0.028 ≈ 16.7 g. 이스트는 조건에 따라 ~0.15–3.50 g로 계산됩니다.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-200">
+                            <h4 class="text-sm font-display font-bold text-gray-900 mb-1">생이스트 (CY) vs. 드라이 (IDY / ADY) & 사워도우</h4>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">단순 공식은 생이스트 (CY = 100%)에 고정 비율 (IDY ≈ 0.33×, ADY ≈ 0.40–0.45×)을 곱합니다. PDE 5.3.0은 재수화·GSH 연화·리콜리·리에비토 마드레까지 0.01 g 단위로 계산합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Physical Limits of Lookup Tables & 0D Fixed-Q10 Approximations -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="mb-6">
+                <span class="text-xs font-bold font-mono uppercase tracking-widest text-slate-700 bg-slate-200/80 px-2.5 py-1 rounded-md mb-2 inline-block">2. 0D 곡선의 한계</span>
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">조견표와 단순 0D 고정 Q10 근사의 물리적 한계</h2>
+                <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">고정 Q10 = 2.0 기반 0D 점 모델은 따뜻한 스트레이트 반죽에서 훌륭한 기준을 제공합니다. 하지만 냉장고, 큰 반죽 덩어리, 복합 밀가루에서는 4가지 물리 효과가 단일 점 방정식을 넘어섭니다:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-sky-800 bg-sky-100/90 border border-sky-200 px-3 py-1 rounded-full inline-block">1 · 열 관성</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">냉장고 속 250 g 볼 vs. 2 kg 반죽 블록</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">0D 모델은 23 °C 반죽이 즉시 4–7 °C로 식는다고 가정합니다. 실제로는 CO2 기포가 단열해 1–2.5 kg 블록 내부가 수 시간 동안 따뜻하게 발효됩니다 (여름철 25–45% 과발효).</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-amber-800 bg-amber-100/90 border border-amber-200 px-3 py-1 rounded-full inline-block">2 · 저온 11.8× 오차</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">9 °C 이하 저온 동역학 (고정 Q10 = 2.0 오류)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">고정 Q10 = 2.0은 5 °C에서 30 °C 속도의 17.7%를 예측합니다. 실험 데이터는 세포막 경화로 ~1.5%에 불과해 11.8배 과대평가합니다.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3 py-1 rounded-full inline-block">3 · 삼투압 & 밀가루</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">소금, 설탕 삼투압 & 블렌드 (Tipo 00 / 0 / 1 / 통밀)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">소금 이온 차폐, 설탕 수분활성도 a_w(t) (> ~6% 억제), 회분 pH 완충, 아밀라아제가 팽창과 갈변을 좌우합니다.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-purple-800 bg-purple-100/90 border border-purple-200 px-3 py-1 rounded-full inline-block">4 · 2단계 캐스케이드</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">폴리쉬, 비가 & 타입-I 사워도우 (Licoli / Lievito Madre)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">일괄 차감은 유기산과 글루텐 분해, MapA 공생을 놓칩니다. PDE 5.3.0은 1단계를 풀고 26개 상태를 연속 전달합니다.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: 3-Generation Comparison Table -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-indigo-800 bg-indigo-100/90 border border-indigo-200 px-2.5 py-1 rounded-md mb-2 inline-block">3. 모델 비교</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">정적 조견표 vs. 0D 공식 vs. 5겹 공간 PDE</h2>
+                    <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">세 세대 피자 반죽 계산기의 계산 방식 비교:</p>
+                </div>
+
+                <div class="formula-table-wrap">
+                    <table class="formula-table">
+                        <thead>
+                            <tr>
+                                <th>기준</th>
+                                <th>1세대: 조견표 / 고정 레시피</th>
+                                <th>2세대: 0D 지수 모델 (고정 Q10)</th>
+                                <th class="formula-col-highlight">3세대: Pizzatastico PDE 5.3.0 (1D 5겹 PDE)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-slate-900">수학적 기반</td>
+                                <td>고정 표 또는 '이스트 1g' 규칙</td>
+                                <td>베이커스% + 0D 지수 피팅</td>
+                                <td class="formula-col-highlight">베이커스% + 5겹 방사형 TR-BDF2 PDE (135 상태)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">이스트 정밀도</td>
+                                <td>큰 단위 (0.5 g – 1 g)</td>
+                                <td>연속 ~0.05 g, 고정 CY/IDY/ADY 비율</td>
+                                <td class="formula-col-highlight">CY, IDY (GSH), ADY, Licoli & Lievito Madre 0.01 g</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">냉장고 & 질량</td>
+                                <td>무시</td>
+                                <td>0D 점 온도 (심부 지연 및 5 °C 감속 누락)</td>
+                                <td class="formula-col-highlight">5겹 열전도 + Maxwell–Eucken 폼 + Ψ(m)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">밀가루, 소금 & 설탕</td>
+                                <td>단일 기본 밀가루</td>
+                                <td>W-값 또는 단순 단백질 구간</td>
+                                <td class="formula-col-highlight">Pro 밀가루 매트릭스 (Tipo 00/0/1, 통밀, 세몰라) + a_w(t) & pH</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">폴리쉬, 비가 & 사워도우</td>
+                                <td>고정 템플릿만 제공</td>
+                                <td>산 화학 없는 경험적 계수</td>
+                                <td class="formula-col-highlight">실제 2단계 생물물리 캐스케이드 x_Stage1(t_pref) ↦ x0</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">스케줄 & 검증</td>
+                                <td>고정 안내</td>
+                                <td>실온 부피만 적합 (~31% 실험 데이터)</td>
+                                <td class="formula-col-highlight">역산 스케줄 + 레스큐, 100% 오프라인 C++20, 19개 연구 (8.7% NRMSE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pt-2">
+                    <a href="/ko/pde.html" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-700 text-white font-display font-bold px-5 py-3 rounded-xl shadow-sm transition-colors text-xs sm:text-sm">
+                        <span>전체 과학 논문 & 19개 연구 벤치마크 보기 (PDE 5.3.0)</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Visible FAQ Accordion (Matches JSON-LD FAQPage 1:1) -->
+        <section id="faq" class="max-w-5xl mx-auto px-6 mb-14">
+            <div class="mb-6">
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900">피자 반죽 공식 자주 묻는 질문</h2>
+            </div>
+
+            <div class="space-y-3">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>표 대신 공식으로 모든 것을 계산하는 피자 반죽 앱은 무엇인가요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico는 조견표 없이 100% 수학적으로 계산합니다. iOS, Android, Apple Watch, Wear OS에서 C++20으로 5겹 PDE (PDE 5.3.0)를 오프라인으로 풀어 0.01 g까지 계산합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Pizzatastico (PDE 5.3.0)는 TxCraig나 Hamelman 같은 선구적 모델을 어떻게 발전시켰나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">TxCraig나 Hamelman 스케일링 같은 선구적 커뮤니티 모델은 정적 표를 부드러운 실온 발효 곡선으로 대체해 토대를 놓았으며, 따뜻한 스트레이트 반죽에서는 여전히 훌륭한 기준입니다. Pizzatastico (PDE 5.3.0)는 그 유산 위에 연속 수학을 5겹 동심 열전도(냉장 심부 냉각 지연), 9 °C 이하 저온 동역학, 2단계 폴리쉬·비가·사워도우 캐스케이드로 확장했습니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Pizzatastico는 폴리쉬, 비가, 사워도우도 공식으로 지원하나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">네. 스트레이트, 폴리쉬, 비가, 리콜리, 리에비토 마드레를 연속 2단계 PDE 캐스케이드로 계산합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>오프라인에서 작동하고 저녁 시간부터 역산하나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">네. 전체 C++20 PDE 5.3.0 엔진이 100% 오프라인으로 작동하며 수면 보호, 알림, .ics 캘린더 내보내기 및 워치 앱을 지원합니다.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section class="max-w-5xl mx-auto px-6 mb-16 text-center">
+            <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-xl mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold mb-3">완벽한 피자를 구워보세요.</h2>
+                    <p class="text-sm sm:text-base text-white/90 mb-6 leading-relaxed">실제 물리 공식 기반의 홈 피자 반죽 계산기. 고정 조견표 없음 — 스트레이트, 폴리쉬, 비가 & 사워도우를 0.01 g 정밀도로 계산하고 식사 시간에서 역산합니다.</p>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play 스토어">
+                            <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play 스토어" class="h-11">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <a href="/ko/" class="hover:opacity-80 transition" title="Back to Home">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico 로고" class="w-8 h-8 object-contain grayscale opacity-60">
+                </a>
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v2.6.8</span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/ko/" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">&larr; Back to Home</a>
+                <a href="/ko/formula.html" class="hover:text-pizza-600 transition-colors text-pizza-600 font-bold">반죽 공식</a>
+                <a href="/ko/pde.html" class="hover:text-pizza-600 transition-colors">PDE 과학 모델</a>
+                <a href="/ko/stats.html" class="hover:text-pizza-600 transition-colors">Pizza Stats</a>
+                <a href="/ko/guide.html" class="hover:text-pizza-600 transition-colors">파올로의 팁</a>
+                <a href="/ko/privacy.html" class="hover:text-pizza-600 transition-colors">개인정보 처리방침</a>
+                <a href="/ko/imprint.html" class="hover:text-pizza-600 transition-colors">법적 고지</a>
+                <button type="button" onclick="window.pzOpenCookieSettings && window.pzOpenCookieSettings()" class="hover:text-pizza-600 transition-colors cursor-pointer bg-transparent border-none p-0">쿠키 설정</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.__PZ_PAGE__ = { page: 'formula', lang: 'ko' };
+        window.__PZ_I18N__ = {"consent_banner_text":"명시적 동의가 있는 경우에만 웹사이트 이용 분석을 위해 선택적 통계 쿠키(Google Analytics 4, Google Ireland / 미국)를 사용합니다. 하단 푸터에서 언제든 철회할 수 있습니다.","nav_privacy":"개인정보 처리방침","privacy_href":"/ko/privacy.html","nav_imprint":"법적 고지","imprint_href":"/ko/imprint.html","consent_accept":"통계 허용","consent_decline":"거부"};
+    </script>
+    <script src="/assets/js/pz-analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+# Pizzatastico — Extended Technical & Scientific Reference (`llms-full.txt`)
+
+> Canonical Domain: https://pizzatastico.com
+> Website Version: v2.6.8
+> Formula Guide: https://pizzatastico.com/formula.html
+> Scientific Whitepaper: https://pizzatastico.com/pde.html
+> Live Community Benchmark: https://pizzatastico.com/stats.html
+> Apple App Store: https://apps.apple.com/app/id6811171643
+> Google Play Store: https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter
+> YouTube: https://www.youtube.com/@Pizzatastico
+> Instagram: https://www.instagram.com/pizzatastico.app/
+
+## 1. Product Philosophy: Backwards Planning from Dinner Time
+
+Pizzatastico plans every pizza dough backwards from the exact target mealtime:
+1. **Spontaneous Dough Calculator:** Fast same-day doughs (e.g., 2–6 hours) with balanced yeast & warm-room schedules.
+2. **Simple Calculator (AVPN Guardrails):** Foolproof Neapolitan & home-oven doughs with safe hydration and fermentation guardrails.
+3. **Expert Calculator:** Full multi-stage temperature control (room temperature + cold fridge fermentation + warm ball proofing), Pro Flour Matrix & custom blending (`Tipo 00`, `Tipo 0`, `Tipo 1`, Whole Wheat, Semola, Manitoba), 2-stage preferments (`Poolish`, `Biga`), Type-I sourdough (`Licoli`, `Lievito Madre`), commercial yeast (`CY` fresh, `IDY` instant dry, `ADY` active dry) to `0.01 g`, and custom salt/oil/sugar ratios.
+4. **Live Step-by-Step Session & Rescue Planner:** Real-time phase notifications, Schedule Shift Advisor if ambient/fridge temperatures or dinner times shift, `.ics` calendar export, plus read-only smartwatch companions (Apple Watch & Wear OS) safe for floury hands.
+
+## 2. From Static Tables & 0D Point Models to Spatial Continuum Physics (PDE 5.3.0)
+
+Pizzatastico uses **zero static lookup tables**. It computes ingredient scaling via exact Baker's Percentages (`M = T / (1 + H% + S% + F% + Y%)`) coupled dynamically with `PDE 5.3.0`:
+- **Building on Pioneering Room-Temperature Math Beyond Generic `0D` Fixed-`Q₁₀` Models:** Pioneering continuous community models (`TxCraig`, `Hamelman`) replaced static lookup tables for warm direct dough and proved that mathematical fermentation curves work. Extending that foundation into cold refrigeration and multi-stage doughs exposes two physical limits of generic `0D` point approximations with fixed `Q₁₀ = 2.0`: in real `4–5 °C` refrigerators, fixed `Q₁₀ = 2.0` overestimates fermentation rate by **`11.8×`** (`17.7%` vs. real `1.5%` of the `30 °C` rate), while `0D` single-point cooling ignores thermal inertia in large dough blocks (`250 g` balls vs. `2.5 kg` bulk block → `25–45%` summer overproofing).
+- **Thermal Inertia in the Fridge:** Placing a dough block from `23 °C` into a `4–7 °C` refrigerator does *not* cool the core instantaneously. Exothermic fermentation enthalpy combined with self-insulating `CO2` micro-bubbles slows core cooling over several hours, creating a radial core-to-surface temperature gradient (`ΔT_core-surf`).
+- **Two-Pool Sugar Stoichiometry & Wheat Fructans:** Wheat dough contains initial free hexoses plus explicit wheat fructans (`S_fruc`) cleaved by yeast invertase alongside starch-derived maltose released from damaged starch by α-/β-amylases. *Saccharomyces cerevisiae* regulates maltose (`MapA`) transport after hexose depletion, producing diauxic gas-production kinetics that single-pool models miss.
+- **Proteolysis, Viscoelasticity & Bubble Rupture:** Immediately after kneading or balling (*staglio*), disulfide-coupled network recovery competes with pH- and temperature-dependent aspartic protease cleavage (`OPA0`), ionic `NaCl` Debye–Hückel shielding, and biaxial bubble coalescence stability.
+
+## 3. PDE 5.3.0 (Generation 2) Continuum Architecture & 2-Stage Preferment Cascade
+
+Engine Version `PDE 5.3.0` (100% offline native C++20 core) solves a **Spatially Resolved 1D-Radial Reaction-Phase-Rheology-Heat-Conduction PDE System**:
+
+- **2-Stage Preferment / Sourdough Cascade (`x_Stage1(t_pref) ↦ x₀`):** Optional Stage-1 fermenter (`Poolish · Biga · Licoli · Lievito Madre`) integrates Stage 1 forward and feeds its matured biophysical state vector mass- and hydration-continuously into the `N_r = 5 × ℝ²⁶` main-dough PDE core while the outer boundary-value controller regulates either `Y₀*` or Stage-1 maturity toward `e = V_target − V(t_bake) → 0`.
+- **Thermal Conduction & Geometry (`O(Δt²)` coupled TR-BDF2):** `N_r = 5` equal-volume concentric shells using L-stable 2nd-order `TR-BDF2` conduction (*Bank et al., 1985*; *Hosea & Shampine, 1996*), parabolic `r = 0` center reconstruction, Maxwell–Eucken gas-foam effective thermal conductivity `k_eff(ε_gas)`, exothermic fermentation enthalpy, and an oblate block shape factor `Ψ(m)` for dough blocks `> 250 g`.
+- **26 Coupled States per Shell (`135` Total States across 5 Shells):**
+  1. Smooth `C^∞` Rosso CTMI and Sharpe–Schoolfield temperature kinetics for yeast, lactic acid bacteria, and endogenous amylases/proteases, plus Baranyi lag readiness `q(t)` and anaerobic ergosterol dilution `q_s(t)`.
+  2. Dynamic Robinson–Stokes/Norrish water activity `a_w(t)` with Ross free-solvent ion normalization and hyperosmotic `GPD1` glycerol synthesis (*Aslankoohi et al., 2015*).
+  3. Atomic carbon- and hydrolytic-water-conserving (`< 10^-15`) two-pool sugar stoichiometry including explicit wheat fructans (`S_fruc`, *Struyf et al., 2016*, *Verspreet et al., 2015*) and dry-yeast rehydration / `GSH` kinetics (*Verheyen et al., 2015*), unified across commercial yeast and Type-I sourdough (*K. humilis* + *F. sanfranciscensis*, *Gänzle et al., 1998*).
+  4. Charge-balance electroneutrality Newton-Raphson `pH` solver accounting for flour ash/phytate buffering (*Jayaram et al., 2013*), dynamically coupled to temperature- and salinity-dependent Henry–Sechenov `CO2` aqueous–gas equilibrium (*Sander, 2015*; *Weisenberger & Schumpe, 1996*).
+  5. Two-Mode Maxwell–Giesekus viscoelasticity in SI Pascals, Weissenberg/Considère bubble stability, steric bran perforation (`WUAX`, *Courtin & Delcour, 2002*), and liquid `DGDG` lipid lamellae (*Sroan, Bean, & MacRitchie, 2009*).
+  6. Conservative volume-weighted shell homogenization upon *staglio* (dividing bulk dough into individual pizza balls).
+
+## 4. ASME V&V 20 Generation-2 Verification & Per-Discipline Accuracy (`PDE 5.3.0`)
+
+- **Stage A — Code & Solution Verification (`5/5 GREEN`):**
+  - Atomic carbon & hydrolysis-water stoichiometry relative error `≤ 9.28e-16` across enzymatic, yeast, and 26-state sourdough pathways.
+  - Closed adiabatic enthalpy conservation relative error `1.32e-10`; unified electroneutrality Newton-pH.
+  - Carslaw–Jaeger analytical sphere verification: `0.013 °C` max shell-mean error on the `N_r = 5` equal-volume grid (`0.844` spatial order on the 5-shell production grid vs. `1.930` on the uniform-radius 2nd-order reference FVM grid), `O(Δt²)` coupled temporal convergence order `2.05` (`V/V0`) and `2.09` (`T`).
+  - Automated 14-axis `C¹` continuity scan: `0` `C⁰` jumps, `0` `C¹` kinks, `0.0` UI-boolean discontinuity.
+  - IEEE-754 C++20/Dart parity `≤ 5.68e-14`; `62,000`-scenario + `500`-monotonicity-pair full-matrix validator across all 8 dough modes with `0` anomalies.
+- **Stage B (Way A) — Overall & Per-Discipline Literature Validation (`blindUnseenHoldout: false`):**
+  - `19` peer-reviewed studies across `13` disjoint international university groups (`62` lab series, `152` effective points / `166` points, `0` tolerance padding): **overall `8.7%` median NRMSE (~`91.3%` accuracy, median `χ²_red = 1.09`)** — split into `calibrationFit` (`11` studies, `30` series, `p_eff = 33`, `dof = 57`, **`6.3%` median NRMSE / `93.7%`**, median `χ²_red = 0.79`) and disjoint unrefitted `crossStudyBenchmark` (`8` studies, `32` series, `0` refitted parameters, `dof = 46`, **`13.5%` median NRMSE / `86.5%`**, median `χ²_red = 1.21`).
+  - **5 Physical Disciplines:**
+    1. **Dough pH & acidification (`12` series):** `3.7%` median NRMSE (`1.1–7.5%`) → **`96.3%` median (`92.5–98.9%`)** (Electroneutrality Newton-pH + ash/phytate buffering).
+    2. **Viscoelastic rheology (`Pa`, *Safari-Ardi & Phan-Thien 1998*, `2` series):** `4.1%` median NRMSE (`3.6–4.6%`) → **`95.4–96.5%`** (2-mode Maxwell gluten network + proteolysis/GSH).
+    3. **Cumulative CO₂ gas & osmosis (`13` series incl. 0–18% sucrose in *Timmermans 2022* `8.1%` & 8 unrefitted flours in *Toumi 2025* Ø `88.7%`):** `11.3%` median NRMSE (`2.6–20.5%`) → **`88.7%` median** (Closed C-stoichiometry + Norrish `a_w(t)` + Henry–Sechenov).
+    4. **Volume expansion 20–30 °C (`V/V₀`, `4` series incl. *Chiotellis 2003* `4.1%`, *Romano*, *Covino*):** `4.5%` median NRMSE (`4.1–9.1%`) → **`90.9–95.9%`** (5-shell foam mechanics + Considère bubble stability).
+    5. **Cold-proof volume 2–5 °C (`2` series: *Gugerli 2004* `15.4%`, *Falciano 2023* `24.0%`):** `19.7%` median NRMSE (`15.4–24.0%`) → **`76.0–84.6%`** (5-shell TR-BDF2 cooling lag + ergosterol membrane stiffening `< 9 °C`).
+- **4 Honest Biological Variance Boundaries (`13 / 62` series > 20% NRMSE intentionally not overfitted without lab flour/yeast certificates):**
+  1. **Strain-specific yeast minor byproducts (`< 3%` carbon):** Succinate/acetate traces vary `2–3×` between industrial strains (`< 1%` impact on gas volume).
+  2. **Axenic lab monocultures vs. Type-I sourdough:** Homofermentative specialty lab inocula (*Pediococcus* / *L. plantarum*) shift lactate/acetate `FQ` vs. *F. sanfranciscensis*, while overall dough pH still achieves `94–96%` accuracy.
+  3. **`14×` harvest variance in endogenous maltose & α-amylase:** Free/enzymatic maltose varies `14×` (`0.15 g` vs. `2.09 g / 100 g` flour) within the same wheat flour grade without a Hagberg Falling Number.
+  4. **Commercial dry-yeast (IDY/ADY) batch vitality:** Rehydration survival varies `±20–25%` across shelf age, vacuum loss, and water temperature.
+
+## 5. Brand-Neutral Comparison of Dough Calculation Model Classes
+
+1. **Class 1 (Static Baker's %):** Coarse yeast % only; blind to fridge cryokinetics (`4–5 °C`), dough mass (`250 g` vs. `2.5 kg`), sugar osmosis, substrate depletion, and sourdough/ash chemistry.
+2. **Class 2 (Empirical `0D-Q₁₀` Lookup Calculators):** Covers `~31%` of lab series (RT volume only); overestimates the `5 °C` rate by **`11.8×`** (`17.7%` vs. real `1.5%` of `30 °C` rate under fixed `Q₁₀ = 2.0`); 0D point model misses core cooling (`25–45%` summer overproofing); `88–100+%` error or blind on `0–18%` sugar osmosis; unbounded extrapolation at `48–72 h`.
+3. **Class 3 (Spatial 1D 5-Shell Continuum PDE `PDE 5.3.0`):** Covers **`100%` of all `62` series** across volume, CO₂, pH, 4 sugar pools, organic acids, and `Pa` rheology; resolves `< 9 °C` Sharpe–Schoolfield + ergosterol cryokinetics, 5 equal-volume `TR-BDF2` radial shells + oblate `Ψ(m)`, `8.1%` NRMSE across the full sugar-osmosis bell curve, 4-pool carbohydrate depletion + proteolytic softening window, and 2-stage preferment/sourdough mass continuity (`Poolish/Biga/Licoli/LM`) + Van Slyke ash buffering + `MapA` symbiosis.
+
+## 6. Selected Verified Primary Literature (DOIs)
+
+- Wieser, H. (2007). *Food Microbiol.*, 24(2), 115–119. https://doi.org/10.1016/j.fm.2006.07.014
+- Schoolfield, R. M., Sharpe, P. J., & Magnuson, C. E. (1981). *J. Theor. Biol.*, 88(4), 719–731. https://doi.org/10.1016/0022-5193(81)90246-0
+- Rosso, L., Lobry, J. R., Bajard, S., & Flandrois, J. P. (1995). *Appl. Environ. Microbiol.*, 61(2), 610–616. https://doi.org/10.1128/aem.61.2.610-616.1995
+- Bank, R. E., Coughran, W. M., Fichtner, W., Grosse, E. H., Rose, D. J., & Smith, R. K. (1985). *IEEE Trans. CAD*, 4(4), 436–451. https://doi.org/10.1109/tcad.1985.1270142
+- Hosea, M. E., & Shampine, L. F. (1996). *Appl. Numer. Math.*, 20(1–2), 21–37. https://doi.org/10.1016/0168-9274(95)00115-8
+- Bikard, J., Coupez, T., Della Valle, G., & Vergnes, B. (2008). *J. Food Eng.*, 85(2), 259–267. https://doi.org/10.1016/j.jfoodeng.2007.07.027
+- Chiotellis, E., & Campbell, G. M. (2003). *Food Bioprod. Process.*, 81(3), 194–216. https://doi.org/10.1205/096030803322437965
+- Covino, C., Sorrentino, A., Di Pierro, P., & Masi, P. (2023). *Foods*, 12(7), 1407. https://doi.org/10.3390/foods12071407
+- Struyf, N., Verspreet, J., Verstrepen, K. J., & Courtin, C. M. (2017). *J. Cereal Sci.*, 75, 35–44. https://doi.org/10.1016/j.jcs.2017.03.013
+- Verspreet, J. et al. (2015). *Trends Food Sci. Technol.*, 43(1), 32–42. https://doi.org/10.1016/j.tifs.2015.01.006
+- Jayaram, V. B. et al. (2013). *Food Chem.*, 136(2), 301–308. https://doi.org/10.1016/j.foodchem.2012.08.039
+- Gänzle, M. G., Ehmann, M., & Hammes, W. P. (1998). *Appl. Environ. Microbiol.*, 64(7), 2616–2623. https://doi.org/10.1128/aem.64.7.2616-2623.1998
+- Sander, R. (2015). *Atmos. Chem. Phys.*, 15, 4399–4981. https://doi.org/10.5194/acp-15-4399-2015
+- Sroan, B. S., Bean, S. R., & MacRitchie, F. (2009). *J. Cereal Sci.*, 49(1), 41–46. https://doi.org/10.1016/j.jcs.2008.07.004
+- Aslankoohi, E. et al. (2015). *PLoS ONE*, 10(3), e0119364. https://doi.org/10.1371/journal.pone.0119364
+- Courtin, C. M., & Delcour, J. A. (2002). *J. Cereal Sci.*, 35(3), 225–243. https://doi.org/10.1006/jcrs.2001.0433

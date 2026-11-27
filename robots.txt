@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /promo
+Disallow: /promo/
+Disallow: /promo.html
+Disallow: /analytics
+Disallow: /analytics/
+Disallow: /analytics.html
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# AI Search & Answer Engine Discovery (llmstxt.org)
+# Concise index: https://pizzatastico.com/llms.txt
+# Technical PDE 5.3.0 & guide digest: https://pizzatastico.com/llms-full.txt
+
+# Canonical Sitemap for Search Engines and AI Crawlers
+Sitemap: https://pizzatastico.com/sitemap.xml

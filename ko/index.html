@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzatastico – 피자 반죽 계산기 앱: 실제 물리 공식 (PDE), 이스트, 폴리쉬, 비가 & 천연발효종</title>
+    <meta name="description" content="조견표 대신 실제 생물물리 방정식 (PDE 5.3.0)으로 계산하는 과학적 피자 반죽 계산기: 0.01 g 정밀도, 스트레이트, 폴리쉬, 비가 & 사워도우 (Licoli, Lievito Madre), 밀가루 블렌드, 역산 스케줄 & 워치 앱. 100% 오프라인.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/ko/">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="Pizzatastico – 피자 반죽 계산기 앱: 실제 물리 공식 (PDE), 이스트, 폴리쉬, 비가 & 천연발효종">
+    <meta property="og:description" content="조견표 대신 실제 생물물리 방정식 (PDE 5.3.0)으로 계산하는 과학적 피자 반죽 계산기: 0.01 g 정밀도, 스트레이트, 폴리쉬, 비가 & 사워도우 (Licoli, Lievito Madre), 밀가루 블렌드, 역산 스케줄 & 워치 앱. 100% 오프라인.">
+    <meta property="og:url" content="https://pizzatastico.com/ko/">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pizzatastico – 피자 반죽 계산기 앱: 실제 물리 공식 (PDE), 이스트, 폴리쉬, 비가 & 천연발효종">
+    <meta name="twitter:description" content="조견표 대신 실제 생물물리 방정식 (PDE 5.3.0)으로 계산하는 과학적 피자 반죽 계산기: 0.01 g 정밀도, 스트레이트, 폴리쉬, 비가 & 사워도우 (Licoli, Lievito Madre), 밀가루 블렌드, 역산 스케줄 & 워치 앱. 100% 오프라인.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Structured Data (JSON-LD) for Google & AI Search (Gemini, ChatGPT, Perplexity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://pizzatastico.com/#software",
+          "name": "Pizzatastico",
+          "softwareVersion": "2.9.8",
+          "applicationCategory": "FoodAndDrinkApplication",
+          "operatingSystem": "iOS, Android, watchOS, Wear OS",
+          "inLanguage": "ko",
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "EUR"
+          },
+          "installUrl": [
+            "https://apps.apple.com/app/id6811171643",
+            "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter"
+          ],
+          "sameAs": [
+            "https://apps.apple.com/app/id6811171643",
+            "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+            "https://www.youtube.com/@Pizzatastico",
+            "https://www.instagram.com/pizzatastico.app/"
+          ],
+          "description": "조견표 대신 실제 생물물리 방정식 (PDE 5.3.0)으로 계산하는 과학적 피자 반죽 계산기: 0.01 g 정밀도, 스트레이트, 폴리쉬, 비가 & 사워도우 (Licoli, Lievito Madre), 밀가루 블렌드, 역산 스케줄 & 워치 앱. 100% 오프라인.",
+          "featureList": [
+            "Pizzatastico Dough Engine (PDE 5.3.0): real-time 1D-radial 5-shell continuum PDE fermentation solver (zero static lookup tables)",
+            "0.01g yeast and starter precision for Fresh Yeast (CY), Instant Dry Yeast (IDY), Active Dry Yeast (ADY), Licoli & Lievito Madre",
+            "Direct Dough, 2-Stage Preferments (Poolish & Biga) and Type-I Sourdough fermentation cascade",
+            "Pro Flour Matrix & Custom Flour Blends (Tipo 00, Tipo 0, Tipo 1, Whole Wheat, Semola, Manitoba) with individual protein percentage matching",
+            "Thermal inertia modeling in cold fridge fermentation (L-stable TR-BDF2 5-shell core-to-surface cooling)",
+            "5-Axis Dough Profile Analysis & Strict AVPN Rulebook Validation",
+            "Reverse Baking Timeline from desired dinner time, Night-Rest Protection, Schedule Shift Advisor & .ics Device Calendar Export",
+            "Native Read-Only Apple Watch & Wear OS Companion Apps",
+            "100% Offline native C++20 on-device calculation, Local Guest Mode & Optional Private Cloud Backup"
+          ],
+          "image": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://pizzatastico.com/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pizzatastico.com/ko/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Pizzatastico 피자 도우 계산기는 어떻게 작동하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico는 정적 조견표를 쓰지 않습니다. 기기 내 네이티브 C++20으로 5겹 1D 방사형 PDE (PDE 5.3.0)를 풀어 온도, 반죽 질량, 단백질 함량에 맞춰 0.01 g 정밀도로 계산합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pizzatastico는 어떤 반죽 방식을 지원하나요 (스트레이트, 폴리쉬, 비가, 사워도우)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "스트레이트(실온/저온 숙성), 2단계 사전 발효종(폴리쉬, 비가), 타입-I 사워도우(리콜리, 리에비토 마드레)를 PDE 5.3.0 캐스케이드로 계산합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "베이킹 일정 캘린더 내보내기는 어떻게 작동하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "터치 한 번으로 반죽하기, 둥글리기(도우 볼 만들기), 오븐 예열 등 전체 일정을 기기 캘린더(Google 캘린더 또는 Apple 캘린더)에 알림과 함께 바로 동기화할 수 있습니다. 범용 .ics 파일로 내보내 카카오톡, 메시지 또는 이메일로 공유할 수도 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "앱에서 어떤 알림과 타이머 기능을 제공하나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "푸시 알림을 통해 모든 주요 단계를 놓치지 않도록 알려줍니다. 반죽 시작 전 맞춤형 사전 알림, 단계 전환 시 정시 알림(예: 1차 벌크 발효 종료 및 둥글리기 타이밍), 상단 알림창에서 실시간으로 진행되는 카운트다운 타이머를 지원합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "생이스트와 드라이 이스트는 어떻게 환산되나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "생이스트(CY), 인스턴트 드라이(IDY), 액티브 드라이(ADY), 리콜리, 리에비토 마드레를 0.01 g까지 지원하며 재수화 및 GSH 연화 효과를 반영합니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "초보자에게 추천하는 가수율과 밀가루는 무엇인가요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "가정용 일반 오븐을 사용하는 초보자에게는 가수율 58~62%와 단백질 함량 11.5~12.5%의 정통 티포 00(Tipo 00) 밀가루를 권장합니다. 고온 전용 피자 오븐의 경우 가수율 62~68%에 더 강력한 밀가루(단백질 12.5~13.5%)를 사용하면 가장 이상적이고 공기층이 살아있는 도우를 구울 수 있습니다."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Pizzatastico는 조견표를 쓰나요, 실제 수학 공식을 쓰나요?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico는 조견표를 전혀 쓰지 않습니다. 베이커스 퍼센트와 기존 0D 발효 곡선을 바탕으로 5겹 PDE (PDE 5.3.0)를 풀어 심부 냉각 지연과 4–5 °C 저온 동역학을 100% 오프라인으로 계산합니다."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pizzatastico.com/#organization",
+          "name": "Pizzatastico",
+          "url": "https://pizzatastico.com/",
+          "logo": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png",
+          "sameAs": [
+            "https://apps.apple.com/app/id6811171643",
+            "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+            "https://www.youtube.com/@Pizzatastico",
+            "https://www.instagram.com/pizzatastico.app/"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Paul Kern"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pizzatastico.com/#website",
+          "url": "https://pizzatastico.com/",
+          "name": "Pizzatastico",
+          "description": "조견표 대신 실제 생물물리 방정식 (PDE 5.3.0)으로 계산하는 과학적 피자 반죽 계산기: 0.01 g 정밀도, 스트레이트, 폴리쉬, 비가 & 사워도우 (Licoli, Lievito Madre), 밀가루 블렌드, 역산 스케줄 & 워치 앱. 100% 오프라인."
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .faq-item[open] {
+            border-color: rgba(234, 88, 12, 0.45);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-weight: 700;
+            color: #111827;
+            font-size: 0.95rem;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-chevron {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: #ea580c;
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header & Hero Section -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black opacity-5"></div>
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white rounded-full p-1 shadow-sm">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico 로고" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-bold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </div>
+            <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/" class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/" selected class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/" class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/" class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/" class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/" class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-12 pb-24 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left text-white mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold leading-tight mb-6 drop-shadow-sm">
+                    완벽한 피자를 구워보세요.
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-medium max-w-lg mx-auto md:mx-0">
+                    실제 물리 공식 기반의 홈 피자 반죽 계산기. 고정 조견표 없음 — 스트레이트, 폴리쉬, 비가 & 사워도우를 0.01 g 정밀도로 계산하고 식사 시간에서 역산합니다.
+                </p>
+                <div class="flex flex-col items-center md:items-start justify-center md:justify-start gap-4">
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-12">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play 스토어">
+                            <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play 스토어" class="h-12">
+                        </a>
+                    </div>
+                    <span class="inline-flex items-center space-x-2 text-white/95 text-xs md:text-sm font-semibold bg-black/25 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>iOS 및 Android 출시 완료</span>
+                    </span>
+                </div>
+            </div>
+            <div class="md:w-5/12 flex justify-center">
+                <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico 마스코트" class="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl">
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-12 md:h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content: Community Stats Teaser Box + PDE Scientific Engine Teaser -->
+    <main class="max-w-5xl mx-auto px-6 py-10 w-full space-y-6">
+        <!-- 1. Community Stats Teaser Box (Clickable, links to /stats.html) -->
+        <a href="/ko/stats.html" class="block group text-left cursor-pointer transform transition-all duration-300 hover:-translate-y-1 focus:outline-hidden" title="커뮤니티 통계 보기">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs group-hover:shadow-xl group-hover:border-pizza-500/50 transition-all relative overflow-hidden">
+                <!-- Top Accent Stripe on Hover -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pizza-500 via-amber-500 to-red-500 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                
+                <!-- Header: Title + Live Badge + Arrow CTA -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xs font-bold font-mono uppercase tracking-widest text-pizza-600 bg-pizza-50 px-2.5 py-0.5 rounded-md inline-block">실시간 벤치마크</span>
+                            <h2 class="text-xl sm:text-2xl font-display font-extrabold text-gray-900 group-hover:text-pizza-600 transition-colors">
+                                현재 평균
+                            </h2>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-500">완료된 피자 굽기 세션에서 자동으로 계산됩니다.</p>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="inline-flex items-center space-x-1.5 text-xs text-pizza-700 font-semibold bg-pizza-50 px-3 py-1.5 rounded-full border border-pizza-200 shrink-0">
+                            <span class="w-2 h-2 rounded-full bg-pizza-500 animate-pulse"></span>
+                            <span id="index-kpi-live-count">158 회 베이킹</span>
+                        </div>
+                        <div class="hidden sm:inline-flex items-center text-xs font-bold text-pizza-600 group-hover:translate-x-1 transition-transform">
+                            <span>커뮤니티 통계 보기</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 KPI Cards Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+                    
+                    <!-- Card 1: Total Bakes -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-orange-50/40 group-hover:border-orange-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-orange-50 border border-orange-100 rounded-lg">🍕</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-total-bakes">158</span><span class="text-pizza-500">+</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">총 굽기 세션</h3>
+                    </div>
+
+                    <!-- Card 2: Hydration -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-sky-50/40 group-hover:border-sky-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-sky-50 border border-sky-100 rounded-lg">💧</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-hydration">65.9</span><span class="text-sky-500 text-lg sm:text-xl">%</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">평균 수분율 (물)</h3>
+                    </div>
+
+                    <!-- Card 3: Flour Protein -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-amber-50/40 group-hover:border-amber-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-amber-50 border border-amber-100 rounded-lg">🌾</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-protein">13.0</span><span class="text-amber-500 text-sm sm:text-base font-bold ml-0.5">g</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">평균 밀가루 단백질</h3>
+                    </div>
+
+                    <!-- Card 4: Baking Heat -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-red-50/40 group-hover:border-red-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-red-50 border border-red-100 rounded-lg">🔥</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-heat">409</span><span class="text-red-500 text-lg sm:text-xl">°C</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">평균 굽기 온도</h3>
+                    </div>
+
+                    <!-- Card 5: Timing Score -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-emerald-50/40 group-hover:border-emerald-200 transition-colors col-span-2 sm:col-span-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-emerald-50 border border-emerald-100 rounded-lg">⏱️</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-timing">92</span><span class="text-emerald-500 text-lg sm:text-xl">%</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">평균 타이밍 점수</h3>
+                    </div>
+
+                </div>
+
+                <!-- Mobile CTA Footer -->
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between sm:hidden text-xs font-bold text-pizza-600">
+                    <span>커뮤니티 통계 보기</span>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </div>
+        </a>
+
+        <!-- 2. Pizza Dough Formula Bridge Card (Clickable, links to /formula.html) -->
+        <a href="/ko/formula.html" class="block group text-left cursor-pointer transform transition-all duration-300 hover:-translate-y-1 focus:outline-hidden" title="공식 & 비교 보기">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs group-hover:shadow-xl group-hover:border-pizza-500/50 transition-all relative overflow-hidden">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-[11px] font-bold font-mono uppercase tracking-widest text-pizza-600 bg-pizza-50 border border-pizza-200 px-2.5 py-0.5 rounded-md inline-block mb-2">표 대신 실제 방정식</span>
+                        <h2 class="text-xl sm:text-2xl font-display font-extrabold text-gray-900 group-hover:text-pizza-600 transition-colors mb-2">
+                            피자 반죽 공식 & 이스트 계산: 베이커스%, 0D Q10 vs. PDE
+                        </h2>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            밀가루·물·소금·이스트를 공식으로 정확히 계산하는 법과 일반 0D 고정 Q10 근사가 냉장고에서 물리적 한계에 부딪히는 지점.
+                        </p>
+                    </div>
+
+                    <div class="inline-flex items-center text-xs sm:text-sm font-bold text-pizza-600 group-hover:translate-x-1 transition-transform shrink-0">
+                        <span>공식 & 비교 보기</span>
+                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- 3. PDE (Pizzatastico Dough Engine) Scientific Teaser Card (Clickable, links to /pde.html) -->
+        <a href="/ko/pde.html" class="block group text-left cursor-pointer transform transition-all duration-300 hover:-translate-y-1 focus:outline-hidden" title="과학적 모델 자세히 보기">
+            <div class="bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xs group-hover:shadow-xl group-hover:border-orange-500/50 transition-all relative overflow-hidden text-white">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="text-[11px] font-bold font-mono uppercase tracking-widest text-orange-400 bg-orange-500/15 border border-orange-500/30 px-2.5 py-0.5 rounded-md inline-block">PIZZATASTICO DOUGH ENGINE (PDE 5.3.0 · GEN 2)</span>
+                        </div>
+                        <h2 class="text-xl sm:text-2xl font-display font-extrabold text-white group-hover:text-orange-400 transition-colors mb-2">
+                            실시간 결합 반죽 생화학
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                            PDE 5.3.0은 곡물 화학, 효모·사워도우 생물물리학 및 L-안정 TR-BDF2 기포 열전도를 전체 발효 일정에 걸친 1차원 방사형 연속체 PDE 시스템(N_r = 5 셸 × 26 상태, 총 135 상태)으로 통합합니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Wieser (2007) · Courtin & Delcour (2002)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Schoolfield et al. (1981) · Rosso et al. (1995)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Bank et al. (1985) · Bikard (2008) · Chiotellis (2003)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Struyf et al. (2016/2017) · Verspreet et al. (2015)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Jayaram et al. (2013) · Gänzle et al. (1998/2007)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Sroan & MacRitchie (2009) · Aslankoohi (2015) · Courtin (2002)</span>
+                        </div>
+                    </div>
+
+                    <div class="inline-flex items-center text-xs sm:text-sm font-bold text-orange-400 group-hover:translate-x-1 transition-transform shrink-0">
+                        <span>과학적 모델 자세히 보기</span>
+                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- 4. Core Feature Highlights -->
+        <section class="pt-4">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">
+                    미니멀하게. 정밀하게. 맛있게.
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    과장된 약속 대신, 완벽한 도우를 만드는 데 꼭 필요한 정밀한 도구만을 담았습니다.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-pizza-600 flex items-center justify-center text-xl mb-4">🍕</div>
+                        <h3 class="text-lg font-display font-bold text-gray-900 mb-2">정밀 도우 계산기</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">고정 표 대신 연속체 방정식 (PDE 5.3.0)으로 이스트, 사워도우 (Licoli & Lievito Madre), 밀가루 배합, 물, 소금을 0.01 g 단위까지 계산하세요.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4">⏱️</div>
+                        <h3 class="text-lg font-display font-bold text-gray-900 mb-2">도우 타임라인 및 발효 관리</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">직관적인 시각적 타임라인으로 발효 단계를 한눈에 확인하세요. 1차 발효(벌크 발효)와 2차 발효(분할 발효)를 분 단위까지 정밀하게 계획할 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">🛡️</div>
+                        <h3 class="text-lg font-display font-bold text-gray-900 mb-2">투명한 데이터 제어 및 옵트아웃(Opt-Out)</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">모든 도우 계산은 기기에서 직접 실행됩니다. 게스트 모드에서는 레시피가 기기에 로컬로 저장되며(로그인 시 선택적 클라우드 백업 지원), 익명 커뮤니티 통계는 언제든 설정에서 비활성화(Opt-Out)할 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Visible FAQ Accordion (Matches JSON-LD FAQPage 1:1) -->
+        <section id="faq" class="pt-4 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-6">자주 묻는 질문</h2>
+            <div class="space-y-3">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>Pizzatastico는 조견표를 쓰나요, 실제 수학 공식을 쓰나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico는 조견표를 전혀 쓰지 않습니다. 베이커스 퍼센트와 기존 0D 발효 곡선을 바탕으로 5겹 PDE (PDE 5.3.0)를 풀어 심부 냉각 지연과 4–5 °C 저온 동역학을 100% 오프라인으로 계산합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Pizzatastico 피자 도우 계산기는 어떻게 작동하나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico는 정적 조견표를 쓰지 않습니다. 기기 내 네이티브 C++20으로 5겹 1D 방사형 PDE (PDE 5.3.0)를 풀어 온도, 반죽 질량, 단백질 함량에 맞춰 0.01 g 정밀도로 계산합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Pizzatastico는 어떤 반죽 방식을 지원하나요 (스트레이트, 폴리쉬, 비가, 사워도우)?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">스트레이트(실온/저온 숙성), 2단계 사전 발효종(폴리쉬, 비가), 타입-I 사워도우(리콜리, 리에비토 마드레)를 PDE 5.3.0 캐스케이드로 계산합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>베이킹 일정 캘린더 내보내기는 어떻게 작동하나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">터치 한 번으로 반죽하기, 둥글리기(도우 볼 만들기), 오븐 예열 등 전체 일정을 기기 캘린더(Google 캘린더 또는 Apple 캘린더)에 알림과 함께 바로 동기화할 수 있습니다. 범용 .ics 파일로 내보내 카카오톡, 메시지 또는 이메일로 공유할 수도 있습니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>앱에서 어떤 알림과 타이머 기능을 제공하나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">푸시 알림을 통해 모든 주요 단계를 놓치지 않도록 알려줍니다. 반죽 시작 전 맞춤형 사전 알림, 단계 전환 시 정시 알림(예: 1차 벌크 발효 종료 및 둥글리기 타이밍), 상단 알림창에서 실시간으로 진행되는 카운트다운 타이머를 지원합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>생이스트와 드라이 이스트는 어떻게 환산되나요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">생이스트(CY), 인스턴트 드라이(IDY), 액티브 드라이(ADY), 리콜리, 리에비토 마드레를 0.01 g까지 지원하며 재수화 및 GSH 연화 효과를 반영합니다.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>초보자에게 추천하는 가수율과 밀가루는 무엇인가요?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">가정용 일반 오븐을 사용하는 초보자에게는 가수율 58~62%와 단백질 함량 11.5~12.5%의 정통 티포 00(Tipo 00) 밀가루를 권장합니다. 고온 전용 피자 오븐의 경우 가수율 62~68%에 더 강력한 밀가루(단백질 12.5~13.5%)를 사용하면 가장 이상적이고 공기층이 살아있는 도우를 구울 수 있습니다.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico 로고" class="w-8 h-8 object-contain grayscale opacity-60">
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v2.6.8</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/ko/formula.html" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">반죽 공식</a>
+                <a href="/ko/pde.html" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">PDE 과학 모델</a>
+                <a href="/ko/stats.html" class="hover:text-pizza-600 transition-colors">Pizza Stats</a>
+                <a href="/ko/guide.html" class="hover:text-pizza-600 transition-colors">파올로의 팁</a>
+                <a href="/ko/privacy.html" class="hover:text-pizza-600 transition-colors">개인정보 처리방침</a>
+                <a href="/ko/imprint.html" class="hover:text-pizza-600 transition-colors">법적 고지</a>
+                <button type="button" onclick="window.pzOpenCookieSettings && window.pzOpenCookieSettings()" class="hover:text-pizza-600 transition-colors cursor-pointer bg-transparent border-none p-0">쿠키 설정</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Live Fetch on Index -->
+    <script>
+        const bakesUnitLabel = "회 베이킹";
+        async function fetchIndexStats() {
+            // 1. Primary: First-party static /stats.json
+            try {
+                const res = await fetch('/stats.json');
+                if (res.ok) {
+                    const json = await res.json();
+                    if (json && json.avg_hydration) {
+                        const bakes = json.total_bakes_count || 158;
+                        const hyd = Number(json.avg_hydration).toFixed(1);
+                        const prot = Number(json.avg_flour_protein).toFixed(1);
+                        const heat = Math.round(json.avg_bake_heat);
+                        const timing = Math.round(json.avg_timing_score);
+
+                        const elTotal = document.getElementById('index-stat-total-bakes');
+                        if (elTotal) elTotal.textContent = bakes;
+                        const elLiveCount = document.getElementById('index-kpi-live-count');
+                        if (elLiveCount) elLiveCount.textContent = bakes + ' ' + bakesUnitLabel;
+                        const elHyd = document.getElementById('index-stat-avg-hydration');
+                        if (elHyd) elHyd.textContent = hyd;
+                        const elProt = document.getElementById('index-stat-avg-protein');
+                        if (elProt) elProt.textContent = prot;
+                        const elHeat = document.getElementById('index-stat-avg-heat');
+                        if (elHeat) elHeat.textContent = heat;
+                        const elTiming = document.getElementById('index-stat-avg-timing');
+                        if (elTiming) elTiming.textContent = timing;
+                        return;
+                    }
+                }
+            } catch (_) {}
+
+            // 2. Fallback: Direct Firestore REST API if first-party /stats.json is unavailable or empty
+            try {
+                const fsRes = await fetch('https://firestore.googleapis.com/v1/projects/pizzatastico-40234/databases/(default)/documents/public_stats/dough_index');
+                if (fsRes.ok) {
+                    const doc = await fsRes.json();
+                    const f = doc.fields;
+                    if (f && f.avg_hydration) {
+                        const bakes = Number(f.total_bakes_count?.integerValue || 158);
+                        const hyd = Number(f.avg_hydration?.doubleValue ?? f.avg_hydration?.integerValue ?? 65.9).toFixed(1);
+                        const prot = Number(f.avg_flour_protein?.doubleValue ?? f.avg_flour_protein?.integerValue ?? 13.0).toFixed(1);
+                        const heat = Math.round(Number(f.avg_bake_heat?.integerValue ?? f.avg_bake_heat?.doubleValue ?? 409));
+                        const timing = Math.round(Number(f.avg_timing_score?.integerValue ?? 92));
+
+                        const elTotal = document.getElementById('index-stat-total-bakes');
+                        if (elTotal) elTotal.textContent = bakes;
+                        const elLiveCount = document.getElementById('index-kpi-live-count');
+                        if (elLiveCount) elLiveCount.textContent = bakes + ' ' + bakesUnitLabel;
+                        const elHyd = document.getElementById('index-stat-avg-hydration');
+                        if (elHyd) elHyd.textContent = hyd;
+                        const elProt = document.getElementById('index-stat-avg-protein');
+                        if (elProt) elProt.textContent = prot;
+                        const elHeat = document.getElementById('index-stat-avg-heat');
+                        if (elHeat) elHeat.textContent = heat;
+                        const elTiming = document.getElementById('index-stat-avg-timing');
+                        if (elTiming) elTiming.textContent = timing;
+                    }
+                }
+            } catch (_) {}
+        }
+        document.addEventListener('DOMContentLoaded', fetchIndexStats);
+    </script>
+    <script>
+        window.__PZ_PAGE__ = { page: 'home', lang: 'ko' };
+        window.__PZ_I18N__ = {"consent_banner_text":"명시적 동의가 있는 경우에만 웹사이트 이용 분석을 위해 선택적 통계 쿠키(Google Analytics 4, Google Ireland / 미국)를 사용합니다. 하단 푸터에서 언제든 철회할 수 있습니다.","nav_privacy":"개인정보 처리방침","privacy_href":"/ko/privacy.html","nav_imprint":"법적 고지","imprint_href":"/ko/imprint.html","consent_accept":"통계 허용","consent_decline":"거부"};
+    </script>
+    <script src="/assets/js/pz-analytics.js" defer></script>
+</body>
+</html>

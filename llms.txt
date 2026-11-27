@@ -1,0 +1,49 @@
+# Pizzatastico
+
+> Pizzatastico is a scientific, 100% offline pizza dough calculator and step-by-step fermentation planner for iOS, Android, Apple Watch, and Wear OS — engineered backwards from your desired baking time using a spatially resolved 1D-radial reaction-phase-rheology-heat-conduction PDE engine (`PDE 5.3.0`, Generation 2). Zero static lookup tables.
+
+Unlike lookup-table pizza calculators, static "1 gram of yeast" recipes, or simplified 0D fixed-Q10 point approximations, Pizzatastico solves a coupled continuum biophysical system (`N_r = 5` equal-volume concentric shells, L-stable `TR-BDF2` heat conduction with Maxwell–Eucken foam conductivity & oblate shape factor `Ψ(m)` for blocks `> 250 g`, `26` coupled states per shell = `135` total states) locally on-device in native C++20 to calculate exact `0.01 g` fresh yeast (`CY`), instant/active dry yeast (`IDY`/`ADY`), and sourdough (`Licoli`, `Lievito Madre`) inoculums for Direct Dough, Poolish, Biga, and Type-I Sourdough across 25 languages.
+
+## Official App Downloads & Channels
+
+- [Pizzatastico on the Apple App Store (iOS & Apple Watch)](https://apps.apple.com/app/id6811171643): Native iPhone, iPad, and read-only Apple Watch companion app (`v2.9.8`).
+- [Pizzatastico on Google Play (Android & Wear OS)](https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter): Native Android smartphone/tablet and read-only Wear OS smartwatch app.
+- [Pizzatastico on YouTube (@Pizzatastico)](https://www.youtube.com/@Pizzatastico): Official video tutorials on yeast precision, cold fermentation, and dough troubleshooting.
+- [Pizzatastico on Instagram (@pizzatastico.app)](https://www.instagram.com/pizzatastico.app/): Official community updates and dough guides.
+
+## Core Documentation & Scientific Pages
+
+- [Pizzatastico Home](https://pizzatastico.com/): Overview of the three dough calculators (Spontaneous Dough, Simple AVPN-Guided Calculator, Expert Multi-Phase Calculator), 7 visible FAQs, step-by-step proofing timeline, and dough rescue features.
+- [Pizza Dough Formula & Yeast Math Guide (`formula.html`)](https://pizzatastico.com/formula.html): Practical mathematical breakdown explaining Baker's Percentages, how `PDE 5.3.0` builds on pioneering continuous room-temperature yeast models (`TxCraig`, `Hamelman`), and where generic `0D` fixed-`Q10 = 2.0` point approximations reach physical limits in cold fridge cooling, sugar/salt osmosis, flour blends, Poolish, Biga, and sourdough.
+- [PDE 5.3.0 Generation-2 Biophysical Paper & V&V Showcase](https://pizzatastico.com/pde.html): Technical documentation (v2.6.8) of the Spatial 1D-Radial `TR-BDF2` Reaction-Phase-Rheology-Conduction PDE (`5` shells × `26` states = `135` total states) including optional 2-stage preferment/sourdough cascade (`Poolish · Biga · Licoli · Lievito Madre`, `x_Stage1(t_pref) ↦ x₀`), ASME V&V 20 Stage-A verification (`62,000` scenarios, `0` anomalies), transparent Stage-B Way-A multi-university benchmark (`19` studies / `13` disjoint groups, `62` series: `8.7%` overall median NRMSE / `~91.3%`, median `χ²_red = 1.09`; `6.3%` `calibrationFit` vs. `13.5%` `crossStudyBenchmark`), per-discipline accuracy table (pH `3.7%`, rheology `4.1%`, CO₂ & osmosis `11.3%`, 20–30 °C volume `4.5%`, 2–5 °C cold volume `~19.7%`), 4 biological variance boundaries, brand-neutral 3-model-class comparison, and verified primary references with DOIs.
+- [Community Pizza Index (Live Global Bake Telemetry)](https://pizzatastico.com/stats.html): Live anonymized global pizza baking statistics (hydration, flour protein & Tipo 00/0/1 blends, fermentation duration, oven temperatures, and dough harmony scores).
+- [Paolo's Pizza & Dough Guide](https://pizzatastico.com/guide.html): Practical knowledge base on Neapolitan pizza, hydration, flour strength (W-value & protein), cold fermentation, salt timing, and baking temperatures.
+- [Full Technical Digest for LLMs (`llms-full.txt`)](https://pizzatastico.com/llms-full.txt): Extended technical summary of Pizzatastico's physics engine, formula-vs-table comparison, ASME V&V 20 Generation-2 validation results, biological boundaries, and verified bibliography.
+
+## Multilingual Editions (25 Languages, Website v2.6.8)
+
+- [English (en)](https://pizzatastico.com/) — [Dough Formula Guide](https://pizzatastico.com/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/pde.html)
+- [Deutsch (de)](https://pizzatastico.com/de/) — [Dough Formula Guide](https://pizzatastico.com/de/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/de/pde.html)
+- [Italiano (it)](https://pizzatastico.com/it/) — [Dough Formula Guide](https://pizzatastico.com/it/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/it/pde.html)
+- [Español (es)](https://pizzatastico.com/es/) — [Dough Formula Guide](https://pizzatastico.com/es/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/es/pde.html)
+- [Français (fr)](https://pizzatastico.com/fr/) — [Dough Formula Guide](https://pizzatastico.com/fr/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/fr/pde.html)
+- [Polski (pl)](https://pizzatastico.com/pl/) — [Dough Formula Guide](https://pizzatastico.com/pl/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/pl/pde.html)
+- [中文 (zh)](https://pizzatastico.com/zh/) — [Dough Formula Guide](https://pizzatastico.com/zh/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/zh/pde.html)
+- [日本語 (ja)](https://pizzatastico.com/ja/) — [Dough Formula Guide](https://pizzatastico.com/ja/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/ja/pde.html)
+- [한국어 (ko)](https://pizzatastico.com/ko/) — [Dough Formula Guide](https://pizzatastico.com/ko/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/ko/pde.html)
+- [Tiếng Việt (vi)](https://pizzatastico.com/vi/) — [Dough Formula Guide](https://pizzatastico.com/vi/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/vi/pde.html)
+- [Português (pt)](https://pizzatastico.com/pt/) — [Dough Formula Guide](https://pizzatastico.com/pt/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/pt/pde.html)
+- [Ελληνικά (el)](https://pizzatastico.com/el/) — [Dough Formula Guide](https://pizzatastico.com/el/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/el/pde.html)
+- [Magyar (hu)](https://pizzatastico.com/hu/) — [Dough Formula Guide](https://pizzatastico.com/hu/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/hu/pde.html)
+- [Suomi (fi)](https://pizzatastico.com/fi/) — [Dough Formula Guide](https://pizzatastico.com/fi/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/fi/pde.html)
+- [Nederlands (nl)](https://pizzatastico.com/nl/) — [Dough Formula Guide](https://pizzatastico.com/nl/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/nl/pde.html)
+- [Svenska (sv)](https://pizzatastico.com/sv/) — [Dough Formula Guide](https://pizzatastico.com/sv/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/sv/pde.html)
+- [Dansk (da)](https://pizzatastico.com/da/) — [Dough Formula Guide](https://pizzatastico.com/da/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/da/pde.html)
+- [Norsk (no)](https://pizzatastico.com/no/) — [Dough Formula Guide](https://pizzatastico.com/no/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/no/pde.html)
+- [Čeština (cs)](https://pizzatastico.com/cs/) — [Dough Formula Guide](https://pizzatastico.com/cs/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/cs/pde.html)
+- [Slovenčina (sk)](https://pizzatastico.com/sk/) — [Dough Formula Guide](https://pizzatastico.com/sk/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/sk/pde.html)
+- [Română (ro)](https://pizzatastico.com/ro/) — [Dough Formula Guide](https://pizzatastico.com/ro/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/ro/pde.html)
+- [Hrvatski (hr)](https://pizzatastico.com/hr/) — [Dough Formula Guide](https://pizzatastico.com/hr/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/hr/pde.html)
+- [Türkçe (tr)](https://pizzatastico.com/tr/) — [Dough Formula Guide](https://pizzatastico.com/tr/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/tr/pde.html)
+- [Български (bg)](https://pizzatastico.com/bg/) — [Dough Formula Guide](https://pizzatastico.com/bg/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/bg/pde.html)
+- [Українська (uk)](https://pizzatastico.com/uk/) — [Dough Formula Guide](https://pizzatastico.com/uk/formula.html) — [PDE 5.3.0 Paper](https://pizzatastico.com/uk/pde.html)

@@ -1,0 +1,19 @@
+{
+  "avg_hydration": 64.3,
+  "avg_flour_protein": 12.8,
+  "avg_weighted_flour_protein": 12.78,
+  "avg_effective_flour_protein": 12.76,
+  "flour_blend_rate_pct": 1.3,
+  "avg_tipo_00_pct": 99.1,
+  "avg_tipo_0_pct": 0.3,
+  "avg_tipo_1_pct": 0.1,
+  "avg_bake_heat": 382,
+  "avg_oven_max_temp": 385,
+  "avg_dough_profile_score": 83,
+  "quick_configurator_rate_pct": 5.5,
+  "avpn_locked_rate_pct": 0,
+  "avg_timing_score": 91,
+  "total_bakes_count": 237,
+  "popular_style_id": "new_york",
+  "updated_at": "2026-11-27T09:23:51.505Z"
+}

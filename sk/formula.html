@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="sk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vzorec Cesta na Pizzu & Výpočet Droždia (Pekárske %, 0D Q10 vs. PDE 5.3.0) – Pizzatastico</title>
+    <meta name="description" content="Kompletný vzorec cesta na pizzu: pekárske percentá s príkladom, prepočet droždia (CY/IDY/ADY), fyzikálne hranice tabuliek a pevných 0D Q10 kriviek v chladničke a výpočet PDE 5.3.0 pre Poolish, Biga i Kvások na 0,01 g.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/sk/formula.html">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/formula.html">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/formula.html">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/formula.html">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/formula.html">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/formula.html">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/formula.html">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/formula.html">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/formula.html">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/formula.html">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/formula.html">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/formula.html">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/formula.html">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/formula.html">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/formula.html">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/formula.html">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/formula.html">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/formula.html">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/formula.html">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/formula.html">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/formula.html">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/formula.html">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/formula.html">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/formula.html">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/formula.html">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/formula.html">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/formula.html">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="Vzorec Cesta na Pizzu & Výpočet Droždia (Pekárske %, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta property="og:description" content="Kompletný vzorec cesta na pizzu: pekárske percentá s príkladom, prepočet droždia (CY/IDY/ADY), fyzikálne hranice tabuliek a pevných 0D Q10 kriviek v chladničke a výpočet PDE 5.3.0 pre Poolish, Biga i Kvások na 0,01 g.">
+    <meta property="og:url" content="https://pizzatastico.com/sk/formula.html">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vzorec Cesta na Pizzu & Výpočet Droždia (Pekárske %, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta name="twitter:description" content="Kompletný vzorec cesta na pizzu: pekárske percentá s príkladom, prepočet droždia (CY/IDY/ADY), fyzikálne hranice tabuliek a pevných 0D Q10 kriviek v chladničke a výpočet PDE 5.3.0 pre Poolish, Biga i Kvások na 0,01 g.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Structured Data (Article + FAQPage) for Search Engines & AI Answer Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://pizzatastico.com/sk/formula.html#article",
+          "headline": "Vzorec Cesta na Pizzu & Výpočet Droždia (Pekárske %, 0D Q10 vs. PDE 5.3.0)",
+          "description": "Kompletný vzorec cesta na pizzu: pekárske percentá s príkladom, prepočet droždia (CY/IDY/ADY), fyzikálne hranice tabuliek a pevných 0D Q10 kriviek v chladničke a výpočet PDE 5.3.0 pre Poolish, Biga i Kvások na 0,01 g.",
+          "inLanguage": "sk",
+          "datePublished": "2026-11-24",
+          "dateModified": "2026-11-26",
+          "author": {
+            "@type": "Person",
+            "name": "Paul Kern"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pizzatastico",
+            "url": "https://pizzatastico.com/",
+            "sameAs": [
+              "https://apps.apple.com/app/id6811171643",
+              "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+              "https://www.youtube.com/@Pizzatastico",
+              "https://www.instagram.com/pizzatastico.app/"
+            ],
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png"
+            }
+          },
+          "mainEntityOfPage": "https://pizzatastico.com/sk/formula.html",
+          "about": [
+            "Baker's percentages pizza dough formula (flour, hydration, salt, oil, yeast)",
+            "Continuous yeast fermentation math building on classic room-temperature models toward spatially resolved 1D-radial continuum physics",
+            "Cold fridge thermal inertia across dough ball vs. bulk dough block mass",
+            "Direct Dough, Poolish, Biga, and Type-I Sourdough (Licoli & Lievito Madre)",
+            "Pizzatastico Dough Engine (PDE 5.3.0): spatially resolved 1D-radial 5-shell continuum PDE running 100% offline in native C++20"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pizzatastico.com/sk/formula.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ktorá aplikácia počíta cesto čisto zo vzorcov namiesto tabuliek?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico počíta 100% matematicky bez tabuliek. Okrem pekárskych percent a 0D Q10 kriviek rieši offline v C++20 5-vrstvovú PDE (PDE 5.3.0) na iOS, Android, Apple Watch i Wear OS s presnosťou 0,01 g."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ako Pizzatastico (PDE 5.3.0) nadväzuje na priekopnícke modely ako TxCraig alebo Hamelman?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Priekopnícke komunitné modely ako TxCraig a Hamelmanovo škálovanie položili základ tým, že nahradili statické tabuľky plynulými krivkami pre izbovú teplotu — pre teplé priame cesto fungujú dodnes výborne. Pizzatastico (PDE 5.3.0) na túto tradíciu nadväzuje a rozširuje spojitú matematiku o 5 tepelných vrstiev (pomalé chladnutie jadra v chladničke), kryokinetiku pod 9 °C a 2-fázové kaskády Poolish, Biga i Kvások."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Podporuje Pizzatastico Poolish, Biga a Kvások pomocou vzorcov?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Áno. Priame cesto, Poolish, Biga, Licoli i Lievito Madre rieši spojitá 2-fázová PDE kaskáda."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Funguje offline a plánuje spätne od času večere?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Áno. Celé jadro C++20 PDE 5.3.0 beží 100% offline vrátane nočnej ochrany, upozornení, exportu .ics a hodinkových aplikácií."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+        }
+        .formula-box {
+            background: #0f172a;
+            color: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.15rem 1.35rem;
+            border: 1px solid #1e293b;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+        .formula-table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            background: #ffffff;
+        }
+        .formula-table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.8125rem;
+            line-height: 1.55;
+        }
+        .formula-table thead th {
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #1e293b;
+            vertical-align: bottom;
+        }
+        .formula-table tbody td {
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+            color: #334155;
+        }
+        .formula-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .formula-table tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .formula-table th.formula-col-highlight {
+            background: #065f46;
+            color: #ecfdf5;
+        }
+        .formula-table td.formula-col-highlight {
+            background: rgba(236, 253, 245, 0.65);
+            color: #064e3b;
+            border-left: 2px solid rgba(5, 150, 105, 0.35);
+            font-weight: 600;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .faq-item[open] {
+            border-color: rgba(234, 88, 12, 0.45);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-chevron {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: #ea580c;
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
+
+    <!-- Header & Hero -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="/sk/" class="flex items-center space-x-3 transition hover:opacity-90 cursor-pointer group" title="Back to Home">
+                <div class="bg-white rounded-full p-1 shadow-sm transition group-hover:scale-105">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Logo Pizzatastico" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-extrabold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </a>
+
+            <div class="flex items-center space-x-3">
+                <a href="/sk/" class="hidden sm:inline-flex items-center space-x-1.5 text-white/95 hover:text-white font-semibold text-xs md:text-sm bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full transition shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Back to Home</span>
+                </a>
+
+                <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                    <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/formula.html" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/formula.html" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/formula.html" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/formula.html" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/formula.html" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/formula.html" class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/formula.html" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/formula.html" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/formula.html" class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/formula.html" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/formula.html" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/formula.html" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/formula.html" class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/formula.html" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/formula.html" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/formula.html" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/formula.html" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/formula.html" class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/formula.html" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/formula.html" selected class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/formula.html" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/formula.html" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/formula.html" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/formula.html" class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/formula.html" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 px-3 py-1 rounded-full text-orange-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+                    <span>MATEMATIKA CESTA · NULA TABULIEK</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white leading-tight mb-4 drop-shadow-xs">
+                    Vzorec Cesta na Pizzu a Výpočet Droždia Jasne Vysvetlený
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mb-7">
+                    Od pekárskych percent a klasických 0D kvasných kriviek k 5-vrstvovej fyzike kontinua (PDE 5.3.0).
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                        <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Obchod Google Play">
+                        <img src="/assets/images/badges/google-play-badge.svg" alt="Obchod Google Play" class="h-11">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none pointer-events-none">
+            <svg class="relative block w-full h-10 sm:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Section 1: Baker's Percentages & Worked Example -->
+        <section class="max-w-5xl mx-auto px-6 py-10">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md mb-3 inline-block">1. ZÁKLADNÉ VZORCE</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-3">Pekárske Percentá & Spätný Výpočet</h2>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl">Každý presný recept stojí na pekárskych percentách: múka M = 100 % a voda (H), soľ (S), olej (F) aj droždie (Y) sa vzťahujú k múke. Z celkovej hmotnosti T = Bochníky × Váha × (1 + Strata) určíme najprv múku.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                    <div class="space-y-3">
+                        <h3 class="text-sm font-display font-bold uppercase tracking-wider text-slate-700">Uzavreté Rovnice Surovín</h3>
+                        <div class="formula-box space-y-1.5">
+                            <div class="text-orange-300">T = N_bochníkov × m_bochníka × (1 + Strata%)</div>
+                            <div class="text-emerald-300">M_múky = T / (1 + H% + S% + F% + Y%)</div>
+                            <div class="text-sky-300">Voda = M × H% · Soľ = M × S% · Tuk = M × F%</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
+                        <div>
+                            <h3 class="text-base font-display font-extrabold text-gray-900 mb-1.5">Príklad (4 × 250 g = 1 000 g cesta, 65 % hydratácia, 2,8 % soli)</h3>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">Bez zanedbateľného droždia (< 0,5 %): M_múky = 1 000 g / (1 + 0,65 + 0,028) = 1 000 / 1,678 ≈ 596 g múky. Voda = 595,9 g × 0,65 ≈ 387 g. Soľ = 595,9 g × 0,028 ≈ 16,7 g. Droždie sa mení (~0,15–3,50 g) podľa času, teplôt, hmotnosti a múky.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-200">
+                            <h4 class="text-sm font-display font-bold text-gray-900 mb-1">Čerstvé Droždie (CY) vs. Sušené (IDY / ADY) & Kvások</h4>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">Jednoduché kalkulačky násobia čerstvé droždie (CY = 100 %) pevným pomerom (IDY ≈ 0,33×, ADY ≈ 0,40–0,45×). PDE 5.3.0 navyše simuluje rehydratáciu, glutatión (GSH), Licoli i Lievito Madre na 0,01 g.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Physical Limits of Lookup Tables & 0D Fixed-Q10 Approximations -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="mb-6">
+                <span class="text-xs font-bold font-mono uppercase tracking-widest text-slate-700 bg-slate-200/80 px-2.5 py-1 rounded-md mb-2 inline-block">2. LIMITY 0D KRIVIEK</span>
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">Fyzikálne Hranice Tabuliek a Jednoduchých 0D-Q10 Aproximácií</h2>
+                <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">Klasické bodové 0D modely s pevným Q10 = 2,0 poskytujú dobré hodnoty pre teplé priame cesto. V chladničke, pri väčších blokoch a zmesiach múk však štyri fyzikálne javy presahujú jednobodový vzorec:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-sky-800 bg-sky-100/90 border border-sky-200 px-3 py-1 rounded-full inline-block">1 · TEPELNÁ ZOTRVAČNOSŤ</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">250g Bochník vs. 2kg Blok v Chladničke</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">0D modely predpokladajú okamžité ochladenie z 23 °C na 4–7 °C. V skutočnosti pena CO2 izoluje stred: 1–2,5kg blok v jadre teplo kysne celé hodiny (25–45 % letného prekysnutia bez radiálneho modelu).</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-amber-800 bg-amber-100/90 border border-amber-200 px-3 py-1 rounded-full inline-block">2 · CHYBA 11,8× V CHLADE</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Kryokinetika pod 9 °C (Chyba pevného Q10 = 2,0)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Pevné Q10 = 2,0 predpovedá pri 5 °C 17,7 % rýchlosti z 30 °C. Merania ukazujú len ~1,5 % pre tuhnutie membrán — nadhodnotenie 11,8×.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3 py-1 rounded-full inline-block">3 · OSMÓZA & ZMESI MÚK</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Soľ, Osmóza Cukru & Múky (Tipo 00 / 0 / 1 / Celozrnná)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Iónové tienenie soli, aktivita vody a_w(t) cukru (nad ~6 % brzdí), pH pufor popola a amylázy riadia rast aj pečenie.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-purple-800 bg-purple-100/90 border border-purple-200 px-3 py-1 rounded-full inline-block">4 · 2-FÁZOVÉ KASKÁDY</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Poolish, Biga & Kvások Typu I (Licoli / Lievito Madre)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Pevné odpočty ignorujú kyseliny, proteolýzu a symbiózu MapA. PDE 5.3.0 rieši Fázu 1 a odovzdáva všetkých 26 stavov spojito.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: 3-Generation Comparison Table -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-indigo-800 bg-indigo-100/90 border border-indigo-200 px-2.5 py-1 rounded-md mb-2 inline-block">3. POROVNANIE MODELOV</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">Statické Tabuľky vs. 0D Vzorce vs. 5-Vrstvová Kontinuálna PDE</h2>
+                    <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">Prehľad výpočtových paradigiem pri troch generáciách aplikácií:</p>
+                </div>
+
+                <div class="formula-table-wrap">
+                    <table class="formula-table">
+                        <thead>
+                            <tr>
+                                <th>Kritérium</th>
+                                <th>Trieda 1: Tabuľky / Pevné Recepty</th>
+                                <th>Trieda 2: Exponenciálne Modely 0D (Pevné Q10)</th>
+                                <th class="formula-col-highlight">Trieda 3: Pizzatastico PDE 5.3.0 (1D 5-Vrstvová PDE)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Matematický Základ</td>
+                                <td>Pevná tabuľka alebo pravidlo '1 g droždia'</td>
+                                <td>Pekárske % + 0D exponenciálna krivka</td>
+                                <td class="formula-col-highlight">Pekárske % + 5-vrstvová radiálna TR-BDF2 PDE (135 stavov)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Presnosť Droždia</td>
+                                <td>Hrubé kroky (0,5 g – 1 g)</td>
+                                <td>Plynule ~0,05 g s pevným pomerom CY/IDY/ADY</td>
+                                <td class="formula-col-highlight">0,01 g pre CY, IDY (GSH), ADY, Licoli i Lievito Madre</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Chladnička & Hmotnosť</td>
+                                <td>Ignorované</td>
+                                <td>Bodová 0D teplota (míňa jadro a brzdu 5 °C)</td>
+                                <td class="formula-col-highlight">5-vrstvové vedenie tepla + pena Maxwell–Eucken + Ψ(m)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Múky, Soľ & Cukor</td>
+                                <td>Jedna univerzálna múka</td>
+                                <td>W-hodnota alebo prosté bielkoviny</td>
+                                <td class="formula-col-highlight">Pro Matica Múk (Tipo 00/0/1, Celozrnná, Semola) + a_w(t) & pH</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Poolish, Biga & Kvások</td>
+                                <td>Len pevné šablóny</td>
+                                <td>Empirické faktory bez chémie kyselín</td>
+                                <td class="formula-col-highlight">Skutočná 2-fázová biofyzikálna kaskáda x_Stage1(t_pref) ↦ x0</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Plán & Validácia</td>
+                                <td>Statický text</td>
+                                <td>Len objem v izbovej teplote (~31 % lab radov)</td>
+                                <td class="formula-col-highlight">Spätný plán + Rescue, 100% offline C++20, 19 štúdií (8,7 % NRMSE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pt-2">
+                    <a href="/sk/pde.html" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-700 text-white font-display font-bold px-5 py-3 rounded-xl shadow-sm transition-colors text-xs sm:text-sm">
+                        <span>Čítať Celý Vedecký Článok & Benchmark 19 Štúdií (PDE 5.3.0)</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Visible FAQ Accordion (Matches JSON-LD FAQPage 1:1) -->
+        <section id="faq" class="max-w-5xl mx-auto px-6 mb-14">
+            <div class="mb-6">
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900">Časté Otázky k Vzorcom Cesta na Pizzu</h2>
+            </div>
+
+            <div class="space-y-3">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>Ktorá aplikácia počíta cesto čisto zo vzorcov namiesto tabuliek?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico počíta 100% matematicky bez tabuliek. Okrem pekárskych percent a 0D Q10 kriviek rieši offline v C++20 5-vrstvovú PDE (PDE 5.3.0) na iOS, Android, Apple Watch i Wear OS s presnosťou 0,01 g.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Ako Pizzatastico (PDE 5.3.0) nadväzuje na priekopnícke modely ako TxCraig alebo Hamelman?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Priekopnícke komunitné modely ako TxCraig a Hamelmanovo škálovanie položili základ tým, že nahradili statické tabuľky plynulými krivkami pre izbovú teplotu — pre teplé priame cesto fungujú dodnes výborne. Pizzatastico (PDE 5.3.0) na túto tradíciu nadväzuje a rozširuje spojitú matematiku o 5 tepelných vrstiev (pomalé chladnutie jadra v chladničke), kryokinetiku pod 9 °C a 2-fázové kaskády Poolish, Biga i Kvások.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Podporuje Pizzatastico Poolish, Biga a Kvások pomocou vzorcov?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Áno. Priame cesto, Poolish, Biga, Licoli i Lievito Madre rieši spojitá 2-fázová PDE kaskáda.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Funguje offline a plánuje spätne od času večere?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Áno. Celé jadro C++20 PDE 5.3.0 beží 100% offline vrátane nočnej ochrany, upozornení, exportu .ics a hodinkových aplikácií.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section class="max-w-5xl mx-auto px-6 mb-16 text-center">
+            <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-xl mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold mb-3">Upeč dokonalú pizzu.</h2>
+                    <p class="text-sm sm:text-base text-white/90 mb-6 leading-relaxed">Kalkulačka cesta na pizzu založená na skutočnej fyzike. Žiadne tabuľky — presná hydratácia, výpočet droždia na 0,01 g pre priame cesto, Poolish, Biga aj Kvások so spoľahlivým spätným plánom.</p>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Obchod Google Play">
+                            <img src="/assets/images/badges/google-play-badge.svg" alt="Obchod Google Play" class="h-11">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <a href="/sk/" class="hover:opacity-80 transition" title="Back to Home">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Logo Pizzatastico" class="w-8 h-8 object-contain grayscale opacity-60">
+                </a>
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v2.6.8</span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/sk/" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">&larr; Back to Home</a>
+                <a href="/sk/formula.html" class="hover:text-pizza-600 transition-colors text-pizza-600 font-bold">Vzorec cesta</a>
+                <a href="/sk/pde.html" class="hover:text-pizza-600 transition-colors">Veda PDE</a>
+                <a href="/sk/stats.html" class="hover:text-pizza-600 transition-colors">Pizza Stats</a>
+                <a href="/sk/guide.html" class="hover:text-pizza-600 transition-colors">Tipy od Paola</a>
+                <a href="/sk/privacy.html" class="hover:text-pizza-600 transition-colors">Ochrana osobných údajov</a>
+                <a href="/sk/imprint.html" class="hover:text-pizza-600 transition-colors">Právne informácie</a>
+                <button type="button" onclick="window.pzOpenCookieSettings && window.pzOpenCookieSettings()" class="hover:text-pizza-600 transition-colors cursor-pointer bg-transparent border-none p-0">Nastavenia súborov cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.__PZ_PAGE__ = { page: 'formula', lang: 'sk' };
+        window.__PZ_I18N__ = {"consent_banner_text":"Iba s vaším výslovným súhlasom používame voliteľné štatistické súbory cookie (Google Analytics 4, Google Ireland / USA). Súhlas môžete kedykoľvek odvolať v pätičke.","nav_privacy":"Ochrana osobných údajov","privacy_href":"/sk/privacy.html","nav_imprint":"Právne informácie","imprint_href":"/sk/imprint.html","consent_accept":"Povoliť štatistiky","consent_decline":"Odmietnuť"};
+    </script>
+    <script src="/assets/js/pz-analytics.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzatastico – Kalkulator Ciasta na Pizzę: Prawdziwe Równania (PDE), Drożdże, Poolish, Biga i Zakwas</title>
+    <meta name="description" content="Naukowy kalkulator ciasta na pizzę oparty na równaniach fizycznych zamiast tabel (PDE 5.3.0): drożdże z dokładnością 0,01 g, ciasto bezpośrednie, Poolish, Biga i zakwas (Licoli, Lievito Madre), mieszanki mąk, harmonogram wsteczny i Watch App. 100% offline.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/pl/">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="Pizzatastico – Kalkulator Ciasta na Pizzę: Prawdziwe Równania (PDE), Drożdże, Poolish, Biga i Zakwas">
+    <meta property="og:description" content="Naukowy kalkulator ciasta na pizzę oparty na równaniach fizycznych zamiast tabel (PDE 5.3.0): drożdże z dokładnością 0,01 g, ciasto bezpośrednie, Poolish, Biga i zakwas (Licoli, Lievito Madre), mieszanki mąk, harmonogram wsteczny i Watch App. 100% offline.">
+    <meta property="og:url" content="https://pizzatastico.com/pl/">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pizzatastico – Kalkulator Ciasta na Pizzę: Prawdziwe Równania (PDE), Drożdże, Poolish, Biga i Zakwas">
+    <meta name="twitter:description" content="Naukowy kalkulator ciasta na pizzę oparty na równaniach fizycznych zamiast tabel (PDE 5.3.0): drożdże z dokładnością 0,01 g, ciasto bezpośrednie, Poolish, Biga i zakwas (Licoli, Lievito Madre), mieszanki mąk, harmonogram wsteczny i Watch App. 100% offline.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Structured Data (JSON-LD) for Google & AI Search (Gemini, ChatGPT, Perplexity) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://pizzatastico.com/#software",
+          "name": "Pizzatastico",
+          "softwareVersion": "2.9.8",
+          "applicationCategory": "FoodAndDrinkApplication",
+          "operatingSystem": "iOS, Android, watchOS, Wear OS",
+          "inLanguage": "pl",
+          "offers": {
+            "@type": "Offer",
+            "price": "0.00",
+            "priceCurrency": "EUR"
+          },
+          "installUrl": [
+            "https://apps.apple.com/app/id6811171643",
+            "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter"
+          ],
+          "sameAs": [
+            "https://apps.apple.com/app/id6811171643",
+            "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+            "https://www.youtube.com/@Pizzatastico",
+            "https://www.instagram.com/pizzatastico.app/"
+          ],
+          "description": "Naukowy kalkulator ciasta na pizzę oparty na równaniach fizycznych zamiast tabel (PDE 5.3.0): drożdże z dokładnością 0,01 g, ciasto bezpośrednie, Poolish, Biga i zakwas (Licoli, Lievito Madre), mieszanki mąk, harmonogram wsteczny i Watch App. 100% offline.",
+          "featureList": [
+            "Pizzatastico Dough Engine (PDE 5.3.0): real-time 1D-radial 5-shell continuum PDE fermentation solver (zero static lookup tables)",
+            "0.01g yeast and starter precision for Fresh Yeast (CY), Instant Dry Yeast (IDY), Active Dry Yeast (ADY), Licoli & Lievito Madre",
+            "Direct Dough, 2-Stage Preferments (Poolish & Biga) and Type-I Sourdough fermentation cascade",
+            "Pro Flour Matrix & Custom Flour Blends (Tipo 00, Tipo 0, Tipo 1, Whole Wheat, Semola, Manitoba) with individual protein percentage matching",
+            "Thermal inertia modeling in cold fridge fermentation (L-stable TR-BDF2 5-shell core-to-surface cooling)",
+            "5-Axis Dough Profile Analysis & Strict AVPN Rulebook Validation",
+            "Reverse Baking Timeline from desired dinner time, Night-Rest Protection, Schedule Shift Advisor & .ics Device Calendar Export",
+            "Native Read-Only Apple Watch & Wear OS Companion Apps",
+            "100% Offline native C++20 on-device calculation, Local Guest Mode & Optional Private Cloud Backup"
+          ],
+          "image": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png",
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://pizzatastico.com/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pizzatastico.com/pl/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jak działa kalkulator Pizzatastico?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico nie korzysta z żadnych statycznych tabel. Rozwiązuje lokalnie w natywnym C++20 5-warstwowy model PDE 1D (PDE 5.3.0), wyliczając mąkę, wodę, sól oraz drożdże lub zakwas co do 0,01 g na podstawie temperatury, masy ciasta, białka mąki i docelowej godziny wypieku."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie metody ciasta obsługuje Pizzatastico (Bezpośrednie, Poolish, Biga, Zakwas)?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico obsługuje Ciasto Bezpośrednie (w temp. pokojowej i chłodni), zaczyn 2-etapowy (Poolish i Biga) oraz zakwas typu I (płynny Licoli i sztywny Lievito Madre) w ciągłej kaskadzie PDE 5.3.0."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak działa eksport harmonogramu pieczenia do kalendarza?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Jednym kliknięciem Pizzatastico zapisuje cały harmonogram (wyrabianie, formowanie kulek, rozgrzewanie pieca) bezpośrednio w kalendarzu urządzenia (Google lub Apple) z przypomnieniami. Możesz też wyeksportować plik .ics."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakie powiadomienia i liczniki czasu oferuje aplikacja?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Aplikacja wysyła powiadomienia push o każdym kroku: konfigurowalny alarm przed rozpoczęciem wyrabiania, powiadomienia o zmianie fazy (np. koniec fermentacji wstępnej i formowanie kulek) oraz aktywny stoper na pasku powiadomień."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak przeliczane są drożdże świeże na suszone?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico obsługuje drożdże świeże (CY), suche instant (IDY), aktywne suche (ADY), Licoli i Lievito Madre co do 0,01 g. Zamiast sztywnych przeliczników PDE 5.3.0 modeluje rehydratację, efekt glutationu (GSH) i symbiozę zakwasu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jaka hydratacja i mąka są zalecane dla początkujących?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "W domowym piekarniku zalecamy hydratację 58%–62% oraz mąkę Tipo 00 o zawartości białka 11,5%–12,5%. W piecach wysokotemperaturowych najlepiej sprawdza się 62%–68% z mocniejszą mąką."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy Pizzatastico używa tabel, czy prawdziwych wzorów matematycznych?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico nie używa tabel. Bazując na procentach piekarskich i klasycznych krzywych 0D, rozwiązuje 5-warstwowe PDE (PDE 5.3.0) modelujące chłodzenie rdzenia, kriokinetykę 4–5 °C i mieszanki mąk 100% offline."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://pizzatastico.com/#organization",
+          "name": "Pizzatastico",
+          "url": "https://pizzatastico.com/",
+          "logo": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png",
+          "sameAs": [
+            "https://apps.apple.com/app/id6811171643",
+            "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+            "https://www.youtube.com/@Pizzatastico",
+            "https://www.instagram.com/pizzatastico.app/"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Paul Kern"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pizzatastico.com/#website",
+          "url": "https://pizzatastico.com/",
+          "name": "Pizzatastico",
+          "description": "Naukowy kalkulator ciasta na pizzę oparty na równaniach fizycznych zamiast tabel (PDE 5.3.0): drożdże z dokładnością 0,01 g, ciasto bezpośrednie, Poolish, Biga i zakwas (Licoli, Lievito Madre), mieszanki mąk, harmonogram wsteczny i Watch App. 100% offline."
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .faq-item[open] {
+            border-color: rgba(234, 88, 12, 0.45);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-weight: 700;
+            color: #111827;
+            font-size: 0.95rem;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-chevron {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: #ea580c;
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header & Hero Section -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black opacity-5"></div>
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white rounded-full p-1 shadow-sm">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Logo Pizzatastico" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-bold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </div>
+            <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/" selected class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/" class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/" class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/" class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/" class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/" class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-12 pb-24 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 text-center md:text-left text-white mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-extrabold leading-tight mb-6 drop-shadow-sm">
+                    Idealne ciasto.
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-10 leading-relaxed font-medium max-w-lg mx-auto md:mx-0">
+                    Kalkulator ciasta na pizzę oparty na prawdziwych równaniach fizycznych. Zero sztywnych tabel: dokładna hydracja, drożdże co do 0,01 g dla ciasta bezpośredniego, Poolish, Biga i zakwasu oraz niezawodny plan wsteczny.
+                </p>
+                <div class="flex flex-col items-center md:items-start justify-center md:justify-start gap-4">
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-12">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play Store">
+                            <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play Store" class="h-12">
+                        </a>
+                    </div>
+                    <span class="inline-flex items-center space-x-2 text-white/95 text-xs md:text-sm font-semibold bg-black/25 backdrop-blur-sm border border-white/20 px-4 py-1.5 rounded-full shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span>Dostępne na iOS i Android</span>
+                    </span>
+                </div>
+            </div>
+            <div class="md:w-5/12 flex justify-center">
+                <img src="/assets/images/boy_hd_no_banner.png" alt="Maskotka Pizzatastico" class="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-2xl">
+            </div>
+        </div>
+        
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none">
+            <svg class="relative block w-full h-12 md:h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Main Content: Community Stats Teaser Box + PDE Scientific Engine Teaser -->
+    <main class="max-w-5xl mx-auto px-6 py-10 w-full space-y-6">
+        <!-- 1. Community Stats Teaser Box (Clickable, links to /stats.html) -->
+        <a href="/pl/stats.html" class="block group text-left cursor-pointer transform transition-all duration-300 hover:-translate-y-1 focus:outline-hidden" title="Zobacz statystyki społeczności">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs group-hover:shadow-xl group-hover:border-pizza-500/50 transition-all relative overflow-hidden">
+                <!-- Top Accent Stripe on Hover -->
+                <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-pizza-500 via-amber-500 to-red-500 opacity-80 group-hover:opacity-100 transition-opacity"></div>
+                
+                <!-- Header: Title + Live Badge + Arrow CTA -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xs font-bold font-mono uppercase tracking-widest text-pizza-600 bg-pizza-50 px-2.5 py-0.5 rounded-md inline-block">BENCHMARK NA ŻYWO</span>
+                            <h2 class="text-xl sm:text-2xl font-display font-extrabold text-gray-900 group-hover:text-pizza-600 transition-colors">
+                                Aktualne średnie
+                            </h2>
+                        </div>
+                        <p class="text-xs sm:text-sm text-gray-500">Obliczane automatycznie na podstawie ukończonych wypieków.</p>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="inline-flex items-center space-x-1.5 text-xs text-pizza-700 font-semibold bg-pizza-50 px-3 py-1.5 rounded-full border border-pizza-200 shrink-0">
+                            <span class="w-2 h-2 rounded-full bg-pizza-500 animate-pulse"></span>
+                            <span id="index-kpi-live-count">158 Wypieków</span>
+                        </div>
+                        <div class="hidden sm:inline-flex items-center text-xs font-bold text-pizza-600 group-hover:translate-x-1 transition-transform">
+                            <span>Zobacz statystyki społeczności</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 KPI Cards Grid -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
+                    
+                    <!-- Card 1: Total Bakes -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-orange-50/40 group-hover:border-orange-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-orange-50 border border-orange-100 rounded-lg">🍕</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-total-bakes">158</span><span class="text-pizza-500">+</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">Wszystkie sesje pieczenia</h3>
+                    </div>
+
+                    <!-- Card 2: Hydration -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-sky-50/40 group-hover:border-sky-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-sky-50 border border-sky-100 rounded-lg">💧</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-hydration">65.9</span><span class="text-sky-500 text-lg sm:text-xl">%</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">Śr. hydracja (woda)</h3>
+                    </div>
+
+                    <!-- Card 3: Flour Protein -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-amber-50/40 group-hover:border-amber-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-amber-50 border border-amber-100 rounded-lg">🌾</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-protein">13.0</span><span class="text-amber-500 text-sm sm:text-base font-bold ml-0.5">g</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">Śr. białko mąki</h3>
+                    </div>
+
+                    <!-- Card 4: Baking Heat -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-red-50/40 group-hover:border-red-200 transition-colors">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-red-50 border border-red-100 rounded-lg">🔥</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-heat">409</span><span class="text-red-500 text-lg sm:text-xl">°C</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">Śr. temperatura pieczenia</h3>
+                    </div>
+
+                    <!-- Card 5: Timing Score -->
+                    <div class="bg-gray-50/70 p-4 rounded-2xl border border-gray-100 group-hover:bg-emerald-50/40 group-hover:border-emerald-200 transition-colors col-span-2 sm:col-span-1">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-xl p-1.5 bg-emerald-50 border border-emerald-100 rounded-lg">⏱️</span>
+                        </div>
+                        <div class="text-2xl sm:text-3xl font-display font-black text-gray-900 mb-0.5 tracking-tight">
+                            <span id="index-stat-avg-timing">92</span><span class="text-emerald-500 text-lg sm:text-xl">%</span>
+                        </div>
+                        <h3 class="text-xs font-bold text-gray-600">Śr. ocena timingu</h3>
+                    </div>
+
+                </div>
+
+                <!-- Mobile CTA Footer -->
+                <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between sm:hidden text-xs font-bold text-pizza-600">
+                    <span>Zobacz statystyki społeczności</span>
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </div>
+        </a>
+
+        <!-- 2. Pizza Dough Formula Bridge Card (Clickable, links to /formula.html) -->
+        <a href="/pl/formula.html" class="block group text-left cursor-pointer transform transition-all duration-300 hover:-translate-y-1 focus:outline-hidden" title="Zobacz wzory i porównanie">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs group-hover:shadow-xl group-hover:border-pizza-500/50 transition-all relative overflow-hidden">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-[11px] font-bold font-mono uppercase tracking-widest text-pizza-600 bg-pizza-50 border border-pizza-200 px-2.5 py-0.5 rounded-md inline-block mb-2">RÓWNANIA ZAMIAST TABEL</span>
+                        <h2 class="text-xl sm:text-2xl font-display font-extrabold text-gray-900 group-hover:text-pizza-600 transition-colors mb-2">
+                            Wzór na Ciasto na Pizzę i Drożdże: % Piekarskie, 0D Q10 vs. PDE
+                        </h2>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                            Jak dokładnie obliczyć mąkę, wodę, sól i drożdże ze wzorów — i gdzie ogólne przybliżenia 0D Q10 napotykają granice fizyczne w lodówce i zaczynach.
+                        </p>
+                    </div>
+
+                    <div class="inline-flex items-center text-xs sm:text-sm font-bold text-pizza-600 group-hover:translate-x-1 transition-transform shrink-0">
+                        <span>Zobacz wzory i porównanie</span>
+                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- 3. PDE (Pizzatastico Dough Engine) Scientific Teaser Card (Clickable, links to /pde.html) -->
+        <a href="/pl/pde.html" class="block group text-left cursor-pointer transform transition-all duration-300 hover:-translate-y-1 focus:outline-hidden" title="Zobacz model naukowy">
+            <div class="bg-slate-900 rounded-3xl p-6 sm:p-8 border border-slate-800 shadow-xs group-hover:shadow-xl group-hover:border-orange-500/50 transition-all relative overflow-hidden text-white">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="text-[11px] font-bold font-mono uppercase tracking-widest text-orange-400 bg-orange-500/15 border border-orange-500/30 px-2.5 py-0.5 rounded-md inline-block">PIZZATASTICO DOUGH ENGINE (PDE 5.3.0 · GEN 2)</span>
+                        </div>
+                        <h2 class="text-xl sm:text-2xl font-display font-extrabold text-white group-hover:text-orange-400 transition-colors mb-2">
+                            Sprzężona biochemia ciasta w czasie rzeczywistym
+                        </h2>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
+                            PDE 5.3.0 łączy chemię zbóż, biofizykę drożdży i zakwasu oraz L-stabilne przewodnictwo ciepła piany TR-BDF2 w ciągłym układzie 1D-radialnym (N_r = 5 powłok × 26 stanów, 135 stanów) dla całego harmonogramu fermentacji.
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300">
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Wieser (2007) · Courtin & Delcour (2002)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Schoolfield et al. (1981) · Rosso et al. (1995)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Bank et al. (1985) · Bikard (2008) · Chiotellis (2003)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Struyf et al. (2016/2017) · Verspreet et al. (2015)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Jayaram et al. (2013) · Gänzle et al. (1998/2007)</span>
+                            <span class="bg-slate-800/90 border border-slate-700 px-2.5 py-1 rounded-md">Sroan & MacRitchie (2009) · Aslankoohi (2015) · Courtin (2002)</span>
+                        </div>
+                    </div>
+
+                    <div class="inline-flex items-center text-xs sm:text-sm font-bold text-orange-400 group-hover:translate-x-1 transition-transform shrink-0">
+                        <span>Zobacz model naukowy</span>
+                        <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- 4. Core Feature Highlights -->
+        <section class="pt-4">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">
+                    Minimalistycznie. Precyzyjnie. Niezawodnie.
+                </h2>
+                <p class="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    Bez pustych obietnic. Tylko te narzędzia, których naprawdę potrzebujesz do stworzenia perfekcyjnego ciasta.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-orange-100 text-pizza-600 flex items-center justify-center text-xl mb-4">🍕</div>
+                        <h3 class="text-lg font-display font-bold text-gray-900 mb-2">Precyzyjny Kalkulator Ciasta</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Obliczaj drożdże, zakwas (Licoli i Lievito Madre), mieszanki mąk, wodę i sól z dokładnością do 0,01 g dzięki prawdziwym równaniom (PDE 5.3.0) zamiast tabel — z uwzględnieniem temperatury, bezwładności lodówki i białka.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl mb-4">⏱️</div>
+                        <h3 class="text-lg font-display font-bold text-gray-900 mb-2">Oś Czasu Fermentacji</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Śledź fermentację wstępną i w kulkach na przejrzystej osi czasu. Zaplanuj dzień wypieku co do minuty.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-6 shadow-xs border border-gray-200 flex flex-col justify-between">
+                    <div>
+                        <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl mb-4">🛡️</div>
+                        <h3 class="text-lg font-display font-bold text-gray-900 mb-2">Pełna Kontrola Danych i Opt-Out</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm leading-relaxed">Wszystkie obliczenia ciasta odbywają się bezpośrednio na Twoim urządzeniu. W trybie Gościa przepisy pozostają lokalne (opcjonalna kopia w chmurze po zalogowaniu), a anonimowe statystyki społeczności można w każdej chwili wyłączyć (Opt-Out).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Visible FAQ Accordion (Matches JSON-LD FAQPage 1:1) -->
+        <section id="faq" class="pt-4 pb-4">
+            <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-6">Często zadawane pytania</h2>
+            <div class="space-y-3">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>Czy Pizzatastico używa tabel, czy prawdziwych wzorów matematycznych?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico nie używa tabel. Bazując na procentach piekarskich i klasycznych krzywych 0D, rozwiązuje 5-warstwowe PDE (PDE 5.3.0) modelujące chłodzenie rdzenia, kriokinetykę 4–5 °C i mieszanki mąk 100% offline.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Jak działa kalkulator Pizzatastico?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico nie korzysta z żadnych statycznych tabel. Rozwiązuje lokalnie w natywnym C++20 5-warstwowy model PDE 1D (PDE 5.3.0), wyliczając mąkę, wodę, sól oraz drożdże lub zakwas co do 0,01 g na podstawie temperatury, masy ciasta, białka mąki i docelowej godziny wypieku.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Jakie metody ciasta obsługuje Pizzatastico (Bezpośrednie, Poolish, Biga, Zakwas)?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico obsługuje Ciasto Bezpośrednie (w temp. pokojowej i chłodni), zaczyn 2-etapowy (Poolish i Biga) oraz zakwas typu I (płynny Licoli i sztywny Lievito Madre) w ciągłej kaskadzie PDE 5.3.0.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Jak działa eksport harmonogramu pieczenia do kalendarza?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Jednym kliknięciem Pizzatastico zapisuje cały harmonogram (wyrabianie, formowanie kulek, rozgrzewanie pieca) bezpośrednio w kalendarzu urządzenia (Google lub Apple) z przypomnieniami. Możesz też wyeksportować plik .ics.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Jakie powiadomienia i liczniki czasu oferuje aplikacja?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Aplikacja wysyła powiadomienia push o każdym kroku: konfigurowalny alarm przed rozpoczęciem wyrabiania, powiadomienia o zmianie fazy (np. koniec fermentacji wstępnej i formowanie kulek) oraz aktywny stoper na pasku powiadomień.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Jak przeliczane są drożdże świeże na suszone?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico obsługuje drożdże świeże (CY), suche instant (IDY), aktywne suche (ADY), Licoli i Lievito Madre co do 0,01 g. Zamiast sztywnych przeliczników PDE 5.3.0 modeluje rehydratację, efekt glutationu (GSH) i symbiozę zakwasu.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Jaka hydratacja i mąka są zalecane dla początkujących?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">W domowym piekarniku zalecamy hydratację 58%–62% oraz mąkę Tipo 00 o zawartości białka 11,5%–12,5%. W piecach wysokotemperaturowych najlepiej sprawdza się 62%–68% z mocniejszą mąką.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <img src="/assets/images/boy_hd_no_banner.png" alt="Logo Pizzatastico" class="w-8 h-8 object-contain grayscale opacity-60">
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v2.6.8</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/pl/formula.html" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">Wzór na ciasto</a>
+                <a href="/pl/pde.html" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">Nauka PDE</a>
+                <a href="/pl/stats.html" class="hover:text-pizza-600 transition-colors">Pizza Stats</a>
+                <a href="/pl/guide.html" class="hover:text-pizza-600 transition-colors">Porady Paolo</a>
+                <a href="/pl/privacy.html" class="hover:text-pizza-600 transition-colors">Polityka Prywatności</a>
+                <a href="/pl/imprint.html" class="hover:text-pizza-600 transition-colors">Nota Prawna</a>
+                <button type="button" onclick="window.pzOpenCookieSettings && window.pzOpenCookieSettings()" class="hover:text-pizza-600 transition-colors cursor-pointer bg-transparent border-none p-0">Ustawienia plików cookie</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Client-Side Live Fetch on Index -->
+    <script>
+        const bakesUnitLabel = "Wypieków";
+        async function fetchIndexStats() {
+            // 1. Primary: First-party static /stats.json
+            try {
+                const res = await fetch('/stats.json');
+                if (res.ok) {
+                    const json = await res.json();
+                    if (json && json.avg_hydration) {
+                        const bakes = json.total_bakes_count || 158;
+                        const hyd = Number(json.avg_hydration).toFixed(1);
+                        const prot = Number(json.avg_flour_protein).toFixed(1);
+                        const heat = Math.round(json.avg_bake_heat);
+                        const timing = Math.round(json.avg_timing_score);
+
+                        const elTotal = document.getElementById('index-stat-total-bakes');
+                        if (elTotal) elTotal.textContent = bakes;
+                        const elLiveCount = document.getElementById('index-kpi-live-count');
+                        if (elLiveCount) elLiveCount.textContent = bakes + ' ' + bakesUnitLabel;
+                        const elHyd = document.getElementById('index-stat-avg-hydration');
+                        if (elHyd) elHyd.textContent = hyd;
+                        const elProt = document.getElementById('index-stat-avg-protein');
+                        if (elProt) elProt.textContent = prot;
+                        const elHeat = document.getElementById('index-stat-avg-heat');
+                        if (elHeat) elHeat.textContent = heat;
+                        const elTiming = document.getElementById('index-stat-avg-timing');
+                        if (elTiming) elTiming.textContent = timing;
+                        return;
+                    }
+                }
+            } catch (_) {}
+
+            // 2. Fallback: Direct Firestore REST API if first-party /stats.json is unavailable or empty
+            try {
+                const fsRes = await fetch('https://firestore.googleapis.com/v1/projects/pizzatastico-40234/databases/(default)/documents/public_stats/dough_index');
+                if (fsRes.ok) {
+                    const doc = await fsRes.json();
+                    const f = doc.fields;
+                    if (f && f.avg_hydration) {
+                        const bakes = Number(f.total_bakes_count?.integerValue || 158);
+                        const hyd = Number(f.avg_hydration?.doubleValue ?? f.avg_hydration?.integerValue ?? 65.9).toFixed(1);
+                        const prot = Number(f.avg_flour_protein?.doubleValue ?? f.avg_flour_protein?.integerValue ?? 13.0).toFixed(1);
+                        const heat = Math.round(Number(f.avg_bake_heat?.integerValue ?? f.avg_bake_heat?.doubleValue ?? 409));
+                        const timing = Math.round(Number(f.avg_timing_score?.integerValue ?? 92));
+
+                        const elTotal = document.getElementById('index-stat-total-bakes');
+                        if (elTotal) elTotal.textContent = bakes;
+                        const elLiveCount = document.getElementById('index-kpi-live-count');
+                        if (elLiveCount) elLiveCount.textContent = bakes + ' ' + bakesUnitLabel;
+                        const elHyd = document.getElementById('index-stat-avg-hydration');
+                        if (elHyd) elHyd.textContent = hyd;
+                        const elProt = document.getElementById('index-stat-avg-protein');
+                        if (elProt) elProt.textContent = prot;
+                        const elHeat = document.getElementById('index-stat-avg-heat');
+                        if (elHeat) elHeat.textContent = heat;
+                        const elTiming = document.getElementById('index-stat-avg-timing');
+                        if (elTiming) elTiming.textContent = timing;
+                    }
+                }
+            } catch (_) {}
+        }
+        document.addEventListener('DOMContentLoaded', fetchIndexStats);
+    </script>
+    <script>
+        window.__PZ_PAGE__ = { page: 'home', lang: 'pl' };
+        window.__PZ_I18N__ = {"consent_banner_text":"Wyłącznie za Twoją wyraźną zgodą używamy opcjonalnych plików cookie Google Analytics 4 (Google Ireland / USA) do analizy ruchu. Zgodę możesz wycofać w każdej chwili w stopce strony.","nav_privacy":"Polityka Prywatności","privacy_href":"/pl/privacy.html","nav_imprint":"Nota Prawna","imprint_href":"/pl/imprint.html","consent_accept":"Zezwól na statystyki","consent_decline":"Odrzuć"};
+    </script>
+    <script src="/assets/js/pz-analytics.js" defer></script>
+</body>
+</html>

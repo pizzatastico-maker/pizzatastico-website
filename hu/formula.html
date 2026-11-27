@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzatészta Képlet & Élesztőszámítás (Pék-%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico</title>
+    <meta name="description" content="A teljes pizzatészta képlet: pék-százalékok példával, élesztőátszámítás (CY/IDY/ADY), a táblázatok és fix 0D Q10 görbék fizikai határai a hűtőben, valamint a PDE 5.3.0 számítása Poolishra, Bigára & Kovászra 0,01 g-ra.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/hu/formula.html">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/formula.html">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/formula.html">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/formula.html">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/formula.html">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/formula.html">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/formula.html">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/formula.html">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/formula.html">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/formula.html">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/formula.html">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/formula.html">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/formula.html">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/formula.html">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/formula.html">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/formula.html">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/formula.html">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/formula.html">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/formula.html">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/formula.html">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/formula.html">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/formula.html">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/formula.html">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/formula.html">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/formula.html">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/formula.html">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/formula.html">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="Pizzatészta Képlet & Élesztőszámítás (Pék-%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta property="og:description" content="A teljes pizzatészta képlet: pék-százalékok példával, élesztőátszámítás (CY/IDY/ADY), a táblázatok és fix 0D Q10 görbék fizikai határai a hűtőben, valamint a PDE 5.3.0 számítása Poolishra, Bigára & Kovászra 0,01 g-ra.">
+    <meta property="og:url" content="https://pizzatastico.com/hu/formula.html">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pizzatészta Képlet & Élesztőszámítás (Pék-%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta name="twitter:description" content="A teljes pizzatészta képlet: pék-százalékok példával, élesztőátszámítás (CY/IDY/ADY), a táblázatok és fix 0D Q10 görbék fizikai határai a hűtőben, valamint a PDE 5.3.0 számítása Poolishra, Bigára & Kovászra 0,01 g-ra.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Structured Data (Article + FAQPage) for Search Engines & AI Answer Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://pizzatastico.com/hu/formula.html#article",
+          "headline": "Pizzatészta Képlet & Élesztőszámítás (Pék-%, 0D Q10 vs. PDE 5.3.0)",
+          "description": "A teljes pizzatészta képlet: pék-százalékok példával, élesztőátszámítás (CY/IDY/ADY), a táblázatok és fix 0D Q10 görbék fizikai határai a hűtőben, valamint a PDE 5.3.0 számítása Poolishra, Bigára & Kovászra 0,01 g-ra.",
+          "inLanguage": "hu",
+          "datePublished": "2026-11-24",
+          "dateModified": "2026-11-26",
+          "author": {
+            "@type": "Person",
+            "name": "Paul Kern"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pizzatastico",
+            "url": "https://pizzatastico.com/",
+            "sameAs": [
+              "https://apps.apple.com/app/id6811171643",
+              "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+              "https://www.youtube.com/@Pizzatastico",
+              "https://www.instagram.com/pizzatastico.app/"
+            ],
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png"
+            }
+          },
+          "mainEntityOfPage": "https://pizzatastico.com/hu/formula.html",
+          "about": [
+            "Baker's percentages pizza dough formula (flour, hydration, salt, oil, yeast)",
+            "Continuous yeast fermentation math building on classic room-temperature models toward spatially resolved 1D-radial continuum physics",
+            "Cold fridge thermal inertia across dough ball vs. bulk dough block mass",
+            "Direct Dough, Poolish, Biga, and Type-I Sourdough (Licoli & Lievito Madre)",
+            "Pizzatastico Dough Engine (PDE 5.3.0): spatially resolved 1D-radial 5-shell continuum PDE running 100% offline in native C++20"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pizzatastico.com/hu/formula.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Melyik app számolja ki a pizzatésztát képletekkel táblázatok helyett?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Pizzatastico 100%-ban matematikailag számol táblázatok nélkül. A pék-százalékokon és 0D Q10 görbéken túl offline C++20-ban old meg egy 5 héjú PDE-t (PDE 5.3.0) iOS-en, Androidon, Apple Watchon és Wear OS-en 0,01 g pontossággal."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Hogyan épít a Pizzatastico (PDE 5.3.0) az olyan úttörő modellekre, mint a TxCraig vagy a Hamelman?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Az olyan úttörő modellek, mint a TxCraig vagy a Hamelman-skálázás alapozták meg a szakmát azzal, hogy a merev táblázatokat folytonos szobahőmérsékleti görbékre cserélték — meleg direkt tésztánál ma is kiválóak. A Pizzatastico (PDE 5.3.0) ezt az örökséget viszi tovább: 5 koncentrikus hőhéjjal (lassú maghűlés a hűtőben), 9 °C alatti kriokinetikával és 2 lépcsős Poolish-, Biga- és Kovász-kaszkáddal bővíti a matematikát."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Támogatja a Pizzatastico a Poolisht, Bigát és Kovászt képletekkel?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Igen. Direkt tészta, Poolish, Biga, Licoli és Lievito Madre egyaránt folytonos 2 lépcsős PDE-kaszkáddal számolódik."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Működik offline, és visszafelé tervez a vacsoraidőtől?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Igen. A teljes C++20 PDE 5.3.0 motor 100% offline fut éjszakai védelemmel, értesítésekkel, .ics exporttal és okosóra-appokkal."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+        }
+        .formula-box {
+            background: #0f172a;
+            color: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.15rem 1.35rem;
+            border: 1px solid #1e293b;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+        .formula-table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            background: #ffffff;
+        }
+        .formula-table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.8125rem;
+            line-height: 1.55;
+        }
+        .formula-table thead th {
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #1e293b;
+            vertical-align: bottom;
+        }
+        .formula-table tbody td {
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+            color: #334155;
+        }
+        .formula-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .formula-table tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .formula-table th.formula-col-highlight {
+            background: #065f46;
+            color: #ecfdf5;
+        }
+        .formula-table td.formula-col-highlight {
+            background: rgba(236, 253, 245, 0.65);
+            color: #064e3b;
+            border-left: 2px solid rgba(5, 150, 105, 0.35);
+            font-weight: 600;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .faq-item[open] {
+            border-color: rgba(234, 88, 12, 0.45);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-chevron {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: #ea580c;
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
+
+    <!-- Header & Hero -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="/hu/" class="flex items-center space-x-3 transition hover:opacity-90 cursor-pointer group" title="Back to Home">
+                <div class="bg-white rounded-full p-1 shadow-sm transition group-hover:scale-105">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico logó" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-extrabold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </a>
+
+            <div class="flex items-center space-x-3">
+                <a href="/hu/" class="hidden sm:inline-flex items-center space-x-1.5 text-white/95 hover:text-white font-semibold text-xs md:text-sm bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full transition shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Back to Home</span>
+                </a>
+
+                <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                    <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/formula.html" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/formula.html" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/formula.html" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/formula.html" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/formula.html" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/formula.html" class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/formula.html" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/formula.html" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/formula.html" class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/formula.html" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/formula.html" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/formula.html" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/formula.html" selected class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/formula.html" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/formula.html" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/formula.html" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/formula.html" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/formula.html" class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/formula.html" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/formula.html" class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/formula.html" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/formula.html" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/formula.html" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/formula.html" class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/formula.html" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 px-3 py-1 rounded-full text-orange-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+                    <span>TÉSZTAMATEMATIKA · NULLA TÁBLÁZAT</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white leading-tight mb-4 drop-shadow-xs">
+                    Pizzatészta Képlet & Élesztőszámítás Érthetően
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mb-7">
+                    A pék-százalékoktól és klasszikus 0D erjedési görbéktől az 5 héjú tészta-fizikáig (PDE 5.3.0).
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                        <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play Áruház">
+                        <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play Áruház" class="h-11">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none pointer-events-none">
+            <svg class="relative block w-full h-10 sm:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Section 1: Baker's Percentages & Worked Example -->
+        <section class="max-w-5xl mx-auto px-6 py-10">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md mb-3 inline-block">1. ALAPKÉPLETEK</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-3">Pék-százalékok & Visszaszámolás</h2>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl">Minden pontos képlet a pék-százalékokra épül: az összes liszt M = 100%, a víz (H), só (S), olaj (F) és élesztő (Y) a liszthez viszonyítva adott. A teljes tömegből T = Gombócok × Súly × (1 + Veszteség) először a lisztet kapjuk meg.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                    <div class="space-y-3">
+                        <h3 class="text-sm font-display font-bold uppercase tracking-wider text-slate-700">Zárt Összetevő-egyenletek</h3>
+                        <div class="formula-box space-y-1.5">
+                            <div class="text-orange-300">T = N_gombóc × m_gombóc × (1 + Veszteség%)</div>
+                            <div class="text-emerald-300">M_liszt = T / (1 + H% + S% + F% + Y%)</div>
+                            <div class="text-sky-300">Víz = M × H% · Só = M × S% · Olaj = M × F%</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
+                        <div>
+                            <h3 class="text-base font-display font-extrabold text-gray-900 mb-1.5">Példa (4 × 250 g = 1 000 g tészta, 65% Hidratáció, 2,8% Só)</h3>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">Az elhanyagolható élesztő (< 0,5%) nélkül: M_liszt = 1 000 g / (1 + 0,65 + 0,028) = 1 000 / 1,678 ≈ 596 g liszt. Víz = 595,9 g × 0,65 ≈ 387 g. Só = 595,9 g × 0,028 ≈ 16,7 g. Az élesztő (~0,15–3,50 g) időtől, hőmérséklettől és tömegtől függ.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-200">
+                            <h4 class="text-sm font-display font-bold text-gray-900 mb-1">Friss Élesztő (CY) vs. Szárított (IDY / ADY) & Kovász</h4>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">Egyszerű képletek fix szorzókkal váltják a friss élesztőt (CY = 100%, IDY ≈ 0,33×, ADY ≈ 0,40–0,45×). A PDE 5.3.0 emellett rehidratációt, glutationt (GSH), Licolit és Lievito Madrét számol 0,01 g-ra.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Physical Limits of Lookup Tables & 0D Fixed-Q10 Approximations -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="mb-6">
+                <span class="text-xs font-bold font-mono uppercase tracking-widest text-slate-700 bg-slate-200/80 px-2.5 py-1 rounded-md mb-2 inline-block">2. A 0D GÖRBÉK KORLÁTAI</span>
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">Táblázatok & Egyszerű 0D-Q10 Közelítések Fizikai Korlátai</h2>
+                <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">A klasszikus, fix Q10 = 2,0 értékkel dolgozó 0D pontmodellek remek iránytűk meleg direkt tésztához. Hűtőben, nagy tömböknél és lisztkeverékeknél azonban négy fizikai hatás túlmutat az egypontos képleteken:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-sky-800 bg-sky-100/90 border border-sky-200 px-3 py-1 rounded-full inline-block">1 · TERMIKUS TEHETETLENSÉG</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">250 g Gombóc vs. 2 kg Tömb a Hűtőben</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">0D modellek szerint a 23 °C-os tészta azonnal 4–7 °C-ra hűl. Valójában a CO2-hab szigeteli a magot: egy 1–2,5 kg-os tömb órákig melegen erjed belül (25–45% nyári túlkelesztés radiális modell nélkül).</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-amber-800 bg-amber-100/90 border border-amber-200 px-3 py-1 rounded-full inline-block">2 · 11,8× HIDEGHIBA</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Kriokinetika 9 °C alatt (Fix Q10 = 2,0 hiba)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Fix Q10 = 2,0 mellett 5 °C-on a 30 °C-os ütem 17,7%-át jósolná. Labormérések csak ~1,5%-ot mutatnak a membránmerevedés miatt — 11,8× túlbecslés.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3 py-1 rounded-full inline-block">3 · OZMÓZIS & LISZTMÁTRIX</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Só, Cukor-ozmózis & Lisztkeverékek (Tipo 00 / 0 / 1 / Teljes kiőrlésű)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Só ionárnyékolás, cukor vízaktivitás a_w(t) (> ~6% fékez), hamu pH-puffer és amilázok szabályozzák a kelesztést és barnulást.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-purple-800 bg-purple-100/90 border border-purple-200 px-3 py-1 rounded-full inline-block">4 · 2 LÉPCSŐS KASZKÁD</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Poolish, Biga & I-es Típusú Kovász (Licoli / Lievito Madre)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Fix levonások figyelmen kívül hagyják a savakat, proteolízist és MapA szimbiózist. A PDE 5.3.0 lefuttatja az 1. lépcsőt és folytonosan adja át a 26 állapotot.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: 3-Generation Comparison Table -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-indigo-800 bg-indigo-100/90 border border-indigo-200 px-2.5 py-1 rounded-md mb-2 inline-block">3. ÖSSZEHASONLÍTÁS</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">Statikus Táblázatok vs. 0D Képletek vs. 5 Héjú Kontinuum PDE</h2>
+                    <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">Áttekintés a három kalkulátor-generáció számítási módjáról:</p>
+                </div>
+
+                <div class="formula-table-wrap">
+                    <table class="formula-table">
+                        <thead>
+                            <tr>
+                                <th>Szempont</th>
+                                <th>1. osztály: Táblázatok / Fix Receptek</th>
+                                <th>2. osztály: 0D Exponenciális Modellek (Fix Q10)</th>
+                                <th class="formula-col-highlight">3. osztály: Pizzatastico PDE 5.3.0 (1D 5 Héjú PDE)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Matematikai Alap</td>
+                                <td>Fix táblázat vagy '1 g élesztő' szabály</td>
+                                <td>Pék-% + 0D exponenciális illesztés</td>
+                                <td class="formula-col-highlight">Pék-% + 5 héjú radiális TR-BDF2 PDE (135 állapot)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Élesztő- & Kovászpontosság</td>
+                                <td>Durva lépések (0,5 g – 1 g)</td>
+                                <td>Folyamatos ~0,05 g fix CY/IDY/ADY aránnyal</td>
+                                <td class="formula-col-highlight">0,01 g: CY, IDY (GSH), ADY, Licoli & Lievito Madre</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Hűtő & Tésztatömeg</td>
+                                <td>Figyelmen kívül hagyva</td>
+                                <td>0D ponthőmérséklet (kihagyja a maghőt & 5 °C féket)</td>
+                                <td class="formula-col-highlight">5 héjú hővezetés + Maxwell–Eucken hab + Ψ(m)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Lisztek, Só & Cukor</td>
+                                <td>Egy általános liszt</td>
+                                <td>W-érték vagy egyszerű fehérjesáv</td>
+                                <td class="formula-col-highlight">Pro Lisztmátrix (Tipo 00/0/1, Teljes kiőrlésű, Semola) + a_w(t) & pH</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Poolish, Biga & Kovász</td>
+                                <td>Csak fix sablonok</td>
+                                <td>Empirikus szorzók savkémia nélkül</td>
+                                <td class="formula-col-highlight">Valódi 2 lépcsős biofizikai kaszkád x_Stage1(t_pref) ↦ x0</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Ütemterv & Validálás</td>
+                                <td>Statikus szöveg</td>
+                                <td>Csak szobahős térfogat (~31% laborsorozat)</td>
+                                <td class="formula-col-highlight">Visszatervező + Rescue, 100% offline C++20, 19 tanulmány (8,7% NRMSE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pt-2">
+                    <a href="/hu/pde.html" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-700 text-white font-display font-bold px-5 py-3 rounded-xl shadow-sm transition-colors text-xs sm:text-sm">
+                        <span>Teljes Tudományos Cikk & 19 Tanulmányos Benchmark (PDE 5.3.0)</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Visible FAQ Accordion (Matches JSON-LD FAQPage 1:1) -->
+        <section id="faq" class="max-w-5xl mx-auto px-6 mb-14">
+            <div class="mb-6">
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900">Gyakori Kérdések a Pizzatészta Képletekről</h2>
+            </div>
+
+            <div class="space-y-3">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>Melyik app számolja ki a pizzatésztát képletekkel táblázatok helyett?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">A Pizzatastico 100%-ban matematikailag számol táblázatok nélkül. A pék-százalékokon és 0D Q10 görbéken túl offline C++20-ban old meg egy 5 héjú PDE-t (PDE 5.3.0) iOS-en, Androidon, Apple Watchon és Wear OS-en 0,01 g pontossággal.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Hogyan épít a Pizzatastico (PDE 5.3.0) az olyan úttörő modellekre, mint a TxCraig vagy a Hamelman?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Az olyan úttörő modellek, mint a TxCraig vagy a Hamelman-skálázás alapozták meg a szakmát azzal, hogy a merev táblázatokat folytonos szobahőmérsékleti görbékre cserélték — meleg direkt tésztánál ma is kiválóak. A Pizzatastico (PDE 5.3.0) ezt az örökséget viszi tovább: 5 koncentrikus hőhéjjal (lassú maghűlés a hűtőben), 9 °C alatti kriokinetikával és 2 lépcsős Poolish-, Biga- és Kovász-kaszkáddal bővíti a matematikát.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Támogatja a Pizzatastico a Poolisht, Bigát és Kovászt képletekkel?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Igen. Direkt tészta, Poolish, Biga, Licoli és Lievito Madre egyaránt folytonos 2 lépcsős PDE-kaszkáddal számolódik.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Működik offline, és visszafelé tervez a vacsoraidőtől?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Igen. A teljes C++20 PDE 5.3.0 motor 100% offline fut éjszakai védelemmel, értesítésekkel, .ics exporttal és okosóra-appokkal.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section class="max-w-5xl mx-auto px-6 mb-16 text-center">
+            <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-xl mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold mb-3">Süsd meg a tökéletes pizzát.</h2>
+                    <p class="text-sm sm:text-base text-white/90 mb-6 leading-relaxed">Képletalapú pizzatészta kalkulátor az otthoni pizzához. Nulla táblázat — pontos hidratáció, 0,01 g élesztőszámítás direkt tésztához, Poolish-hoz, Bigához & Kovászhoz megbízható visszatervezéssel.</p>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play Áruház">
+                            <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play Áruház" class="h-11">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <a href="/hu/" class="hover:opacity-80 transition" title="Back to Home">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico logó" class="w-8 h-8 object-contain grayscale opacity-60">
+                </a>
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v2.6.8</span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/hu/" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">&larr; Back to Home</a>
+                <a href="/hu/formula.html" class="hover:text-pizza-600 transition-colors text-pizza-600 font-bold">Tésztaképlet</a>
+                <a href="/hu/pde.html" class="hover:text-pizza-600 transition-colors">PDE Tudomány</a>
+                <a href="/hu/stats.html" class="hover:text-pizza-600 transition-colors">Pizza Stats</a>
+                <a href="/hu/guide.html" class="hover:text-pizza-600 transition-colors">Paolo Tippjei</a>
+                <a href="/hu/privacy.html" class="hover:text-pizza-600 transition-colors">Adatvédelem</a>
+                <a href="/hu/imprint.html" class="hover:text-pizza-600 transition-colors">Impresszum</a>
+                <button type="button" onclick="window.pzOpenCookieSettings && window.pzOpenCookieSettings()" class="hover:text-pizza-600 transition-colors cursor-pointer bg-transparent border-none p-0">Cookie-beállítások</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.__PZ_PAGE__ = { page: 'formula', lang: 'hu' };
+        window.__PZ_I18N__ = {"consent_banner_text":"Kizárólag az Ön kifejezett hozzájárulásával használunk opcionális statisztikai sütiket (Google Analytics 4, Google Ireland / USA). Hozzájárulását bármikor visszavonhatja a láblécben.","nav_privacy":"Adatvédelem","privacy_href":"/hu/privacy.html","nav_imprint":"Impresszum","imprint_href":"/hu/imprint.html","consent_accept":"Statisztikák engedélyezése","consent_decline":"Elutasítás"};
+    </script>
+    <script src="/assets/js/pz-analytics.js" defer></script>
+</body>
+</html>

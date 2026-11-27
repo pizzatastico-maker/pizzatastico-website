@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="no" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzadeig Formel & Gjærberegning (Baker-%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico</title>
+    <meta name="description" content="Komplett pizzadeig-formel forklart: bakerprosenter med regneeksempel, gjæromregning (CY/IDY/ADY), fysiske grenser for tabeller og faste 0D Q10-kurver i kjøleskap og hvordan PDE 5.3.0 beregner Direktedeig, Poolish, Biga & Surdeig til 0,01 g.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#eb6a0b">
+    <link rel="icon" type="image/png" href="/assets/images/boy_hd_no_banner.png">
+
+    <!-- Canonical & Hreflang for International SEO -->
+    <link rel="canonical" href="https://pizzatastico.com/no/formula.html">
+    <link rel="alternate" hreflang="en" href="https://pizzatastico.com/formula.html">
+    <link rel="alternate" hreflang="de" href="https://pizzatastico.com/de/formula.html">
+    <link rel="alternate" hreflang="it" href="https://pizzatastico.com/it/formula.html">
+    <link rel="alternate" hreflang="es" href="https://pizzatastico.com/es/formula.html">
+    <link rel="alternate" hreflang="fr" href="https://pizzatastico.com/fr/formula.html">
+    <link rel="alternate" hreflang="pl" href="https://pizzatastico.com/pl/formula.html">
+    <link rel="alternate" hreflang="zh" href="https://pizzatastico.com/zh/formula.html">
+    <link rel="alternate" hreflang="ja" href="https://pizzatastico.com/ja/formula.html">
+    <link rel="alternate" hreflang="ko" href="https://pizzatastico.com/ko/formula.html">
+    <link rel="alternate" hreflang="vi" href="https://pizzatastico.com/vi/formula.html">
+    <link rel="alternate" hreflang="pt" href="https://pizzatastico.com/pt/formula.html">
+    <link rel="alternate" hreflang="el" href="https://pizzatastico.com/el/formula.html">
+    <link rel="alternate" hreflang="hu" href="https://pizzatastico.com/hu/formula.html">
+    <link rel="alternate" hreflang="fi" href="https://pizzatastico.com/fi/formula.html">
+    <link rel="alternate" hreflang="nl" href="https://pizzatastico.com/nl/formula.html">
+    <link rel="alternate" hreflang="sv" href="https://pizzatastico.com/sv/formula.html">
+    <link rel="alternate" hreflang="da" href="https://pizzatastico.com/da/formula.html">
+    <link rel="alternate" hreflang="no" href="https://pizzatastico.com/no/formula.html">
+    <link rel="alternate" hreflang="cs" href="https://pizzatastico.com/cs/formula.html">
+    <link rel="alternate" hreflang="sk" href="https://pizzatastico.com/sk/formula.html">
+    <link rel="alternate" hreflang="ro" href="https://pizzatastico.com/ro/formula.html">
+    <link rel="alternate" hreflang="hr" href="https://pizzatastico.com/hr/formula.html">
+    <link rel="alternate" hreflang="tr" href="https://pizzatastico.com/tr/formula.html">
+    <link rel="alternate" hreflang="bg" href="https://pizzatastico.com/bg/formula.html">
+    <link rel="alternate" hreflang="uk" href="https://pizzatastico.com/uk/formula.html">
+    <link rel="alternate" hreflang="x-default" href="https://pizzatastico.com/formula.html">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Pizzatastico">
+    <meta property="og:title" content="Pizzadeig Formel & Gjærberegning (Baker-%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta property="og:description" content="Komplett pizzadeig-formel forklart: bakerprosenter med regneeksempel, gjæromregning (CY/IDY/ADY), fysiske grenser for tabeller og faste 0D Q10-kurver i kjøleskap og hvordan PDE 5.3.0 beregner Direktedeig, Poolish, Biga & Surdeig til 0,01 g.">
+    <meta property="og:url" content="https://pizzatastico.com/no/formula.html">
+    <meta property="og:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pizzadeig Formel & Gjærberegning (Baker-%, 0D Q10 vs. PDE 5.3.0) – Pizzatastico">
+    <meta name="twitter:description" content="Komplett pizzadeig-formel forklart: bakerprosenter med regneeksempel, gjæromregning (CY/IDY/ADY), fysiske grenser for tabeller og faste 0D Q10-kurver i kjøleskap og hvordan PDE 5.3.0 beregner Direktedeig, Poolish, Biga & Surdeig til 0,01 g.">
+    <meta name="twitter:image" content="https://pizzatastico.com/assets/images/boy_hd_no_banner.png">
+
+    <!-- Structured Data (Article + FAQPage) for Search Engines & AI Answer Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://pizzatastico.com/no/formula.html#article",
+          "headline": "Pizzadeig Formel & Gjærberegning (Baker-%, 0D Q10 vs. PDE 5.3.0)",
+          "description": "Komplett pizzadeig-formel forklart: bakerprosenter med regneeksempel, gjæromregning (CY/IDY/ADY), fysiske grenser for tabeller og faste 0D Q10-kurver i kjøleskap og hvordan PDE 5.3.0 beregner Direktedeig, Poolish, Biga & Surdeig til 0,01 g.",
+          "inLanguage": "no",
+          "datePublished": "2026-11-24",
+          "dateModified": "2026-11-26",
+          "author": {
+            "@type": "Person",
+            "name": "Paul Kern"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Pizzatastico",
+            "url": "https://pizzatastico.com/",
+            "sameAs": [
+              "https://apps.apple.com/app/id6811171643",
+              "https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter",
+              "https://www.youtube.com/@Pizzatastico",
+              "https://www.instagram.com/pizzatastico.app/"
+            ],
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pizzatastico.com/assets/images/boy_hd_no_banner.png"
+            }
+          },
+          "mainEntityOfPage": "https://pizzatastico.com/no/formula.html",
+          "about": [
+            "Baker's percentages pizza dough formula (flour, hydration, salt, oil, yeast)",
+            "Continuous yeast fermentation math building on classic room-temperature models toward spatially resolved 1D-radial continuum physics",
+            "Cold fridge thermal inertia across dough ball vs. bulk dough block mass",
+            "Direct Dough, Poolish, Biga, and Type-I Sourdough (Licoli & Lievito Madre)",
+            "Pizzatastico Dough Engine (PDE 5.3.0): spatially resolved 1D-radial 5-shell continuum PDE running 100% offline in native C++20"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://pizzatastico.com/no/formula.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Hvilken app beregner pizzadeig med formler i stedet for tabeller?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pizzatastico regner 100% matematisk uten tabeller. Utover bakerprosenter og 0D Q10-kurver løser appen offline i C++20 en 5-skalls PDE (PDE 5.3.0) på iOS, Android, Apple Watch og Wear OS ned til 0,01 g."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Hvordan bygger Pizzatastico (PDE 5.3.0) videre på pionermodeller som TxCraig eller Hamelman?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pionermodeller som TxCraig og Hamelman-skalering la grunnlaget ved å erstatte stive tabeller med jevne romtemperatur-kurver — og fungerer fortsatt utmerket for varm direktedeig. Pizzatastico (PDE 5.3.0) bygger videre på dette ved å utvide til 5 konsentriske varmeskall (langsom kjernekjøling i kjøleskap), kryokinetikk under 9 °C og 2-trinns Poolish, Biga & Surdeig."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Støtter Pizzatastico Poolish, Biga og Surdeig med ekte formler?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Direktedeig, Poolish, Biga, Licoli og Lievito Madre beregnes via en kontinuerlig 2-trinns PDE-kaskade."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Virker appen offline og planlegger baklengs fra middag?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Hele C++20 PDE 5.3.0-motoren kjører 100% offline med nattesøvn-beskyttelse, varsler, .ics-eksport og klokke-apper."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #334155 100%);
+        }
+        .formula-box {
+            background: #0f172a;
+            color: #f8fafc;
+            border-radius: 1rem;
+            padding: 1.15rem 1.35rem;
+            border: 1px solid #1e293b;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            overflow-x: auto;
+        }
+        .formula-table-wrap {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            background: #ffffff;
+        }
+        .formula-table {
+            width: 100%;
+            min-width: 700px;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.8125rem;
+            line-height: 1.55;
+        }
+        .formula-table thead th {
+            background: #0f172a;
+            color: #f8fafc;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #1e293b;
+            vertical-align: bottom;
+        }
+        .formula-table tbody td {
+            padding: 0.85rem 0.95rem;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+            color: #334155;
+        }
+        .formula-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .formula-table tbody tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        .formula-table th.formula-col-highlight {
+            background: #065f46;
+            color: #ecfdf5;
+        }
+        .formula-table td.formula-col-highlight {
+            background: rgba(236, 253, 245, 0.65);
+            color: #064e3b;
+            border-left: 2px solid rgba(5, 150, 105, 0.35);
+            font-weight: 600;
+        }
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1rem;
+            padding: 1rem 1.25rem;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+        .faq-item[open] {
+            border-color: rgba(234, 88, 12, 0.45);
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+        }
+        .faq-item summary {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.95rem;
+        }
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-chevron {
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+            color: #ea580c;
+        }
+        .faq-item[open] .faq-chevron {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-app-bg text-gray-900 antialiased font-sans min-h-screen flex flex-col justify-between selection:bg-orange-500 selection:text-white">
+
+    <!-- Header & Hero -->
+    <header class="hero-gradient relative overflow-hidden shadow-md">
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <nav class="relative z-10 max-w-5xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="/no/" class="flex items-center space-x-3 transition hover:opacity-90 cursor-pointer group" title="Back to Home">
+                <div class="bg-white rounded-full p-1 shadow-sm transition group-hover:scale-105">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico-logo" class="w-8 h-8 object-contain">
+                </div>
+                <span class="text-white font-display font-extrabold tracking-widest uppercase text-lg">Pizzatastico</span>
+            </a>
+
+            <div class="flex items-center space-x-3">
+                <a href="/no/" class="hidden sm:inline-flex items-center space-x-1.5 text-white/95 hover:text-white font-semibold text-xs md:text-sm bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full transition shadow-xs">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                    <span>Back to Home</span>
+                </a>
+
+                <div class="bg-white/95 px-4 py-2 rounded-full shadow-sm">
+                    <div class="relative inline-flex items-center"><svg class="w-4 h-4 text-pizza-500 mr-1.5 shrink-0 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.5 0 4.5-4 4.5-9S14.5 3 12 3m0 18c-2.5 0-4.5-4-4.5-9S9.5 3 12 3m-9 9h18"/></svg><select onchange="if (this.value) window.location.href=this.value" class="bg-transparent text-gray-800 font-semibold text-xs sm:text-sm cursor-pointer focus:outline-hidden pr-6 py-0.5 appearance-none border-none outline-hidden"><option value="/formula.html" class="bg-white text-gray-900 py-1">🇬🇧 English (EN)</option><option value="/de/formula.html" class="bg-white text-gray-900 py-1">🇩🇪 Deutsch (DE)</option><option value="/it/formula.html" class="bg-white text-gray-900 py-1">🇮🇹 Italiano (IT)</option><option value="/es/formula.html" class="bg-white text-gray-900 py-1">🇪🇸 Español (ES)</option><option value="/fr/formula.html" class="bg-white text-gray-900 py-1">🇫🇷 Français (FR)</option><option value="/pl/formula.html" class="bg-white text-gray-900 py-1">🇵🇱 Polski (PL)</option><option value="/zh/formula.html" class="bg-white text-gray-900 py-1">🇨🇳 中文 (ZH)</option><option value="/ja/formula.html" class="bg-white text-gray-900 py-1">🇯🇵 日本語 (JA)</option><option value="/ko/formula.html" class="bg-white text-gray-900 py-1">🇰🇷 한국어 (KO)</option><option value="/vi/formula.html" class="bg-white text-gray-900 py-1">🇻🇳 Tiếng Việt (VI)</option><option value="/pt/formula.html" class="bg-white text-gray-900 py-1">🇵🇹 Português (PT)</option><option value="/el/formula.html" class="bg-white text-gray-900 py-1">🇬🇷 Ελληνικά (EL)</option><option value="/hu/formula.html" class="bg-white text-gray-900 py-1">🇭🇺 Magyar (HU)</option><option value="/fi/formula.html" class="bg-white text-gray-900 py-1">🇫🇮 Suomi (FI)</option><option value="/nl/formula.html" class="bg-white text-gray-900 py-1">🇳🇱 Nederlands (NL)</option><option value="/sv/formula.html" class="bg-white text-gray-900 py-1">🇸🇪 Svenska (SV)</option><option value="/da/formula.html" class="bg-white text-gray-900 py-1">🇩🇰 Dansk (DA)</option><option value="/no/formula.html" selected class="bg-white text-gray-900 py-1">🇳🇴 Norsk (NO)</option><option value="/cs/formula.html" class="bg-white text-gray-900 py-1">🇨🇿 Čeština (CS)</option><option value="/sk/formula.html" class="bg-white text-gray-900 py-1">🇸🇰 Slovenčina (SK)</option><option value="/ro/formula.html" class="bg-white text-gray-900 py-1">🇷🇴 Română (RO)</option><option value="/hr/formula.html" class="bg-white text-gray-900 py-1">🇭🇷 Hrvatski (HR)</option><option value="/tr/formula.html" class="bg-white text-gray-900 py-1">🇹🇷 Türkçe (TR)</option><option value="/bg/formula.html" class="bg-white text-gray-900 py-1">🇧🇬 Български (BG)</option><option value="/uk/formula.html" class="bg-white text-gray-900 py-1">🇺🇦 Українська (UK)</option></select><svg class="w-3.5 h-3.5 text-gray-400 pointer-events-none absolute right-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 pt-8 pb-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-orange-500/20 backdrop-blur-sm border border-orange-400/30 px-3 py-1 rounded-full text-orange-300 text-xs font-mono font-bold tracking-wider uppercase mb-5">
+                    <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse"></span>
+                    <span>DEIGMATEMATIKK · NULL TABELLER</span>
+                </div>
+
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white leading-tight mb-4 drop-shadow-xs">
+                    Pizzadeig Formel & Gjærberegning Forklart
+                </h1>
+                <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl mb-7">
+                    Fra bakerprosenter og klassiske 0D-hevekurver til romlig 5-skalls deigfysikk (PDE 5.3.0).
+                </p>
+
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                        <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play Butikk">
+                        <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play Butikk" class="h-11">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-0 w-full overflow-hidden leading-none pointer-events-none">
+            <svg class="relative block w-full h-10 sm:h-12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118,137.96,119.5,207.6,108.5,246.52,102.34,284.14,81.42,321.39,56.44Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Section 1: Baker's Percentages & Worked Example -->
+        <section class="max-w-5xl mx-auto px-6 py-10">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md mb-3 inline-block">1. GRUNNFORMEL</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-3">Bakerprosenter & Baklengs Beregning</h2>
+                    <p class="text-sm sm:text-base text-gray-700 leading-relaxed max-w-3xl">Enhver presis deigformel starter med bakerprosenter: total melvekt M er 100%, og vann (H), salt (S), olje (F) og gjær (Y) beregnes relativt til melet. Ut fra total deigvekt T = Emner × Vekt × (1 + Svinn) finnes melet først.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                    <div class="space-y-3">
+                        <h3 class="text-sm font-display font-bold uppercase tracking-wider text-slate-700">Lukkede Ingrediensligninger</h3>
+                        <div class="formula-box space-y-1.5">
+                            <div class="text-orange-300">T = N_emner × m_emne × (1 + Svinn%)</div>
+                            <div class="text-emerald-300">M_mel = T / (1 + H% + S% + F% + Y%)</div>
+                            <div class="text-sky-300">Vann = M × H% · Salt = M × S% · Olje = M × F%</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-2xl p-5 sm:p-6 border border-slate-200 space-y-4">
+                        <div>
+                            <h3 class="text-base font-display font-extrabold text-gray-900 mb-1.5">Regneeksempel (4 × 250 g = 1 000 g deig, 65% Hydrering, 2,8% Salt)</h3>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">Uten sporgjær (< 0,5%): M_mel = 1 000 g / (1 + 0,65 + 0,028) = 1 000 / 1,678 ≈ 596 g mel. Vann = 595,9 g × 0,65 ≈ 387 g. Salt = 595,9 g × 0,028 ≈ 16,7 g. Gjærmengden varierer (~0,15–3,50 g) etter tid, temperatur, masse og mel.</p>
+                        </div>
+                        <div class="pt-3 border-t border-slate-200">
+                            <h4 class="text-sm font-display font-bold text-gray-900 mb-1">Fersk Gjær (CY) vs. Tørrgjær (IDY / ADY) & Surdeig</h4>
+                            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">Enkle formler regner om fersk gjær (CY = 100%) med faste faktorer (IDY ≈ 0,33×, ADY ≈ 0,40–0,45×). PDE 5.3.0 modellerer også rehydrering, glutation (GSH), Licoli og Lievito Madre til 0,01 g.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Physical Limits of Lookup Tables & 0D Fixed-Q10 Approximations -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="mb-6">
+                <span class="text-xs font-bold font-mono uppercase tracking-widest text-slate-700 bg-slate-200/80 px-2.5 py-1 rounded-md mb-2 inline-block">2. NÅR 0D-KURVER SVIKTER</span>
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">Fysiske Grenser for Tabeller & Enkle 0D-Q10-Tilnærminger</h2>
+                <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">Klassiske 0D-punktmodeller med fast Q10 = 2,0 gir gode retningslinjer for varm direktedeig. Med kjøleskap, tunge deigblokker og melblandinger går fire fysiske effekter utover punktformelen:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-sky-800 bg-sky-100/90 border border-sky-200 px-3 py-1 rounded-full inline-block">1 · TERMISK TREGHET</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">250 g Deigemne vs. 2 kg Blokk i Kjøleskapet</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">0D-modeller antar at 23 °C deig kjøles til 4–7 °C øyeblikkelig. I praksis isolerer CO2-skum kjernen, slik at en 1–2,5 kg blokk hever varmt i kjernen i timesvis (25–45% sommer-overheving uten radiell modell).</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-amber-800 bg-amber-100/90 border border-amber-200 px-3 py-1 rounded-full inline-block">2 · 11,8× KULDEFEIL</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Kryokinetikk under 9 °C (Fast Q10 = 2,0-feil)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Fast Q10 = 2,0 spår ved 5 °C 17,7% av 30-°C-farten. Labmålinger viser ~1,5% grunnet stivere membranlipider — en 11,8× overestimering.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-emerald-800 bg-emerald-100/90 border border-emerald-200 px-3 py-1 rounded-full inline-block">3 · OSMOSE & MELMATRISE</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Salt, Sukkerosmose & Melblanding (Tipo 00 / 0 / 1 / Sammalt)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Saltskjerming, sukkerets vannaktivitet a_w(t) (> ~6% bremser), aske-pH-buffering og amylaser styrer heving og steking.</p>
+                </article>
+
+                <article class="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xs space-y-3">
+                    <span class="text-xs font-mono font-bold text-purple-800 bg-purple-100/90 border border-purple-200 px-3 py-1 rounded-full inline-block">4 · 2-TRINNS KASKADE</span>
+                    <h3 class="text-lg sm:text-xl font-display font-extrabold text-gray-900">Poolish, Biga & Type-I Surdeig (Licoli / Lievito Madre)</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">Faste fradrag overser syrer, proteolyse og MapA-symbiose. PDE 5.3.0 kjører Trinn 1 og overfører alle 26 tilstandene kontinuerlig.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 3: 3-Generation Comparison Table -->
+        <section class="max-w-5xl mx-auto px-6 mb-12">
+            <div class="bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-xs space-y-6">
+                <div>
+                    <span class="text-xs font-bold font-mono uppercase tracking-widest text-indigo-800 bg-indigo-100/90 border border-indigo-200 px-2.5 py-1 rounded-md mb-2 inline-block">3. SAMMENLIGNING</span>
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900 mb-2">Statiske Tabeller vs. 0D-Formler vs. Romlig 5-Skalls PDE</h2>
+                    <p class="text-sm sm:text-base text-gray-600 max-w-3xl leading-relaxed">Oversikt over hvordan tre generasjoner pizzadeig-apper regner:</p>
+                </div>
+
+                <div class="formula-table-wrap">
+                    <table class="formula-table">
+                        <thead>
+                            <tr>
+                                <th>Kriterium</th>
+                                <th>Klasse 1: Tabeller / Faste Oppskrifter</th>
+                                <th>Klasse 2: 0D-Eksponentialmodeller (Fast Q10)</th>
+                                <th class="formula-col-highlight">Klasse 3: Pizzatastico PDE 5.3.0 (1D 5-Skalls PDE)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Matematisk Grunnlag</td>
+                                <td>Fast tabell eller '1 g gjær'-regel</td>
+                                <td>Baker-% + 0D-eksponentiell tilpasning</td>
+                                <td class="formula-col-highlight">Baker-% + 5-skalls radiell TR-BDF2 PDE (135 tilstander)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Gjær- & Surdeigspresisjon</td>
+                                <td>Grove trinn (0,5 g – 1 g)</td>
+                                <td>Trinnløst ~0,05 g med fast CY/IDY/ADY-forhold</td>
+                                <td class="formula-col-highlight">0,01 g for CY, IDY (GSH), ADY, Licoli & Lievito Madre</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Kjøleskap & Deigmasse</td>
+                                <td>Ignorert</td>
+                                <td>0D-punkttemp (misser kjernevarme & 5-°C-brems)</td>
+                                <td class="formula-col-highlight">5-skalls varmeledning + Maxwell–Eucken-skum + Ψ(m)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Mel, Salt & Sukker</td>
+                                <td>Ett standardmel</td>
+                                <td>W-verdi eller enkelt proteinbånd</td>
+                                <td class="formula-col-highlight">Pro Melmatrise (Tipo 00/0/1, Sammalt, Semola) + a_w(t) & pH</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Poolish, Biga & Surdeig</td>
+                                <td>Kun faste maler</td>
+                                <td>Empiriske faktorer uten syrekjemi</td>
+                                <td class="formula-col-highlight">Ekte 2-trinns biofysisk kaskade x_Stage1(t_pref) ↦ x0</td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-slate-900">Planlegging & Validering</td>
+                                <td>Statisk tekst</td>
+                                <td>Kun romtemp-volum (~31% av labserier)</td>
+                                <td class="formula-col-highlight">Baklengs plan + Rescue, 100% offline C++20, 19 studier (8,7% NRMSE)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pt-2">
+                    <a href="/no/pde.html" class="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-700 text-white font-display font-bold px-5 py-3 rounded-xl shadow-sm transition-colors text-xs sm:text-sm">
+                        <span>Les Full Vitenskapelig Artikkel & Benchmark (PDE 5.3.0)</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Visible FAQ Accordion (Matches JSON-LD FAQPage 1:1) -->
+        <section id="faq" class="max-w-5xl mx-auto px-6 mb-14">
+            <div class="mb-6">
+                <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-gray-900">Ofte Stilte Spørsmål om Pizzadeig-Formler</h2>
+            </div>
+
+            <div class="space-y-3">
+                <details class="faq-item" open>
+                    <summary>
+                        <span>Hvilken app beregner pizzadeig med formler i stedet for tabeller?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pizzatastico regner 100% matematisk uten tabeller. Utover bakerprosenter og 0D Q10-kurver løser appen offline i C++20 en 5-skalls PDE (PDE 5.3.0) på iOS, Android, Apple Watch og Wear OS ned til 0,01 g.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Hvordan bygger Pizzatastico (PDE 5.3.0) videre på pionermodeller som TxCraig eller Hamelman?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Pionermodeller som TxCraig og Hamelman-skalering la grunnlaget ved å erstatte stive tabeller med jevne romtemperatur-kurver — og fungerer fortsatt utmerket for varm direktedeig. Pizzatastico (PDE 5.3.0) bygger videre på dette ved å utvide til 5 konsentriske varmeskall (langsom kjernekjøling i kjøleskap), kryokinetikk under 9 °C og 2-trinns Poolish, Biga & Surdeig.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Støtter Pizzatastico Poolish, Biga og Surdeig med ekte formler?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Ja. Direktedeig, Poolish, Biga, Licoli og Lievito Madre beregnes via en kontinuerlig 2-trinns PDE-kaskade.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Virker appen offline og planlegger baklengs fra middag?</span>
+                        <svg class="w-5 h-5 faq-chevron" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+                    </summary>
+                    <p class="mt-3 text-sm text-gray-600 leading-relaxed">Ja. Hele C++20 PDE 5.3.0-motoren kjører 100% offline med nattesøvn-beskyttelse, varsler, .ics-eksport og klokke-apper.</p>
+                </details>
+            </div>
+        </section>
+
+        <!-- Download CTA -->
+        <section class="max-w-5xl mx-auto px-6 mb-16 text-center">
+            <div class="bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                <div class="relative z-10 max-w-xl mx-auto">
+                    <h2 class="text-2xl sm:text-3xl font-display font-extrabold mb-3">Bak den perfekte pizzaen.</h2>
+                    <p class="text-sm sm:text-base text-white/90 mb-6 leading-relaxed">Din formelbaserte pizzadeig-kalkulator for ekte pizza hjemme. Null oppslagstabeller — presis hydrering, 0,01 g gjærberegning for direktedeig, Poolish, Biga & Surdeig og sikker baklengs planlegging.</p>
+                    <div class="flex flex-wrap items-center justify-center gap-3">
+                        <a href="https://apps.apple.com/app/id6811171643" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Apple App Store">
+                            <img src="/assets/images/badges/app-store-badge.svg" alt="Apple App Store" class="h-11">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.pizzatastico.pizzatastico_flutter" target="_blank" rel="noopener noreferrer" class="inline-block transition hover:scale-105 filter drop-shadow-md" title="Google Play Butikk">
+                            <img src="/assets/images/badges/google-play-badge.svg" alt="Google Play Butikk" class="h-11">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+            <div class="flex items-center space-x-3 mb-6 md:mb-0">
+                <a href="/no/" class="hover:opacity-80 transition" title="Back to Home">
+                    <img src="/assets/images/boy_hd_no_banner.png" alt="Pizzatastico-logo" class="w-8 h-8 object-contain grayscale opacity-60">
+                </a>
+                <div class="flex flex-col text-left">
+                    <span class="font-medium text-gray-700">&copy; 2026 Pizzatastico</span>
+                    <span class="text-xs text-gray-400 font-mono">v2.6.8</span>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-6 font-medium">
+                <a href="/no/" class="hover:text-pizza-600 transition-colors font-semibold text-gray-700">&larr; Back to Home</a>
+                <a href="/no/formula.html" class="hover:text-pizza-600 transition-colors text-pizza-600 font-bold">Deigformel</a>
+                <a href="/no/pde.html" class="hover:text-pizza-600 transition-colors">PDE Vitenskap</a>
+                <a href="/no/stats.html" class="hover:text-pizza-600 transition-colors">Pizza Stats</a>
+                <a href="/no/guide.html" class="hover:text-pizza-600 transition-colors">Paolos Tips</a>
+                <a href="/no/privacy.html" class="hover:text-pizza-600 transition-colors">Personvernerklæring</a>
+                <a href="/no/imprint.html" class="hover:text-pizza-600 transition-colors">Juridisk informasjon</a>
+                <button type="button" onclick="window.pzOpenCookieSettings && window.pzOpenCookieSettings()" class="hover:text-pizza-600 transition-colors cursor-pointer bg-transparent border-none p-0">Informasjonskapsler</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.__PZ_PAGE__ = { page: 'formula', lang: 'no' };
+        window.__PZ_I18N__ = {"consent_banner_text":"Kun med ditt uttrykkelige samtykke bruker vi valgfrie statistikk-informasjonskapsler (Google Analytics 4, Google Ireland / USA). Kan trekkes tilbake når som helst i bunnteksten.","nav_privacy":"Personvernerklæring","privacy_href":"/no/privacy.html","nav_imprint":"Juridisk informasjon","imprint_href":"/no/imprint.html","consent_accept":"Tillat statistikk","consent_decline":"Avvis"};
+    </script>
+    <script src="/assets/js/pz-analytics.js" defer></script>
+</body>
+</html>
